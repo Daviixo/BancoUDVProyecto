@@ -46,7 +46,7 @@
                             <a href="#" class="fab fa-instagram"></a>
                         </div><!-- /.topbar__social -->
                         <a href="Login/Login.php" >Login</a>
-                        <a href="#">Company News</a>
+                        <a href="#">Company Newssssss</a>
                         <a href="#">FAQs</a>
                     </div><!-- /.topbar__left -->
                     <div class="topbar__right">

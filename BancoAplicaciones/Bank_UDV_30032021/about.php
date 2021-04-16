@@ -68,7 +68,7 @@
                                 <li>
                                     <a href="index-1.html">INICIO One</a>
                                 </li>
-                                <li><a href="index-2.html">Home Two</a></li>
+                                <li><a href="index-2.html">INICIO Two</a></li>
                                 <li class="dropdown">
                                     <a href="#">Header Styles</a>
                                     <ul>

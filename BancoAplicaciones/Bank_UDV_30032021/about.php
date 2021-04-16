@@ -63,7 +63,7 @@
                     </div><!-- /.logo-box -->
                     <ul class="main-menu__list">
                         <li class="dropdown">
-                            <a href="index-1.html">Home</a>
+                            <a href="index-1.html">INICIO</a>
                             <ul>
                                 <li>
                                     <a href="index-1.html">Home One</a>

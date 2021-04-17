@@ -247,9 +247,7 @@
                         <form action="#" id="loan-calculator" data-interest-rate="15" class="about-one__form wow fadeInRight" data-wow-duration="1500ms">
                             <h3>How Much You Need</h3>
                             <div class="about-one__form-content">
-                                <div class="input-box__top">
-                                    <span>$1000</span>
-                                    <span>$40000</span>
+                                <div class="input-box__top">  
                                 </div><!-- /.input-box__top -->
                                 <div class="input-box">
                                     <div class="range-slider-count" id="range-slider-count"></div>
@@ -257,8 +255,6 @@
                                     <input type="hidden" value="" id="max-value-rangeslider-count">
                                 </div><!-- /.input-box -->
                                 <div class="input-box__top">
-                                    <span>1 Month</span>
-                                    <span>12 Months</span>
                                 </div><!-- /.input-box__top -->
                                 <div class="input-box">
                                     <div class="range-slider-month" id="range-slider-month"></div>

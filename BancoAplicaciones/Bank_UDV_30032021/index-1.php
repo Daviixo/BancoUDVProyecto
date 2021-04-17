@@ -45,7 +45,7 @@
                             <a href="#" class="fab fa-pinterest-p"></a>
                             <a href="#" class="fab fa-instagram"></a>
                         </div><!-- /.topbar__social -->
-                        <a href="#">Login</a>
+                        <a href="BancoAplicaciones\Bank_UDV_30032021\Login\Login.php">Login</a>
                         <a href="#">Company News</a>
                         <a href="#">FAQs</a>
                     </div><!-- /.topbar__left -->
@@ -68,12 +68,12 @@
                                 <li>
                                     <a href="index-1.html">Home One</a>
                                 </li>
-                                <li><a href="index-2.html">Home Two</a></li>
+                                <li><a href="index-1.html">Home Two</a></li>
                                 <li class="dropdown">
                                     <a href="#">Header Styles</a>
                                     <ul>
                                         <li><a href="index-1.html">Header One</a></li>
-                                        <li><a href="index-2.html">Header Two</a></li>
+                                        <li><a href="index-1.html">Header Two</a></li>
                                     </ul>
                                 </li>
                             </ul>

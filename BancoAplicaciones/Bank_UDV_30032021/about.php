@@ -68,12 +68,12 @@
                                 <li>
                                     <a href="index-1.html">INICIO One</a>
                                 </li>
-                                <li><a href="index-2.html">INICIO Two</a></li>
+                                <li><a href="index-1.html">INICIO Two</a></li>
                                 <li class="dropdown">
                                     <a href="#">Header Styles</a>
                                     <ul>
                                         <li><a href="index-1.html">Header One</a></li>
-                                        <li><a href="index-2.html">Header Two</a></li>
+                                        <li><a href="index-1.html">Header Two</a></li>
                                     </ul>
                                 </li>
                             </ul>

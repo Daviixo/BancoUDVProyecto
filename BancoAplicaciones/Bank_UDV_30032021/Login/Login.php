@@ -67,7 +67,7 @@
                     </div><!-- /.logo-box -->
                     <ul class="main-menu__list">
                         <li class="dropdown">
-                            <a href="../index.php">Home</a>
+                            <a href="../index-1.php">Home</a>
                             <ul>
                                 <li>
                                     <a href="../index-1.php">Home One</a>
@@ -337,7 +337,5 @@ fetch("insert.php", {
 
 });
     </script>
-<a href="https://www.designnominees.com/themes/pylon-loan-finance-company-html-template" title="Design Nominees" style="width:70px;height:132px;position:fixed;top:100px;left:0px;z-index:99999;text-indent:-9999px;background: url(http://www.designnominees.com/ribbons/designnominees-ribbon-blue-left.png) no-repeat;" target="_blank">Design Nominees</a>
-<a href="https://www.designnominees.com/themes/pylon-loan-finance-company-html-template" title="Design Nominees" style="width:70px;height:182px;position:fixed;top:250px;left:0px;z-index:99999;text-indent:-9999px;background: url(http://www.designnominees.com/ribbons/designnominees-ribbon-totd-white-left.png) no-repeat;" target="_blank">Design Nominees</a>
 </body>
 </html>

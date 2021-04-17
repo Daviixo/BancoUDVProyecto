@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home One || Pylon || Loan HTML Template</title>
+    <title>== UDV Bank ==</title>
     <!-- favicons Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets\images\favicons\apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets\images\favicons\favicon-32x32.png">
@@ -58,7 +58,7 @@
             <nav class="main-menu">
                 <div class="container">
                     <div class="logo-box">
-                        <a href="index-1.html" aria-label="logo image"><img src="assets\images\logo-dark.png" width="155" alt=""></a>
+                        <a href="index-1.html" aria-label="logo image"><img src="assets\images\UDV_Bank.JPG" width="155" alt=""></a>
                         <span class="fa fa-bars mobile-nav__toggler"></span>
                     </div><!-- /.logo-box -->
                     <ul class="main-menu__list">
@@ -79,22 +79,22 @@
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a href="about.html">About</a>
+                            <a href="about.php">About</a>
                             <ul>
                                 <li><a href="team.html">Team</a></li>
                                 <li><a href="team-details.html">Team Details</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown"><a href="services.html">Services</a>
+                        <li class="dropdown"><a href="services.php">Services</a>
                             <ul>
-                                <li><a href="services.html">Services</a></li>
+                                <li><a href="services.php">Services</a></li>
                                 <li><a href="service-details.html">Service Details</a></li>
                             </ul>
                         </li>
                         <li class="dropdown"><a href="news.html">News</a>
                             <ul>
                                 <li><a href="news.html">News</a></li>
-                                <li><a href="news-details.html">News Details</a></li>
+                                <li><a href="news-details.php">News Details</a></li>
                             </ul>
                         </li>
                         <li class="dropdown"><a href="#">Pages</a>

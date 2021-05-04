@@ -58,22 +58,22 @@
             <nav class="main-menu">
                 <div class="container">
                     <div class="logo-box">
-                        <a href="index-1.php" aria-label="logo image"><img src="assets\images\UDV_Bank.JPG" width="155" alt=""></a>
+                        <a href="index.php" aria-label="logo image"><img src="assets\images\UDV_Bank.JPG" width="155" alt=""></a>
                         <span class="fa fa-bars mobile-nav__toggler"></span>
                     </div><!-- /.logo-box -->
                     <ul class="main-menu__list">
                         <li class="dropdown">
-                            <a href="index-1.php">Home</a>
+                            <a href="index.php">Home</a>
                             <ul>
                                 <li>
-                                    <a href="index-1.php">Home One</a>
+                                    <a href="index.php">Home One</a>
                                 </li>
-                                <li><a href="index-1.php">Home Two</a></li>
+                                <li><a href="index.php">Home Two</a></li>
                                 <li class="dropdown">
                                     <a href="#">Header Styles</a>
                                     <ul>
-                                        <li><a href="index-1.php">Header One</a></li>
-                                        <li><a href="index-1.php">Header Two</a></li>
+                                        <li><a href="index.php">Header One</a></li>
+                                        <li><a href="index.php">Header Two</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -142,7 +142,7 @@
             <!-- /.page-header__bg -->
             <div class="container">
                 <ul class="thm-breadcrumb list-unstyled">
-                    <li><a href="index-1.php">Home</a></li>
+                    <li><a href="index.php">Home</a></li>
                     <li>/</li>
                     <li><span>Team Details</span></li>
                 </ul><!-- /.thm-breadcrumb list-unstyled -->
@@ -201,7 +201,7 @@
                 <div class="row">
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-widget footer-widget__about">
-                            <a href="index-1.php">
+                            <a href="index.php">
                                 <img src="assets\images\logo-light.png" width="155" alt="">
                             </a>
                             <p>Lorem ipsum is not dolor sit amet, consect etur adi pisicing elit sed eiusmod tempor ut labore.</p>
@@ -289,7 +289,7 @@
             <span class="mobile-nav__close mobile-nav__toggler"><i class="far fa-times"></i></span>
 
             <div class="logo-box">
-                <a href="index-1.php" aria-label="logo image"><img src="assets\images\logo-light.png" width="155" alt=""></a>
+                <a href="index.php" aria-label="logo image"><img src="assets\images\logo-light.png" width="155" alt=""></a>
             </div>
             <!-- /.logo-box -->
             <div class="mobile-nav__container"></div>

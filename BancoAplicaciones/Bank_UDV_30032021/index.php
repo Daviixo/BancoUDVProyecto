@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home One || Pylon || Loan HTML Template</title>
+    <title>== UDV Bank ==</title>
     <!-- favicons Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets\images\favicons\apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets\images\favicons\favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets\images\favicons\favicon-16x16.png">
     <link rel="manifest" href="assets\images\favicons\site.webmanifest">
+    <script type = "text/javascript" src="apirest.js"></script>  
     <meta name="description" content="Pylon Loan HTML Template">
 
     <!-- fonts -->
@@ -30,6 +31,9 @@
     <link rel="stylesheet" href="assets\css\main.css">
 </head>
 
+<input type = "button" onclick = "firstExample()" value = "1st Function">
+<input type = "button" onclick = "searchByDPI()" value = "Get by DPI">    
+
 <body>
     <div class="preloader">
         <img class="preloader__image" src="assets\images\loader.png" alt="">
@@ -45,10 +49,8 @@
                             <a href="#" class="fab fa-pinterest-p"></a>
                             <a href="#" class="fab fa-instagram"></a>
                         </div><!-- /.topbar__social -->
-                        <a href="Login/Login.php" >Login</a>
+                        <a href="Login\Login.php">Login</a>
                         <a href="#">Company News</a>
-                        <?php echo "Esto es un test para PHP" ?>
-
                         <a href="#">FAQs</a>
                     </div><!-- /.topbar__left -->
                     <div class="topbar__right">
@@ -65,56 +67,56 @@
                     </div><!-- /.logo-box -->
                     <ul class="main-menu__list">
                         <li class="dropdown">
-                            <a href="index-1.php">Home</a>
+                            <a href="index.php">Home</a>
                             <ul>
                                 <li>
-                                    <a href="index-1.php">Home One</a>
+                                    <a href="index.php">Home One</a>
                                 </li>
-                                <li><a href="index-1.html">Home Two</a></li>
+                                <li><a href="index.php">Home Two</a></li>
                                 <li class="dropdown">
                                     <a href="#">Header Styles</a>
                                     <ul>
-                                        <li><a href="index-1.html">Header One</a></li>
-                                        <li><a href="index-1.html">Header Two</a></li>
+                                        <li><a href="index.php">Header One</a></li>
+                                        <li><a href="index.php">Header Two</a></li>
                                     </ul>
                                 </li>
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a href="about.html">About</a>
+                            <a href="about.php">About</a>
                             <ul>
-                                <li><a href="team.html">Team</a></li>
-                                <li><a href="team-details.html">Team Details</a></li>
+                                <li><a href="team.php">Team</a></li>
+                                <li><a href="team-details.php">Team Details</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown"><a href="services.html">Services</a>
+                        <li class="dropdown"><a href="services.php">Services</a>
                             <ul>
-                                <li><a href="services.html">Services</a></li>
-                                <li><a href="service-details.html">Service Details</a></li>
+                                <li><a href="services.php">Services</a></li>
+                                <li><a href="service-details.php">Service Details</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown"><a href="news.html">News</a>
+                        <li class="dropdown"><a href="news.php">News</a>
                             <ul>
-                                <li><a href="news.html">News</a></li>
-                                <li><a href="news-details.html">News Details</a></li>
+                                <li><a href="news.php">News</a></li>
+                                <li><a href="news-details.php">News Details</a></li>
                             </ul>
                         </li>
                         <li class="dropdown"><a href="#">Pages</a>
                             <ul>
-                                <li><a href="how-it-works.html">How It Works</a></li>
-                                <li><a href="loan-calculator.html">Loan Calculator</a></li>
+                                <li><a href="how-it-works.php">How It Works</a></li>
+                                <li><a href="loan-calculator.php">Loan Calculator</a></li>
                                 <li class="dropdown">
-                                    <a href="credit-card.html">Credit Card</a>
+                                    <a href="credit-card.php">Credit Card</a>
                                     <ul>
-                                        <li><a href="credit-card.html">Credit Card</a></li>
-                                        <li><a href="credit-card-details.html">Credit Card Details</a></li>
+                                        <li><a href="credit-card.php">Credit Card</a></li>
+                                        <li><a href="credit-card-details.php">Credit Card Details</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="faq.html">FAQ</a></li>
+                                <li><a href="faq.php">FAQ</a></li>
                                 <li><a href="testimonials.html">Testimonials</a></li>
                             </ul>
                         </li>
-                        <li><a href="contact.php">Deseo ser afiliado</a></li>
+                        <li><a href="contact.php">Contact</a></li>
                         <li class="search-btn search-toggler">
                             <a href="#"><i class="pylon-icon-magnifying-glass"></i></a>
                         </li>
@@ -249,9 +251,7 @@
                         <form action="#" id="loan-calculator" data-interest-rate="15" class="about-one__form wow fadeInRight" data-wow-duration="1500ms">
                             <h3>How Much You Need</h3>
                             <div class="about-one__form-content">
-                                <div class="input-box__top">
-                                    <span>$1000</span>
-                                    <span>$40000</span>
+                                <div class="input-box__top">  
                                 </div><!-- /.input-box__top -->
                                 <div class="input-box">
                                     <div class="range-slider-count" id="range-slider-count"></div>
@@ -259,8 +259,6 @@
                                     <input type="hidden" value="" id="max-value-rangeslider-count">
                                 </div><!-- /.input-box -->
                                 <div class="input-box__top">
-                                    <span>1 Month</span>
-                                    <span>12 Months</span>
                                 </div><!-- /.input-box__top -->
                                 <div class="input-box">
                                     <div class="range-slider-month" id="range-slider-month"></div>
@@ -300,9 +298,9 @@
                                 <img src="assets\images\services\services-1-1.png" alt="">
                             </div><!-- /.service-one__image -->
                             <div class="service-one__content">
-                                <h3><a href="service-details.html">Personal Loan</a></h3>
+                                <h3><a href="service-details.php">Personal Loan</a></h3>
                                 <p>There are many variations of passages of lorem ipsum available the majority have some.</p>
-                                <a href="service-details.html" class="pylon-icon-right-arrow service-one__link"></a><!-- /.service-one__link -->
+                                <a href="service-details.php" class="pylon-icon-right-arrow service-one__link"></a><!-- /.service-one__link -->
                             </div><!-- /.service-one__content -->
                         </div><!-- /.service-one__card -->
                     </div><!-- /.col-lg-4 -->
@@ -312,9 +310,9 @@
                                 <img src="assets\images\services\services-1-2.png" alt="">
                             </div><!-- /.service-one__image -->
                             <div class="service-one__content">
-                                <h3><a href="service-details.html">Education Loan</a></h3>
+                                <h3><a href="service-details.php">Education Loan</a></h3>
                                 <p>There are many variations of passages of lorem ipsum available the majority have some.</p>
-                                <a href="service-details.html" class="pylon-icon-right-arrow service-one__link"></a><!-- /.service-one__link -->
+                                <a href="service-details.php" class="pylon-icon-right-arrow service-one__link"></a><!-- /.service-one__link -->
                             </div><!-- /.service-one__content -->
                         </div><!-- /.service-one__card -->
                     </div><!-- /.col-lg-4 -->
@@ -324,9 +322,9 @@
                                 <img src="assets\images\services\services-1-3.png" alt="">
                             </div><!-- /.service-one__image -->
                             <div class="service-one__content">
-                                <h3><a href="service-details.html">Business Loan</a></h3>
+                                <h3><a href="service-details.php">Business Loan</a></h3>
                                 <p>There are many variations of passages of lorem ipsum available the majority have some.</p>
-                                <a href="service-details.html" class="pylon-icon-right-arrow service-one__link"></a><!-- /.service-one__link -->
+                                <a href="service-details.php" class="pylon-icon-right-arrow service-one__link"></a><!-- /.service-one__link -->
                             </div><!-- /.service-one__content -->
                         </div><!-- /.service-one__card -->
                     </div><!-- /.col-lg-4 -->
@@ -671,7 +669,7 @@
                                     <a href="#"><i class="fa fa-tags"></i>Loan</a>
                                     <a href="#"><i class="fa fa-comments"></i>2 Comments</a>
                                 </div><!-- /.blog-card__meta -->
-                                <h3><a href="news-details.html">Changing & grow your business faster</a></h3>
+                                <h3><a href="news-details.php">Changing & grow your business faster</a></h3>
                                 <div class="blog-card__author">
                                     <img src="assets\images\blog\blog-author-1-1.png" alt="">Christine Eve
                                 </div><!-- /.blog-card__author -->
@@ -689,7 +687,7 @@
                                     <a href="#"><i class="fa fa-tags"></i>Loan</a>
                                     <a href="#"><i class="fa fa-comments"></i>2 Comments</a>
                                 </div><!-- /.blog-card__meta -->
-                                <h3><a href="news-details.html">Changing & grow your business faster</a></h3>
+                                <h3><a href="news-details.php">Changing & grow your business faster</a></h3>
                                 <div class="blog-card__author">
                                     <img src="assets\images\blog\blog-author-1-2.png" alt="">Christine Eve
                                 </div><!-- /.blog-card__author -->
@@ -707,7 +705,7 @@
                                     <a href="#"><i class="fa fa-tags"></i>Loan</a>
                                     <a href="#"><i class="fa fa-comments"></i>2 Comments</a>
                                 </div><!-- /.blog-card__meta -->
-                                <h3><a href="news-details.html">Changing & grow your business faster</a></h3>
+                                <h3><a href="news-details.php">Changing & grow your business faster</a></h3>
                                 <div class="blog-card__author">
                                     <img src="assets\images\blog\blog-author-1-3.png" alt="">Christine Eve
                                 </div><!-- /.blog-card__author -->
@@ -799,7 +797,7 @@
                 <div class="row">
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-widget footer-widget__about">
-                            <a href="index-1.html">
+                            <a href="index.php">
                                 <img src="assets\images\logo-light.png" width="155" alt="">
                             </a>
                             <p>Lorem ipsum is not dolor sit amet, consect etur adi pisicing elit sed eiusmod tempor ut labore.</p>
@@ -832,14 +830,14 @@
                                     <img src="assets\images\resources\footer-post-1-1.png" alt="">
                                     <div class="footer-widget__post-list-content">
                                         <span>16 Oct, 2020</span>
-                                        <h3><a href="news-details.html">We’re Providing the Quality Services</a></h3>
+                                        <h3><a href="news-details.php">We’re Providing the Quality Services</a></h3>
                                     </div><!-- /.footer-widget__post-content -->
                                 </li>
                                 <li>
                                     <img src="assets\images\resources\footer-post-1-2.png" alt="">
                                     <div class="footer-widget__post-list-content">
                                         <span>16 Oct, 2020</span>
-                                        <h3><a href="news-details.html">We’re Providing the Quality Services</a></h3>
+                                        <h3><a href="news-details.php">We’re Providing the Quality Services</a></h3>
                                     </div><!-- /.footer-widget__post-content -->
                                 </li>
                             </ul><!-- /.list-unstyled -->
@@ -887,7 +885,7 @@
             <span class="mobile-nav__close mobile-nav__toggler"><i class="far fa-times"></i></span>
 
             <div class="logo-box">
-                <a href="index-1.html" aria-label="logo image"><img src="assets\images\logo-light.png" width="155" alt=""></a>
+                <a href="index.php" aria-label="logo image"><img src="assets\images\logo-light.png" width="155" alt=""></a>
             </div>
             <!-- /.logo-box -->
             <div class="mobile-nav__container"></div>

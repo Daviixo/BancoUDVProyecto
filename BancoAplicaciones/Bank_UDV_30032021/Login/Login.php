@@ -67,10 +67,10 @@
                     </div><!-- /.logo-box -->
                     <ul class="main-menu__list">
                         <li class="dropdown">
-                            <a href="../index-1.php">Home</a>
+                            <a href="../index.php">Home</a>
                             <ul>
                                 <li>
-                                    <a href="../index-1.php">Home One</a>
+                                    <a href="../index.php">Home One</a>
                                 </li>
                                 <li><a href="index-1.html">Home Two</a></li>
                                 <li class="dropdown">

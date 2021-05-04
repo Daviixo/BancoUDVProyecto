@@ -5,7 +5,7 @@ $input = json_decode(file_get_contents('php://input'), true);
 $message='';
 
 if(!empty($input["nombre_usuario"]) && !empty($input["email_usuario"])  && !empty($input["alias_usuario"])  && !empty($input["password"])){
-    $sql = "INSERT INTO users (nombre,telefono, email, password) VALUES (:nombre,:telefono, :email, :password )";
+    $sql = "INSERT INTO usuarios (nombre,telefono, email, password) VALUES (:nombre,:telefono, :email, :password )";
     $stmt = $conn ->prepare($sql);
     $stmt->bindParam(':nombre',$input['nombre_usuario']);
     $stmt->bindParam(':email',$input['email_usuario']);

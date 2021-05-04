@@ -48,7 +48,7 @@
                             <a href="#" class="fab fa-pinterest-p"></a>
                             <a href="#" class="fab fa-instagram"></a>
                         </div><!-- /.topbar__social -->
-                        <a href="Login/Login.php" >Login</a>
+                        <a href="../Login.php" >Login</a>
                         <a href="#">Company News</a>
                         <a href="#">FAQs</a>
                     </div><!-- /.topbar__left -->
@@ -62,7 +62,8 @@
             <nav class="main-menu">
                 <div class="container">
                     <div class="logo-box">
-                        <a href="index-1.html" aria-label="logo image"><img src="images\UDV_Bank.JPG" width="155" alt=""></a>
+                    <a href="index.php" aria-label="logo image"><img src="assets\images\UDV_Bank.JPG" width="155" alt=""></a>
+                        
                         <span class="fa fa-bars mobile-nav__toggler"></span>
                     </div><!-- /.logo-box -->
                     <ul class="main-menu__list">

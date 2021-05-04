@@ -142,7 +142,7 @@
             <!-- /.page-header__bg -->
             <div class="container">
                 <ul class="thm-breadcrumb list-unstyled">
-                    <li><a href="index-1.html">Home</a></li>
+                    <li><a href="index-1.php">Home</a></li>
                     <li>/</li>
                     <li><span>About</span></li>
                 </ul><!-- /.thm-breadcrumb list-unstyled -->
@@ -499,7 +499,7 @@
                 <div class="row">
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-widget footer-widget__about">
-                            <a href="index-1.html">
+                            <a href="index-1.php">
                                 <img src="assets\images\logo-light.png" width="155" alt="">
                             </a>
                             <p>Lorem ipsum is not dolor sit amet, consect etur adi pisicing elit sed eiusmod tempor ut labore.</p>
@@ -532,14 +532,14 @@
                                     <img src="assets\images\resources\footer-post-1-1.png" alt="">
                                     <div class="footer-widget__post-list-content">
                                         <span>16 Oct, 2020</span>
-                                        <h3><a href="news-details.html">We’re Providing the Quality Services</a></h3>
+                                        <h3><a href="news-details.php">We’re Providing the Quality Services</a></h3>
                                     </div><!-- /.footer-widget__post-content -->
                                 </li>
                                 <li>
                                     <img src="assets\images\resources\footer-post-1-2.png" alt="">
                                     <div class="footer-widget__post-list-content">
                                         <span>16 Oct, 2020</span>
-                                        <h3><a href="news-details.html">We’re Providing the Quality Services</a></h3>
+                                        <h3><a href="news-details.php">We’re Providing the Quality Services</a></h3>
                                     </div><!-- /.footer-widget__post-content -->
                                 </li>
                             </ul><!-- /.list-unstyled -->
@@ -587,7 +587,7 @@
             <span class="mobile-nav__close mobile-nav__toggler"><i class="far fa-times"></i></span>
 
             <div class="logo-box">
-                <a href="index-1.html" aria-label="logo image"><img src="assets\images\logo-light.png" width="155" alt=""></a>
+                <a href="index-1.php" aria-label="logo image"><img src="assets\images\logo-light.png" width="155" alt=""></a>
             </div>
             <!-- /.logo-box -->
             <div class="mobile-nav__container"></div>

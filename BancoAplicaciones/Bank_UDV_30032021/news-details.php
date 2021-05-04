@@ -66,9 +66,9 @@
                             <a href="index-1.php">Home</a>
                             <ul>
                                 <li>
-                                    <a href="index-1..php">Home One</a>
+                                    <a href="index-1.php">Home One</a>
                                 </li>
-                                <li><a href="index-1..php">Home Two</a></li>
+                                <li><a href="index-1.php">Home Two</a></li>
                                 <li class="dropdown">
                                     <a href="#">Header Styles</a>
                                     <ul>

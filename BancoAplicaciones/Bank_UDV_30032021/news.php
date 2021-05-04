@@ -58,61 +58,61 @@
             <nav class="main-menu">
                 <div class="container">
                     <div class="logo-box">
-                        <a href="index-1.html" aria-label="logo image"><img src="assets\images\UDV_Bank.JPG" width="155" alt=""></a>
+                        <a href="index-1.php" aria-label="logo image"><img src="assets\images\UDV_Bank.JPG" width="155" alt=""></a>
                         <span class="fa fa-bars mobile-nav__toggler"></span>
                     </div><!-- /.logo-box -->
                     <ul class="main-menu__list">
                         <li class="dropdown">
-                            <a href="index-1.html">Home</a>
+                            <a href="index-1.php">Home</a>
                             <ul>
                                 <li>
-                                    <a href="index-1.html">Home One</a>
+                                    <a href="index-1.php">Home One</a>
                                 </li>
-                                <li><a href="index-1.html">Home Two</a></li>
+                                <li><a href="index-1.php">Home Two</a></li>
                                 <li class="dropdown">
                                     <a href="#">Header Styles</a>
                                     <ul>
-                                        <li><a href="index-1.html">Header One</a></li>
-                                        <li><a href="index-1.html">Header Two</a></li>
+                                        <li><a href="index-1.php">Header One</a></li>
+                                        <li><a href="index-1.php">Header Two</a></li>
                                     </ul>
                                 </li>
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a href="about.html">About</a>
+                            <a href="about.php">About</a>
                             <ul>
-                                <li><a href="team.html">Team</a></li>
-                                <li><a href="team-details.html">Team Details</a></li>
+                                <li><a href="team.php">Team</a></li>
+                                <li><a href="team-details.php">Team Details</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown"><a href="services.html">Services</a>
+                        <li class="dropdown"><a href="services.php">Services</a>
                             <ul>
-                                <li><a href="services.html">Services</a></li>
-                                <li><a href="service-details.html">Service Details</a></li>
+                                <li><a href="services.php">Services</a></li>
+                                <li><a href="service-details.php">Service Details</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown"><a href="news.html">News</a>
+                        <li class="dropdown"><a href="news.php">News</a>
                             <ul>
-                                <li><a href="news.html">News</a></li>
-                                <li><a href="news-details.html">News Details</a></li>
+                                <li><a href="news.php">News</a></li>
+                                <li><a href="news-details.php">News Details</a></li>
                             </ul>
                         </li>
                         <li class="dropdown"><a href="#">Pages</a>
                             <ul>
-                                <li><a href="how-it-works.html">How It Works</a></li>
-                                <li><a href="loan-calculator.html">Loan Calculator</a></li>
+                                <li><a href="how-it-works.php">How It Works</a></li>
+                                <li><a href="loan-calculator.php">Loan Calculator</a></li>
                                 <li class="dropdown">
-                                    <a href="credit-card.html">Credit Card</a>
+                                    <a href="credit-card.php">Credit Card</a>
                                     <ul>
-                                        <li><a href="credit-card.html">Credit Card</a></li>
-                                        <li><a href="credit-card-details.html">Credit Card Details</a></li>
+                                        <li><a href="credit-card.php">Credit Card</a></li>
+                                        <li><a href="credit-card-details.php">Credit Card Details</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="faq.html">FAQ</a></li>
-                                <li><a href="testimonials.html">Testimonials</a></li>
+                                <li><a href="faq.php">FAQ</a></li>
+                                <li><a href="testimonials.php">Testimonials</a></li>
                             </ul>
                         </li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="contact.php">Contact</a></li>
                         <li class="search-btn search-toggler">
                             <a href="#"><i class="pylon-icon-magnifying-glass"></i></a>
                         </li>
@@ -142,7 +142,7 @@
             <!-- /.page-header__bg -->
             <div class="container">
                 <ul class="thm-breadcrumb list-unstyled">
-                    <li><a href="index-1.html">Home</a></li>
+                    <li><a href="index-1.php">Home</a></li>
                     <li>/</li>
                     <li><span>News</span></li>
                 </ul><!-- /.thm-breadcrumb list-unstyled -->
@@ -164,7 +164,7 @@
                                     <a href="#"><i class="fa fa-tags"></i>Loan</a>
                                     <a href="#"><i class="fa fa-comments"></i>2 Comments</a>
                                 </div><!-- /.blog-card__meta -->
-                                <h3><a href="news-details.html">Changing & grow your business faster</a></h3>
+                                <h3><a href="news-details.php">Changing & grow your business faster</a></h3>
                                 <div class="blog-card__author">
                                     <img src="assets\images\blog\blog-author-1-1.png" alt="">Christine Eve
                                 </div><!-- /.blog-card__author -->
@@ -182,7 +182,7 @@
                                     <a href="#"><i class="fa fa-tags"></i>Loan</a>
                                     <a href="#"><i class="fa fa-comments"></i>2 Comments</a>
                                 </div><!-- /.blog-card__meta -->
-                                <h3><a href="news-details.html">Changing & grow your business faster</a></h3>
+                                <h3><a href="news-details.php">Changing & grow your business faster</a></h3>
                                 <div class="blog-card__author">
                                     <img src="assets\images\blog\blog-author-1-1.png" alt="">Christine Eve
                                 </div><!-- /.blog-card__author -->
@@ -200,7 +200,7 @@
                                     <a href="#"><i class="fa fa-tags"></i>Loan</a>
                                     <a href="#"><i class="fa fa-comments"></i>2 Comments</a>
                                 </div><!-- /.blog-card__meta -->
-                                <h3><a href="news-details.html">Changing & grow your business faster</a></h3>
+                                <h3><a href="news-details.php">Changing & grow your business faster</a></h3>
                                 <div class="blog-card__author">
                                     <img src="assets\images\blog\blog-author-1-1.png" alt="">Christine Eve
                                 </div><!-- /.blog-card__author -->
@@ -218,7 +218,7 @@
                                     <a href="#"><i class="fa fa-tags"></i>Loan</a>
                                     <a href="#"><i class="fa fa-comments"></i>2 Comments</a>
                                 </div><!-- /.blog-card__meta -->
-                                <h3><a href="news-details.html">Changing & grow your business faster</a></h3>
+                                <h3><a href="news-details.php">Changing & grow your business faster</a></h3>
                                 <div class="blog-card__author">
                                     <img src="assets\images\blog\blog-author-1-1.png" alt="">Christine Eve
                                 </div><!-- /.blog-card__author -->
@@ -236,7 +236,7 @@
                                     <a href="#"><i class="fa fa-tags"></i>Loan</a>
                                     <a href="#"><i class="fa fa-comments"></i>2 Comments</a>
                                 </div><!-- /.blog-card__meta -->
-                                <h3><a href="news-details.html">Changing & grow your business faster</a></h3>
+                                <h3><a href="news-details.php">Changing & grow your business faster</a></h3>
                                 <div class="blog-card__author">
                                     <img src="assets\images\blog\blog-author-1-1.png" alt="">Christine Eve
                                 </div><!-- /.blog-card__author -->
@@ -254,7 +254,7 @@
                                     <a href="#"><i class="fa fa-tags"></i>Loan</a>
                                     <a href="#"><i class="fa fa-comments"></i>2 Comments</a>
                                 </div><!-- /.blog-card__meta -->
-                                <h3><a href="news-details.html">Changing & grow your business faster</a></h3>
+                                <h3><a href="news-details.php">Changing & grow your business faster</a></h3>
                                 <div class="blog-card__author">
                                     <img src="assets\images\blog\blog-author-1-1.png" alt="">Christine Eve
                                 </div><!-- /.blog-card__author -->
@@ -277,7 +277,7 @@
                 <div class="row">
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-widget footer-widget__about">
-                            <a href="index-1.html">
+                            <a href="index-1.php">
                                 <img src="assets\images\logo-light.png" width="155" alt="">
                             </a>
                             <p>Lorem ipsum is not dolor sit amet, consect etur adi pisicing elit sed eiusmod tempor ut labore.</p>
@@ -310,14 +310,14 @@
                                     <img src="assets\images\resources\footer-post-1-1.png" alt="">
                                     <div class="footer-widget__post-list-content">
                                         <span>16 Oct, 2020</span>
-                                        <h3><a href="news-details.html">We’re Providing the Quality Services</a></h3>
+                                        <h3><a href="news-details.php">We’re Providing the Quality Services</a></h3>
                                     </div><!-- /.footer-widget__post-content -->
                                 </li>
                                 <li>
                                     <img src="assets\images\resources\footer-post-1-2.png" alt="">
                                     <div class="footer-widget__post-list-content">
                                         <span>16 Oct, 2020</span>
-                                        <h3><a href="news-details.html">We’re Providing the Quality Services</a></h3>
+                                        <h3><a href="news-details.php">We’re Providing the Quality Services</a></h3>
                                     </div><!-- /.footer-widget__post-content -->
                                 </li>
                             </ul><!-- /.list-unstyled -->
@@ -365,7 +365,7 @@
             <span class="mobile-nav__close mobile-nav__toggler"><i class="far fa-times"></i></span>
 
             <div class="logo-box">
-                <a href="index-1.html" aria-label="logo image"><img src="assets\images\logo-light.png" width="155" alt=""></a>
+                <a href="index-1.php" aria-label="logo image"><img src="assets\images\logo-light.png" width="155" alt=""></a>
             </div>
             <!-- /.logo-box -->
             <div class="mobile-nav__container"></div>

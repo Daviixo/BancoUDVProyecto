@@ -1,5 +1,5 @@
 <?php 
-$_SERVER= "174.138.46.182";
+$_SERVER= "localhost";
 $username= "root";
 $password= "DavincianosA*2021a";
 $database= "bancoaplicaciones";

@@ -146,7 +146,7 @@
     
 
                             <?php 
-                        require "insert.php";
+                       // require "insert.php";
                             ?>
                
         <footer class="site-footer">

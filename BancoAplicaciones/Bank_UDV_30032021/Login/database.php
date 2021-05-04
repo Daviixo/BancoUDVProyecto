@@ -1,10 +1,10 @@
 <?php 
 $_SERVER= "localhost";
-$username= "root";
+$username= "usuario";
 $password= "DavincianosA*2021a";
 $database= "bancoaplicaciones";
 
-$conex = mysqli_connect($_SERVER,"root",$password,"bancoaplicaciones");
+$conex = mysqli_connect($_SERVER,$username,$password,$database);
 
 try{
     $conn= new PDO("mysql:host=$_SERVER;dbname=$database",$username,$password);

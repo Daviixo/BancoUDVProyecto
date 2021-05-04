@@ -27,7 +27,7 @@ if ($inc) {
     }
     
     if ($contador>0){
-    header("Location: ../checkout.php");
+    header("Location: ../index.php");
     }
     
     if($contador<=0){

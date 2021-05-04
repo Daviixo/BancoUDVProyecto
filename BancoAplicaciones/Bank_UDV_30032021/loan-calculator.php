@@ -99,7 +99,7 @@
                         </li>
                         <li class="dropdown"><a href="#">Pages</a>
                             <ul>
-                                <li><a href="how-it-works.html">How It Works</a></li>
+                                <li><a href="how-it-works.php">How It Works</a></li>
                                 <li><a href="loan-calculator.html">Loan Calculator</a></li>
                                 <li class="dropdown">
                                     <a href="credit-card.html">Credit Card</a>

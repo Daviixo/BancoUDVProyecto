@@ -9,6 +9,7 @@ $email=$_SESSION['username'];
 if(isset($_POST['testbutton1'])){
 
     session_destroy();
+    echo '<script language="javascript">alert("Logout in process...");</script>';
 
 }
 

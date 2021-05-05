@@ -6,7 +6,7 @@ session_start();
 
 $email=$_SESSION['username'];
 
-if(isset($_POST['testbutton1'])){
+if(isset($_POST['logout'])){
 
     session_destroy();
     echo '<script language="javascript">alert("Logout in process...");</script>';
@@ -16,8 +16,8 @@ if(isset($_POST['testbutton1'])){
 ?>
 
 <form method="post">
-<input type="submit" name="testbutton1"
-value="Button1"/>
+<input type="submit" name="logout"
+value="Logout"/>
 
 <!DOCTYPE html>
 <html lang="en">

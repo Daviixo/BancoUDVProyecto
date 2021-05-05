@@ -1,4 +1,8 @@
-﻿<?php
+﻿
+
+<?php
+
+session_start();
 
 $email=$_SESSION['username'];
 
@@ -27,7 +31,6 @@ value="Button1"/>
     <link rel="icon" type="image/png" sizes="16x16" href="assets\images\favicons\favicon-16x16.png">
     <link rel="manifest" href="assets\images\favicons\site.webmanifest">
     <script type = "text/javascript" src="apirest.js"></script>  
-    <
     <meta name="description" content="Pylon Loan HTML Template">
 
     <!-- fonts -->

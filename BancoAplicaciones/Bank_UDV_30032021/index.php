@@ -6,14 +6,18 @@ echo '<script language="javascript">alert("This is a test?");</script>';
 
 ?>
 
-<script type="text/javascript">
-    var userEmail = "<?php $email_usuario ?>";
-</script>
-
 <script>
 function testFunction1(){
 
-    alert("Yo soy: " + userEmail);
+    var userEmail = "<?php $email ?>";
+    if(userEmail==""){
+
+        alert("No hay nadie :c");
+
+    }else{
+        alert("Yo soy: " + userEmail);
+    }
+    
 
 }
 

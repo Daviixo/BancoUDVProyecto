@@ -6,6 +6,18 @@ echo '<script language="javascript">alert("This is a test?");</script>';
 
 ?>
 
+<script type="text/javascript">
+    var userEmail = "<?php $email_usuario ?>";
+</script>
+
+<script>
+function testFunction1(){
+
+    alert("Yo soy: " + userEmail);
+
+}
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,6 +53,9 @@ echo '<script language="javascript">alert("This is a test?");</script>';
 
 <input type = "button" onclick = "firstExample()" value = "1st Function">
 <input type = "button" onclick = "searchByDPI()" value = "Get by DPI">    
+<input type = "button" onclick = "testFunction1()" value = "Test">
+<button onclick="testFunction1()">Testeo loco</button>
+
 <br>
 
 <h1>Welcome: <?php echo $email; ?></h1>

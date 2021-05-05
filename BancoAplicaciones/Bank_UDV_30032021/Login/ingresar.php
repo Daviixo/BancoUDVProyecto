@@ -24,11 +24,12 @@ if ($inc) {
       // verificar contraseña cifrada y validacion de correo 
       if(password_verify($pass, $password )&&($email_usuario==$email)){
         $contador++;
+        $_SESSION['username']==$email;
       }  
     }
     
     if ($contador>0){
-    echo '<script type="text/javascript">myTestFunction();</script>';
+    
     header("Location: ../index.php");
     }
     
@@ -37,11 +38,5 @@ if ($inc) {
     }
 	}
 }
-
-<script type="text/javascript">
-function myTestFunction(){
-alert('This is a test');
-}
-</script>
 
 ?>

@@ -1,4 +1,12 @@
-﻿<!DOCTYPE html>
+﻿<?php 
+
+session_start();
+$email=$_SESSION['username'];
+echo '<script language="javascript">alert("This is a test?");</script>';
+
+?>
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>

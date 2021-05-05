@@ -72,7 +72,12 @@
                         <a href="index.html" aria-label="logo image"><img src="assets\images\UDV_Bank.JPG" width="155" alt=""></a>
                         <span class="fa fa-bars mobile-nav__toggler"></span>
                     </div><!-- /.logo-box -->
-                    
+                    <ul class="main-menu__list">
+                        <div style="width:750px; margin:0 auto;">
+                            
+                        <ul>
+                    </ul>
+                    </div>
                     <!-- /.main-menu__list -->
 
                     <div class="main-header__info">

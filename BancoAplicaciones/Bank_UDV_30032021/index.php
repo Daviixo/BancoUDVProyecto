@@ -1,8 +1,8 @@
-﻿<!-- This is David's test -->
+﻿<?php
 
-<?php
+$email=$_SESSION['username'];
 
-if(isset($_POST['logout'])){
+if(isset($_POST['testbutton1'])){
 
     session_destroy();
 
@@ -11,8 +11,8 @@ if(isset($_POST['logout'])){
 ?>
 
 <form method="post">
-<input type="submit" name="logout"
-value="Logout"/>
+<input type="submit" name="testbutton1"
+value="Button1"/>
 
 <!DOCTYPE html>
 <html lang="en">

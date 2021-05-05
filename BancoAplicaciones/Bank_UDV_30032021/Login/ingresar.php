@@ -1,4 +1,5 @@
 <?php 
+session_start();
 $inc = include("database.php");
 $pass=$_POST['password'];
 $email_usuario=$_POST['email_usuario'];
@@ -27,6 +28,7 @@ if ($inc) {
     }
     
     if ($contador>0){
+    myFunction();  
     header("Location: ../index.php");
     }
     
@@ -35,4 +37,12 @@ if ($inc) {
     }
 	}
 }
+
+
+function myFunction(){
+
+  alert("Hola");
+
+}
+
 ?>

@@ -68,59 +68,8 @@
                     <ul class="main-menu__list">
                         <li class="dropdown">
                             <a href="../index.php">Home</a>
-                            <ul>
-                                <li>
-                                    <a href="../index.php">Home One</a>
-                                </li>
-                                <li><a href="index-1.html">Home Two</a></li>
-                                <li class="dropdown">
-                                    <a href="#">Header Styles</a>
-                                    <ul>
-                                        <li><a href="index-1.html">Header One</a></li>
-                                        <li><a href="index-1.html">Header Two</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
                         </li>
-                        <li class="dropdown">
-                            <a href="about.html">About</a>
-                            <ul>
-                                <li><a href="team.html">Team</a></li>
-                                <li><a href="team-details.html">Team Details</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown"><a href="services.html">Services</a>
-                            <ul>
-                                <li><a href="services.html">Services</a></li>
-                                <li><a href="service-details.html">Service Details</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown"><a href="news.html">News</a>
-                            <ul>
-                                <li><a href="news.html">News</a></li>
-                                <li><a href="news-details.html">News Details</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown"><a href="#">Pages</a>
-                            <ul>
-                                <li><a href="how-it-works.php">How It Works</a></li>
-                                <li><a href="loan-calculator.html">Loan Calculator</a></li>
-                                <li class="dropdown">
-                                    <a href="credit-card.html">Credit Card</a>
-                                    <ul>
-                                        <li><a href="credit-card.html">Credit Card</a></li>
-                                        <li><a href="credit-card-details.html">Credit Card Details</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="faq.html">FAQ</a></li>
-                                <li><a href="testimonials.html">Testimonials</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li class="search-btn search-toggler">
-                            <a href="#"><i class="pylon-icon-magnifying-glass"></i></a>
-                        </li>
-                    </ul>
+                        
                     <!-- /.main-menu__list -->
 
                     <div class="main-header__info">

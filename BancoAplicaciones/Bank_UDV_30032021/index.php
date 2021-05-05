@@ -1,4 +1,6 @@
 ﻿
+<!DOCTYPE html>
+<html lang="en">
 
 <?php
 
@@ -20,9 +22,6 @@ if(isset($_POST['logout'])){
 value="Logout"/>
 
 <a href="Login/Login.php" target="_"><input type="button" value="Login"/></a>
-
-<!DOCTYPE html>
-<html lang="en">
 
 <head>
     <meta charset="UTF-8">

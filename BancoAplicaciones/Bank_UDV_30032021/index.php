@@ -1,18 +1,8 @@
-﻿<?php 
-
-echo "<a href='BancoAplicaciones\Bank_UDV_30032021\Login\destroy.php'>Logout</a>";
-
-session_start();
-$email=$_SESSION['username'];
-echo '<script language="javascript">alert("This is a test?");</script>';
-
-?>
-
-<!-- This is David's test -->
+﻿<!-- This is David's test -->
 
 <?php
 
-if(isset($_POST['testbutton1'])){
+if(isset($_POST['logout'])){
 
     session_destroy();
 
@@ -21,24 +11,8 @@ if(isset($_POST['testbutton1'])){
 ?>
 
 <form method="post">
-<input type="submit" name="testbutton1"
-value="Button1"/>
-
-<script>
-function testFunction1(){
-
-    var userEmail = "<?php $email ?>";
-    if(userEmail==""){
-
-        alert("No hay nadie :c");
-
-    }else{
-        alert("Yo soy: " + userEmail);
-    }
-    
-
-}
-
+<input type="submit" name="logout"
+value="Logout"/>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -76,7 +50,6 @@ function testFunction1(){
 
 <input type = "button" onclick = "firstExample()" value = "1st Function">
 <input type = "button" onclick = "searchByDPI()" value = "Get by DPI">    
-<input type = "button" onclick = "testFunction1()" value = "Test">
 
 <br>
 

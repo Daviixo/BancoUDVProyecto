@@ -62,12 +62,12 @@
             <nav class="main-menu">
                 <div class="container">
                     <div class="logo-box">
-                    <!--<a href="index.php" aria-label="logo image"><img src="assets\images\UDV_Bank.JPG" width="155" alt=""></a> -->
+                    <a href="index.php" aria-label="logo image"><img src="assets\images\UDV_Bank.JPG" width="155" alt=""></a>
                         <span class="fa fa-bars mobile-nav__toggler"></span>
                     </div><!-- /.logo-box -->
                     <ul class="main-menu__list">
                         <li class="dropdown">
-                        <div style="width:800px;" margin:0 auto;>
+                        <div style="width:100px;" margin:0 auto;>
                             <a href="../index.php">Home</a>
                             </div>
                         </li>

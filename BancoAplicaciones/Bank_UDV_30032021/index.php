@@ -58,7 +58,7 @@ function testFunction1(){
 <input type = "button" onclick = "firstExample()" value = "1st Function">
 <input type = "button" onclick = "searchByDPI()" value = "Get by DPI">    
 <input type = "button" onclick = "testFunction1()" value = "Test">
-<button onclick="testFunction1()">Testeo loco</button>
+<button onclick="session_reset();">Testeo loco</button>
 
 <br>
 

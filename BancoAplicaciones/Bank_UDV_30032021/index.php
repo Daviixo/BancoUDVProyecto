@@ -41,6 +41,9 @@ echo '<script language="javascript">alert("This is a test?");</script>';
 
 <input type = "button" onclick = "firstExample()" value = "1st Function">
 <input type = "button" onclick = "searchByDPI()" value = "Get by DPI">    
+<br>
+
+<h1>Welcome: <?php echo $email; ?></h1>
 
 <body>
     <div class="preloader">

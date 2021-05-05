@@ -60,8 +60,6 @@ if(isset($_POST['logout'])){
 
 <br>
 
-<h1>Welcome, <?php echo $email; ?></h1>
-
 <body>
     <div class="preloader">
         <img class="preloader__image" src="assets\images\loader.png" alt="">

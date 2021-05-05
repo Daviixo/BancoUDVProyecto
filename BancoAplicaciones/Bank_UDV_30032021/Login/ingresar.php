@@ -38,10 +38,10 @@ if ($inc) {
 	}
 }
 
-
 function myFunction(){
 
-  alert("Hola");
+  echo '<script type="text/JavaScript"> prompt("Holi");
+  </script>';
 
 }
 

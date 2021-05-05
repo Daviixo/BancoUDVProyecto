@@ -67,7 +67,9 @@
                     </div><!-- /.logo-box -->
                     <ul class="main-menu__list">
                         <li class="dropdown">
+                        <div style="width:800px;" margin:0 auto;>
                             <a href="../index.php">Home</a>
+                            </div>
                         </li>
                         
                     <!-- /.main-menu__list -->

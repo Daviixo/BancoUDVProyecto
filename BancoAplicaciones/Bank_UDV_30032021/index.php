@@ -10,7 +10,7 @@ if(isset($_POST['logout'])){
 
     session_destroy();
     echo '<script language="javascript">alert("Logout in process...");</script>';
-
+    
 }
 
 ?>
@@ -18,6 +18,8 @@ if(isset($_POST['logout'])){
 <form method="post">
 <input type="submit" name="logout"
 value="Logout"/>
+
+<button onclick="location.href = 'Login/Login.php';" id="myButton" class="float-left submit-button" >Login</button>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -57,7 +59,7 @@ value="Logout"/>
 
 <br>
 
-<h1>Welcome: <?php echo $email; ?></h1>
+<h1>Welcome, <?php echo $email; ?></h1>
 
 <body>
     <div class="preloader">

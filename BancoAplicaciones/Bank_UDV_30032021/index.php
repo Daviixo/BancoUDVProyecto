@@ -14,7 +14,7 @@ echo '<script language="javascript">alert("This is a test?");</script>';
 
 if(isset($_POST['testbutton1'])){
 
-    session_unset();
+    session_destroy();
 
 }
 

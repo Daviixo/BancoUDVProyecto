@@ -17,11 +17,13 @@ if(isset($_POST['logout'])){
 
 ?>
 
-<form method="post">
-<input type="submit" name="logout"
-value="Logout"/>
+<form method="post"><input type="submit" name="logout"value="Logout"/>
+
+<!--
 
 <a href="Login/Login.php" target="_"><input type="button" value="Login"/></a>
+
+-->
 
 <head>
     <meta charset="UTF-8">
@@ -91,62 +93,7 @@ value="Logout"/>
                         <a href="index.html" aria-label="logo image"><img src="assets\images\UDV_Bank.JPG" width="155" alt=""></a>
                         <span class="fa fa-bars mobile-nav__toggler"></span>
                     </div><!-- /.logo-box -->
-                    <ul class="main-menu__list">
-                        <li class="dropdown">
-                            <a href="index.php">Home</a>
-                            <ul>
-                                <li>
-                                    <a href="index.php">Home One</a>
-                                </li>
-                                <li><a href="index.php">Home Two</a></li>
-                                <li class="dropdown">
-                                    <a href="#">Header Styles</a>
-                                    <ul>
-                                        <li><a href="index.php">Header One</a></li>
-                                        <li><a href="index.php">Header Two</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="about.php">About</a>
-                            <ul>
-                                <li><a href="team.php">Team</a></li>
-                                <li><a href="team-details.php">Team Details</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown"><a href="services.php">Services</a>
-                            <ul>
-                                <li><a href="services.php">Services</a></li>
-                                <li><a href="service-details.php">Service Details</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown"><a href="news.php">News</a>
-                            <ul>
-                                <li><a href="news.php">News</a></li>
-                                <li><a href="news-details.php">News Details</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown"><a href="#">Pages</a>
-                            <ul>
-                                <li><a href="how-it-works.php">How It Works</a></li>
-                                <li><a href="loan-calculator.php">Loan Calculator</a></li>
-                                <li class="dropdown">
-                                    <a href="credit-card.php">Credit Card</a>
-                                    <ul>
-                                        <li><a href="credit-card.php">Credit Card</a></li>
-                                        <li><a href="credit-card-details.php">Credit Card Details</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="faq.php">FAQ</a></li>
-                                <li><a href="testimonials.html">Testimonials</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="contact.php">Contact</a></li>
-                        <li class="search-btn search-toggler">
-                            <a href="#"><i class="pylon-icon-magnifying-glass"></i></a>
-                        </li>
-                    </ul>
+                    
                     <!-- /.main-menu__list -->
 
                     <div class="main-header__info">
@@ -324,9 +271,9 @@ value="Logout"/>
                                 <img src="assets\images\services\services-1-1.png" alt="">
                             </div><!-- /.service-one__image -->
                             <div class="service-one__content">
-                                <h3><a href="service-details.php">Personal Loan</a></h3>
+                                <h3><a href="#">Personal Loan</a></h3>
                                 <p>There are many variations of passages of lorem ipsum available the majority have some.</p>
-                                <a href="service-details.php" class="pylon-icon-right-arrow service-one__link"></a><!-- /.service-one__link -->
+                                <a href="#" class="pylon-icon-right-arrow service-one__link"></a><!-- /.service-one__link -->
                             </div><!-- /.service-one__content -->
                         </div><!-- /.service-one__card -->
                     </div><!-- /.col-lg-4 -->
@@ -336,9 +283,9 @@ value="Logout"/>
                                 <img src="assets\images\services\services-1-2.png" alt="">
                             </div><!-- /.service-one__image -->
                             <div class="service-one__content">
-                                <h3><a href="service-details.php">Education Loan</a></h3>
+                                <h3><a href="#">Education Loan</a></h3>
                                 <p>There are many variations of passages of lorem ipsum available the majority have some.</p>
-                                <a href="service-details.php" class="pylon-icon-right-arrow service-one__link"></a><!-- /.service-one__link -->
+                                <a href="#" class="pylon-icon-right-arrow service-one__link"></a><!-- /.service-one__link -->
                             </div><!-- /.service-one__content -->
                         </div><!-- /.service-one__card -->
                     </div><!-- /.col-lg-4 -->
@@ -348,9 +295,9 @@ value="Logout"/>
                                 <img src="assets\images\services\services-1-3.png" alt="">
                             </div><!-- /.service-one__image -->
                             <div class="service-one__content">
-                                <h3><a href="service-details.php">Business Loan</a></h3>
+                                <h3><a href="#">Business Loan</a></h3>
                                 <p>There are many variations of passages of lorem ipsum available the majority have some.</p>
-                                <a href="service-details.php" class="pylon-icon-right-arrow service-one__link"></a><!-- /.service-one__link -->
+                                <a href="#" class="pylon-icon-right-arrow service-one__link"></a><!-- /.service-one__link -->
                             </div><!-- /.service-one__content -->
                         </div><!-- /.service-one__card -->
                     </div><!-- /.col-lg-4 -->

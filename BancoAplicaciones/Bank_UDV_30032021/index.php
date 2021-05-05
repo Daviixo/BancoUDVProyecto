@@ -8,6 +8,22 @@ echo '<script language="javascript">alert("This is a test?");</script>';
 
 ?>
 
+<!-- This is David's test -->
+
+<?php
+
+if(isset($_POST['testbutton1'])){
+
+    session_unset();
+
+}
+
+?>
+
+<form method="post">
+<input type="submit" name="testbutton1"
+value="Button1"/>
+
 <script>
 function testFunction1(){
 

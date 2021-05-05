@@ -24,7 +24,7 @@ if ($inc) {
       // verificar contraseña cifrada y validacion de correo 
       if(password_verify($pass, $password )&&($email_usuario==$email)){
         $contador++;
-        $_SESSION['username']==$email;
+        $_SESSION['username']=$email_usuario;
       }  
     }
     

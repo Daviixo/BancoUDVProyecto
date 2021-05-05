@@ -35,6 +35,7 @@ function testFunction1(){
     <link rel="icon" type="image/png" sizes="16x16" href="assets\images\favicons\favicon-16x16.png">
     <link rel="manifest" href="assets\images\favicons\site.webmanifest">
     <script type = "text/javascript" src="apirest.js"></script>  
+    <
     <meta name="description" content="Pylon Loan HTML Template">
 
     <!-- fonts -->
@@ -50,7 +51,7 @@ function testFunction1(){
     <link rel="stylesheet" href="assets\css\bootstrap-select.min.css">
     <link rel="stylesheet" href="assets\css\nouislider.min.css">
     <link rel="stylesheet" href="assets\css\nouislider.pips.css">
-
+    
     <!-- template styles -->
     <link rel="stylesheet" href="assets\css\main.css">
 </head>
@@ -58,7 +59,8 @@ function testFunction1(){
 <input type = "button" onclick = "firstExample()" value = "1st Function">
 <input type = "button" onclick = "searchByDPI()" value = "Get by DPI">    
 <input type = "button" onclick = "testFunction1()" value = "Test">
-<button onclick="session_reset();">Testeo loco</button>
+<a href="BancoAplicaciones\Bank_UDV_30032021\Login\destroy.php">Logout</a>
+
 
 <br>
 

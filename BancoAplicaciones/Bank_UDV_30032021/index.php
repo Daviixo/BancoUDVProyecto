@@ -19,7 +19,7 @@ if(isset($_POST['logout'])){
 <input type="submit" name="logout"
 value="Logout"/>
 
-<button onclick="location.href = 'Login/Login.php';" id="myButton" class="float-left submit-button" >Login</button>
+<a href="Login/Login.php" target="_"><input type="button" value="Login"/></a>
 
 <!DOCTYPE html>
 <html lang="en">

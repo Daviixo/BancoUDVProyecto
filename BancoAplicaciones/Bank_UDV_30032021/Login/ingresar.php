@@ -28,7 +28,7 @@ if ($inc) {
     }
     
     if ($contador>0){
-    myFunction();  
+    echo '<script type="text/javascript">myTestFunction();</script>';
     header("Location: ../index.php");
     }
     
@@ -38,11 +38,10 @@ if ($inc) {
 	}
 }
 
-function myFunction(){
-
-  echo '<script type="text/JavaScript"> prompt("Holi");
-  </script>';
-
+<script type="text/javascript">
+function myTestFunction(){
+alert('This is a test');
 }
+</script>
 
 ?>

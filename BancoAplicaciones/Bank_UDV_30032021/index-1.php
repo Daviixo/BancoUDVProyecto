@@ -53,6 +53,8 @@ if(isset($_POST['logout'])){
 <input type = "button" onclick = "firstExample()" value = "1st Function">
 <input type = "button" onclick = "searchByDPI()" value = "Get by DPI">    
 
+<h1>Welcome, <?php echo $email; ?></h1>
+
 <body>
     <div class="preloader">
         <img class="preloader__image" src="assets\images\loader.png" alt="">

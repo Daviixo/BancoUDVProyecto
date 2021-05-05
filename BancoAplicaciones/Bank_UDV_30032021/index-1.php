@@ -13,7 +13,7 @@ if(isset($_POST['logout'])){
 
     session_destroy();
     echo '<script language="javascript">alert("Logout in process...");</script>';
-    header('Location:../index.php');
+    header('Location:BancoAplicaciones\Bank_UDV_30032021\index.php');
 }
 
 ?>

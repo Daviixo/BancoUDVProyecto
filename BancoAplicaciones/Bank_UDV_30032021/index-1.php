@@ -1,6 +1,25 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 
+<!-- TO LOGOUT THE USER
+
+<?php
+
+session_start();
+
+$email=$_SESSION['username'];
+
+if(isset($_POST['logout'])){
+
+    session_destroy();
+    echo '<script language="javascript">alert("Logout in process...");</script>';
+    
+}
+
+?>
+
+-->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -49,7 +68,7 @@
                             <a href="#" class="fab fa-pinterest-p"></a>
                             <a href="#" class="fab fa-instagram"></a>
                         </div><!-- /.topbar__social -->
-                        <a href="Login\Login.php">Login</a>
+                        <form method="post"><input type="submit" name="logout"value="Logout"/>
                         <a href="#">Company News</a>
                         <a href="#">FAQs</a>
                     </div><!-- /.topbar__left -->

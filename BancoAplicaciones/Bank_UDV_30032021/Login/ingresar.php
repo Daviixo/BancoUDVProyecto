@@ -30,7 +30,7 @@ if ($inc) {
     
     if ($contador>0){
     
-    header("Location: ../index.php");
+    header("Location: ../index-1.php");
     }
     
     if($contador<=0){

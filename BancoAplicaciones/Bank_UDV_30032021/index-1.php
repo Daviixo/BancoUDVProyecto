@@ -268,24 +268,60 @@ if(isset($_POST['logout'])){
                             <p>There are many variations of passages of lorem ipsum available the majority have suffered alteration in some form by injected humour. Duis aute irure dolor lipsum is simply free text available in the local markets in reprehenderit.</p>
                         </div><!-- /.about-one__content -->
                     </div><!-- /.col-lg-6 -->
+
                     <div class="col-lg-6">
+                        <form action="#" id="loan-calculator" data-interest-rate="15" class="about-one__form wow fadeInRight animated" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-name: fadeInRight;">
+                            <h3>How Much You Need</h3>
+                            <div class="about-one__form-content">
+                                <div class="input-box__top">
+                                </div><!-- /.input-box__top -->
+                                <div class="input-box">
+                                    <div class="range-slider-count noUi-target noUi-ltr noUi-horizontal noUi-txt-dir-ltr" id="range-slider-count"><div class="noUi-base"><div class="noUi-connects"><div class="noUi-connect" style="transform: translate(0%, 0px) scale(1, 1);"></div></div><div class="noUi-origin" style="transform: translate(0%, 0px); z-index: 4;"><div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="1000.0" aria-valuemax="40000.0" aria-valuenow="40000.0" aria-valuetext="40000.00"><div class="noUi-touch-area"></div><div class="noUi-tooltip">$40000</div></div></div></div></div>
+                                    <input type="hidden" value="40000.00" id="min-value-rangeslider-count">
+                                    <input type="hidden" value="" id="max-value-rangeslider-count">
+                                </div><!-- /.input-box -->
+                                <div class="input-box__top">                             
+                                </div><!-- /.input-box__top -->
+                                <div class="input-box">
+                                    <div class="range-slider-month noUi-target noUi-ltr noUi-horizontal noUi-txt-dir-ltr" id="range-slider-month"><div class="noUi-base"><div class="noUi-connects"><div class="noUi-connect" style="transform: translate(0%, 0px) scale(1, 1);"></div></div><div class="noUi-origin" style="transform: translate(0%, 0px); z-index: 4;"><div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="1.0" aria-valuemax="12.0" aria-valuenow="12.0" aria-valuetext="12.00"><div class="noUi-touch-area"></div><div class="noUi-tooltip">12</div></div></div></div></div>
+                                    <input type="hidden" value="12.00" id="min-value-rangeslider-month">
+                                    <input type="hidden" value="" id="max-value-rangeslider-month">
+                                </div><!-- /.input-box -->
+                                <p>
+                                    <span>Pay Monthly</span>
+                                    <b>$<i id="loan-monthly-pay">3833</i></b>
+                                </p>
+                                <p>
+                                    <span>Term of Use</span>
+                                    <b><i id="loan-month">12</i> Months</b>
+                                </p>
+                                <p>
+                                    <span>Total Pay Back</span>
+                                    <b>$<i id="loan-total">46000</i></b>
+                                </p>
+                                <button type="submit" class="thm-btn">Apply For Loan</button>
+                            </div><!-- /.about-one__from-content -->
+                        </form><!-- /.about-one__form -->
+                    </div>
+
+                    <!-- <div class="col-lg-6">
                         <form action="#" id="loan-calculator" data-interest-rate="15" class="about-one__form wow fadeInRight" data-wow-duration="1500ms">
                             <h3>How Much You Need</h3>
                             <div class="about-one__form-content">
                                 <div class="input-box__top">  
-                                </div><!-- /.input-box__top -->
+                                </div>
                                 <div class="input-box">
                                     <div class="range-slider-count" id="range-slider-count"></div>
                                     <input type="hidden" value="" id="min-value-rangeslider-count">
                                     <input type="hidden" value="" id="max-value-rangeslider-count">
-                                </div><!-- /.input-box -->
+                                </div>
                                 <div class="input-box__top">
-                                </div><!-- /.input-box__top -->
+                                </div>
                                 <div class="input-box">
                                     <div class="range-slider-month" id="range-slider-month"></div>
                                     <input type="hidden" value="" id="min-value-rangeslider-month">
                                     <input type="hidden" value="" id="max-value-rangeslider-month">
-                                </div><!-- /.input-box -->
+                                </div>
                                 <p>
                                     <span>Pay Monthly</span>
                                     <b>$<i id="loan-monthly-pay"></i></b>
@@ -299,12 +335,12 @@ if(isset($_POST['logout'])){
                                     <b>$<i id="loan-total"></i></b>
                                 </p>
                                 <button type="submit" class="thm-btn">Apply For Loan</button>
-                            </div><!-- /.about-one__from-content -->
-                        </form><!-- /.about-one__form -->
-                    </div><!-- /.col-lg-6 -->
-                </div><!-- /.row -->
-            </div><!-- /.container -->
-        </section><!-- /.about-one -->
+                            </div>
+                        </form>
+                    </div> -->
+                </div>
+            </div>
+        </section>
 
         <section class="service-one">
             <div class="container">

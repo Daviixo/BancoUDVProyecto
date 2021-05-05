@@ -2,22 +2,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php
-
-session_start();
-
-$email=$_SESSION['username'];
-
-if(isset($_POST['logout'])){
-
-    session_destroy();
-    echo '<script language="javascript">alert("Logout in process...");</script>';
-    
-}
-
-?>
-
-<form method="post"><input type="submit" name="logout"value="Logout"/>
 
 <!--
 
@@ -54,9 +38,6 @@ if(isset($_POST['logout'])){
     <!-- template styles -->
     <link rel="stylesheet" href="assets\css\main.css">
 </head>
-
-<input type = "button" onclick = "firstExample()" value = "1st Function">
-<input type = "button" onclick = "searchByDPI()" value = "Get by DPI">    
 
 <br>
 

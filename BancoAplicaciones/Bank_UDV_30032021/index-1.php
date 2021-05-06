@@ -70,7 +70,9 @@ if(isset($_POST['logout'])){
                             <a href="#" class="fab fa-pinterest-p"></a>
                             <a href="#" class="fab fa-instagram"></a>
                         </div><!-- /.topbar__social -->
+                        <div class="col-xl-6 col-lg-6">
                         <form method="post"><input type="submit" name="logout"value="Logout"/>
+                        </div>
                         <a href="#">Company News</a>
                         <a href="#">FAQs</a>
                     </div><!-- /.topbar__left -->

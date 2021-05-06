@@ -73,10 +73,10 @@ if(isset($_POST['logout'])){
                             <a href="#" class="fab fa-instagram"></a>
                         </div><!-- /.topbar__social -->
                         
-                        <form method="post"><button type="submit" class="btn btn-primary" name="logout"value="Logout"/>
+                        <form method="post"><button type="submit" class="btn btn-primary" name="logout"value="Logout"></button>
                         
-                        <a href="#">Company News</a>
-                        <a href="#">FAQs</a>
+                        <!-- <a href="#">Company News</a>
+                        <a href="#">FAQs</a> -->
                     </div><!-- /.topbar__left -->
                     <div class="topbar__right">
                         <a href="#"><i class="pylon-icon-email1"></i>needhelp@company.com</a>

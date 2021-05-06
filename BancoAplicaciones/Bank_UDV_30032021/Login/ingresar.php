@@ -6,7 +6,7 @@ $email_usuario=$_POST['email_usuario'];
 $contador=0;
 if (isset($pass)){
   //header("Location: Login.php");
-  echo '<script language="javascript">alert(" Usuario y contraseña son necesarios para acceder");window.location.href="Login.php"</script>';
+  echo '<script language="javascript">alert("User and/or password are incorrect. Please try again!");window.location.href="Login.php"</script>';
  
 }
 

@@ -39,22 +39,22 @@
             <nav class="main-menu main-menu__two">
                 <div class="container">
                     <div class="logo-box">
-                        <a href="index-1.html" aria-label="logo image"><img src="assets\images\logo-light.png" width="155" alt=""></a>
+                        <a href="index-1.php" aria-label="logo image"><img src="assets\images\logo-light.png" width="155" alt=""></a>
                         <span class="fa fa-bars mobile-nav__toggler"></span>
                     </div><!-- /.logo-box -->
                     <ul class="main-menu__list">
                         <li class="dropdown">
-                            <a href="index-1.html">Home</a>
+                            <a href="index-1.php">Home</a>
                             <ul>
                                 <li>
-                                    <a href="index-1.html">Home One</a>
+                                    <a href="index-1.php">Home One</a>
                                 </li>
-                                <li><a href="index-1.html">Home Two</a></li>
+                                <li><a href="index-1.php">Home Two</a></li>
                                 <li class="dropdown">
                                     <a href="#">Header Styles</a>
                                     <ul>
-                                        <li><a href="index-1.html">Header One</a></li>
-                                        <li><a href="index-1.html">Header Two</a></li>
+                                        <li><a href="index-1.php">Header One</a></li>
+                                        <li><a href="index-1.php">Header Two</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -720,7 +720,7 @@
                 <div class="row">
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-widget footer-widget__about">
-                            <a href="index-1.html">
+                            <a href="index-1.php">
                                 <img src="assets\images\logo-light.png" width="155" alt="">
                             </a>
                             <p>Lorem ipsum is not dolor sit amet, consect etur adi pisicing elit sed eiusmod tempor ut labore.</p>
@@ -808,7 +808,7 @@
             <span class="mobile-nav__close mobile-nav__toggler"><i class="far fa-times"></i></span>
 
             <div class="logo-box">
-                <a href="index-1.html" aria-label="logo image"><img src="assets\images\logo-light.png" width="155" alt=""></a>
+                <a href="index-1.php" aria-label="logo image"><img src="assets\images\logo-light.png" width="155" alt=""></a>
             </div>
             <!-- /.logo-box -->
             <div class="mobile-nav__container"></div>

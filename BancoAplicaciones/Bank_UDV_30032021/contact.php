@@ -1,6 +1,24 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 
+<!-- TO LOGOUT THE USER
+
+<?php
+
+session_start();
+
+$email=$_SESSION['username'];
+
+if(isset($_POST['logout'])){
+
+    session_destroy();
+    echo '<script language="javascript">alert("Logout in process...");</script>';
+    header('Location:index.php');
+}
+
+?>
+
+-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

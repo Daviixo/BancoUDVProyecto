@@ -1,6 +1,23 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 
+<!-- TO LOGOUT THE USER
+
+<?php
+
+session_start();
+
+$email=$_SESSION['username'];
+
+if(isset($_POST['logout'])){
+
+    session_destroy();
+    echo '<script language="javascript">alert("Logout in process...");</script>';
+    header('Location:index.php');
+}
+
+?>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,6 +32,7 @@
     <!-- fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
     <link rel="stylesheet" href="assets\css\bootstrap.min.css">
     <link rel="stylesheet" href="assets\css\fontawesome-all.min.css">
     <link rel="stylesheet" href="assets\css\swiper.min.css">
@@ -27,6 +45,7 @@
     <link rel="stylesheet" href="assets\css\nouislider.pips.css">
 
     <!-- template styles -->
+    <h1>Welcome, <?php echo $email; ?></h1>
     <link rel="stylesheet" href="assets\css\main.css">
 </head>
 
@@ -45,9 +64,10 @@
                             <a href="#" class="fab fa-pinterest-p"></a>
                             <a href="#" class="fab fa-instagram"></a>
                         </div><!-- /.topbar__social -->
-                        <a href="#">Login</a>
+                        <form method="post"><button type="submit" class="btn btn-primary" name="logout"value="Logout">Logout</button>
+                        <!-- <a href="#">Login</a>
                         <a href="#">Company News</a>
-                        <a href="#">FAQs</a>
+                        <a href="#">FAQs</a> -->
                     </div><!-- /.topbar__left -->
                     <div class="topbar__right">
                         <a href="#"><i class="pylon-icon-email1"></i>needhelp@company.com</a>

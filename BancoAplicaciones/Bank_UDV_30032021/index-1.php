@@ -13,7 +13,7 @@ if(isset($_POST['logout'])){
 
     session_destroy();
     echo '<script language="javascript">alert("Logout in process...");</script>';
-    header('Location:index.php');
+    header('Location:index-1.php');
 }
 
 ?>
@@ -88,17 +88,17 @@ if(isset($_POST['logout'])){
                     </div><!-- /.logo-box -->
                     <ul class="main-menu__list">
                         <li class="dropdown">
-                            <a href="index.php">Home</a>
+                            <a href="index-1.php">Home</a>
                             <ul>
                                 <li>
-                                    <a href="index.php">Home One</a>
+                                    <a href="index-1.php">Home One</a>
                                 </li>
-                                <li><a href="index.php">Home Two</a></li>
+                                <li><a href="index-1.php">Home Two</a></li>
                                 <li class="dropdown">
                                     <a href="#">Header Styles</a>
                                     <ul>
-                                        <li><a href="index.php">Header One</a></li>
-                                        <li><a href="index.php">Header Two</a></li>
+                                        <li><a href="index-1.php">Header One</a></li>
+                                        <li><a href="index-1.php">Header Two</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -784,7 +784,7 @@ if(isset($_POST['logout'])){
                 <div class="row">
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-widget footer-widget__about">
-                            <a href="index.php">
+                            <a href="index-1.php">
                                 <img src="assets\images\logo-light.png" width="155" alt="">
                             </a>
                             <p>Lorem ipsum is not dolor sit amet, consect etur adi pisicing elit sed eiusmod tempor ut labore.</p>
@@ -872,7 +872,7 @@ if(isset($_POST['logout'])){
             <span class="mobile-nav__close mobile-nav__toggler"><i class="far fa-times"></i></span>
 
             <div class="logo-box">
-                <a href="index.php" aria-label="logo image"><img src="assets\images\logo-light.png" width="155" alt=""></a>
+                <a href="index-1.php" aria-label="logo image"><img src="assets\images\logo-light.png" width="155" alt=""></a>
             </div>
             <!-- /.logo-box -->
             <div class="mobile-nav__container"></div>

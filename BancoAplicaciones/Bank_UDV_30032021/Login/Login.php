@@ -68,7 +68,7 @@
                     <ul class="main-menu__list">
                         <li class="dropdown">
                         <div style="width:100px;" margin:0 auto;>
-                            <a href="../index-1.php">Home</a>
+                            <a href="../index.php">Home</a>
                             </div>
                         </li>
                         

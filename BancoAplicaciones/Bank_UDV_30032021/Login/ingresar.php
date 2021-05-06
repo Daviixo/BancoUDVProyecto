@@ -6,7 +6,7 @@ $email_usuario=$_POST['email_usuario'];
 $contador=0;
 if (isset($pass)){
   //header("Location: Login.php");
-  echo '<script language="javascript">alert(" Usuario y contraseña son necesarios para acceder");window.location.href="login.php"</script>';
+  echo '<script language="javascript">alert(" Usuario y contraseña son necesarios para acceder");window.location.href="Login.php"</script>';
  
 }
 
@@ -23,6 +23,7 @@ if ($inc) {
       $password = $row['password'];
       // verificar contraseña cifrada y validacion de correo 
       if(password_verify($pass, $password )&&($email_usuario==$email)){
+        echo '<script language="javascript">alert("Login successfully!");window.location.href="Login.php"</script>';
         $contador++;
         $_SESSION['username']=$email_usuario;
       }  
@@ -31,10 +32,11 @@ if ($inc) {
     if ($contador>0){
     
     header("Location: ../index-1.php");
+    echo '<script language="javascript">alert("Entro a CONTADOR>0!");window.location.href="Login.php"</script>';
     }
     
     if($contador<=0){
-      echo '<script language="javascript">alert("Usuario o contraseña no son correctos");window.location.href="Login.php"</script>';
+      echo '<script language="javascript">alert("(CONTADOR<=0) Usuario o contraseña no son correctos");window.location.href="Login.php"</script>';
     }
 	}
 }

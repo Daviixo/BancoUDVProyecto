@@ -34,7 +34,7 @@ if ($inc) {
     }
     
     if($contador<=0){
-      echo '<script language="javascript">alert("Usuario o contraseña no son correctos");window.location.href="login.php"</script>';
+      echo '<script language="javascript">alert("Usuario o contraseña no son correctos");window.location.href="Login.php"</script>';
     }
 	}
 }

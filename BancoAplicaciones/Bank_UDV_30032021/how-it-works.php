@@ -84,19 +84,7 @@ if(isset($_POST['logout'])){
                     <ul class="main-menu__list">
                         <li class="dropdown">
                             <a href="index-1.php">Home</a>
-                            <ul>
-                                <li>
-                                    <a href="index-1.php">Home One</a>
-                                </li>
-                                <li><a href="index-1.php">Home Two</a></li>
-                                <li class="dropdown">
-                                    <a href="#">Header Styles</a>
-                                    <ul>
-                                        <li><a href="index-1.php">Header One</a></li>
-                                        <li><a href="index-1.php">Header Two</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
+                           
                         </li>
                         <li class="dropdown">
                             <a href="about.php">About</a>

@@ -97,7 +97,7 @@
     
 
                             <?php 
-                       require "insert.php";
+                       //require "insert.php";
                             ?>
                
         <footer class="site-footer">
@@ -132,12 +132,14 @@
                                   
                                 </form>
                                 <!--Registro-->
-                                <form action="login.php" id="prueba1" class="Formulario_Registro" method="post" autocomplete="off">
-                                    <h2>Registrarse</h2>
-                                    <input  type="text" placeholder="Nombre completo"  name="nombre_usuario" require>
+                                <form action="login.php" id="prueba1" class="Formulario_Registro" method="post" autocomplete="off" style= "padding-top:0 !important">
+                                    <h2 >Registrarse</h2>
+                                    <input  type="text" placeholder="Nombre"  name="nombre_usuario" require>
+                                    <input  type="text" placeholder="Primer Apellido"  name="primerApellido" require>
+                                    <input  type="text" placeholder="Segundo Apellido"  name="segundoApellido" require>
                                     <input  type="email" placeholder="Correo Electronico" name="email_usuario" require>
-                                    <input  type="text" placeholder="Usuario" name="alias_usuario" require>
-                                    <input  type="text" placeholder="Telefono" name="telefono" require>
+                                    <input  type="text" placeholder="DPI" name="dpi_usuario" require>
+                                    <input  type="date" placeholder="Fecha Nacimiento" name="fechaNacimiento" require>
                                     <input  type="password"placeholder="Contraseña" name="password" require>
                                     <input type="submit" value="Crear usuario" class="boton"  >
                                    
@@ -268,7 +270,31 @@ console.log('Form submission cancelled.');
 var $form = $("#prueba1");
 var data = getFormData($form);
 console.log (data);
-fetch("insert.php", {
+
+
+fetch("https://banco-vivienda.club/clientes/registro", {
+    "method": "POST",
+    "headers": {
+        "content-type": "application/json",
+        'Accept': 'application/json',
+        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZFN1Y3Vyc2FsIjo1LCJ1c2VybmFtZSI6IlNVQ1VSU0FMMSIsInBhc3N3b3JkIjoicXdlcnR5IiwiaWF0IjoxNjE5NTQ3NzQ0LCJleHAiOjE2MjI2NTgxNDR9.1awdMkX9_Ajun1OLcYXD19_UbtKVgx4Uzbmy55Jlrt4"
+    },
+    body: JSON.stringify({
+        "dpi": data.dpi_usuario,
+        "name": data.nombre_usuario, 
+        "lastNameOne": data.primerApellido, 
+        "lastNameTwo": data.segundoApellido, 
+        "typeIde": 1,  
+        "bornDate": data.fechaNacimiento 
+    })
+})
+    .then(
+        response => response.json()
+    )
+    .then(response => {
+        console.log(response);
+        if (response.Code==100) {
+            fetch("insert.php", {
 	method: 'post',
     headers: {
     'Content-Type': 'charset=utf-8',
@@ -283,6 +309,14 @@ fetch("insert.php", {
         alert ("Si se pudo");
     }
 });
+        } else {
+          alert (`Error\n ${response.Message}`);  
+        }
+    })
+    .catch(err => {
+        console.error(err);
+    });
+
 
 
 

@@ -167,31 +167,15 @@
             </div><!-- /.container -->
         </footer><!-- /.site-footer -->
 
-        <!-- THIS IS JUST TO SIMULATE A LARGER PAGE -->
+    <!-- THIS IS JUST TO SIMULATE A LARGER PAGE -->
 
-        <div class="bottom-footer">
+    <footer class="site-footer">
             <div class="container">
-            </div><!-- /.bottom-footer__social -->
-        </div><!-- /.container -->
-    </div><!-- /.bottom-footer -->
+                <div class="row">
 
-    </div><!-- /.page-wrapper -->
-
-    <div class="bottom-footer">
-            <div class="container">
-            </div><!-- /.bottom-footer__social -->
-        </div><!-- /.container -->
-    </div><!-- /.bottom-footer -->
-
-    </div><!-- /.page-wrapper -->
-
-    <div class="bottom-footer">
-            <div class="container">
-            </div><!-- /.bottom-footer__social -->
-        </div><!-- /.container -->
-    </div><!-- /.bottom-footer -->
-
-    </div><!-- /.page-wrapper -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </footer><!-- /.site-footer -->
 
     <!-- END OF> THIS IS JUST TO SIMULATE A LARGER PAGE -->
 

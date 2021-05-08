@@ -26,17 +26,18 @@ if(!empty($input["primerNombre"]) && !empty($input["email_usuario"])  && !empty(
     if($stmt->execute()){
 
         $id = $conn -> lastInsertId();
+        $idInt= (int)$id;
         echo "La ID es: $id"; 
         
-        $sql = "INSERT INTO Usuario (email_usuario,password,id_DetalleUsuario)
+        $pst = "INSERT INTO Usuario (email_usuario,password,id_DetalleUsuario)
         VALUES (:email_usuario,:password,:id_DetalleUsuario)";
-        $stmt = $conn ->prepare($sql);
-        $stmt->bindParam(':email_usuario',$input['email_usuario']);
+        $statement = $conn ->prepare($pst);
+        $statement->bindParam(':email_usuario',$input['email_usuario']);
         
-        $stmt->bindParam(':id_DetalleUsuario',$id->getid(), PDO::PARAM_INT);
+        $statement->bindParam(':id_DetalleUsuario',$idInt);
 
         $password= password_hash($input['password'], PASSWORD_BCRYPT);
-        $stmt->bindParam(':password',$password);
+        $statement->bindParam(':password',$password);
         
         
     }else {

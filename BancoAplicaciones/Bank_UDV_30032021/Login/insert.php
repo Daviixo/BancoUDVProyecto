@@ -24,11 +24,13 @@ if(!empty($input["primerNombre"]) && !empty($input["email_usuario"])  && !empty(
     echo '<script type="text/javascript">console.log("'.$dpiTest.'")</script>';
     
     if($stmt->execute()){
-        $message= 'Successfully created new user';
-        echo '<script>alert("Successfully created new user")</script>';
+
         $id = $conn -> lastInsertId();
         echo "La ID es: $id"; 
-        echo '<script type="text/javascript">console.log("'.$id.'")</script>';
+        
+        $sql = "INSERT INTO Usuario (email_usuario,password,id_DetalleUsuario)
+        VALUES (:email_usuario,:password,:$id)";
+
         
     }else {
         $message='Sorry thre must have been an issue creating your password';
@@ -36,5 +38,4 @@ if(!empty($input["primerNombre"]) && !empty($input["email_usuario"])  && !empty(
     }
 }
 
-    //$sql = "SELECT id_DetalleUsuario FROM Detalle_Usuario WHERE dpi_usuario = {$dpiTest}";
-    //$stmt = $conn ->prepare($sql);
+    

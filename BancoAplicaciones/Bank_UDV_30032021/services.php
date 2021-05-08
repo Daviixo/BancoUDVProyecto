@@ -356,7 +356,7 @@ if (isset($_POST['logout'])) {
        
     
     `
-
+            let infocliente = document.querySelector("#dataCliente");
             fetch("https://banco-vivienda.club/clientes/113", {
                     "headers": {
                         'Accept': 'application/json',
@@ -385,7 +385,15 @@ if (isset($_POST['logout'])) {
                     console.error(err);
                 });
 
-            
+            // // let formulario = document.querySelector("#formulario");
+            // // formulario.addEventListener("submit", function(e) {
+            // //     e.preventDefault()
+            // //     let dpi = document.querySelector("#dpi");
+            // //     console.log(dpi.value);
+
+
+
+            // })
         </script>
 
 

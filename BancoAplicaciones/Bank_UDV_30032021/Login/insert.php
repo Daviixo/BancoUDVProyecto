@@ -35,18 +35,16 @@ if(!empty($input["primerNombre"]) && !empty($input["email_usuario"])  && !empty(
 }
 
     $sql = "SELECT id_DetalleUsuario FROM Detalle_Usuario WHERE dpi_usuario = " .$dpiTest;
-    $result = $conn->prepare($sql);
-    $result->bindParam(':id_DetalleUsuario', $temp);
-    $result->execute();
-    $result->bindValue(':id_DetalleUsario', $finalResult); 
+    $stmt = $conn ->prepare($sql);
+    $finalResult = mysqli_query($conex, $sql);
 
-    if($result->execute()){
-        $message= 'Query from ID was successful';
-        echo "<script>console.log('ID from query is: " . $finalResult . "' );</script>";
+    if($stmt->execute()){
+        $message= 'ID query was successfull';
+        echo "<script>console.log('ID is: " . $finalResult . "' );</script>";
 
         
     }else {
-        $message='There was an error, please try again.';
+        $message='Something went wrong...';
         echo $message;
     }
 

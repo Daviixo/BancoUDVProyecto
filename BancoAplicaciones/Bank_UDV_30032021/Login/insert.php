@@ -33,7 +33,7 @@ if(!empty($input["primerNombre"]) && !empty($input["email_usuario"])  && !empty(
         $stmt = $conn ->prepare($sql);
         $stmt->bindParam(':email_usuario',$input['email_usuario']);
         
-        $stmt->bindParam(':id_DetalleUsuario',$id);
+        $stmt->bindParam(':id_DetalleUsuario',$id->getid(), PDO::PARAM_INT);
 
         $password= password_hash($input['password'], PASSWORD_BCRYPT);
         $stmt->bindParam(':password',$password);

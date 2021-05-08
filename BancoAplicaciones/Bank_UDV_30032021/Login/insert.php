@@ -4,8 +4,8 @@ require "database.php";
 $input = json_decode(file_get_contents('php://input'), true);
 $message='';
 $dpiTest=$_POST['dpi_usuario'];
-$dpiTemp='';
 $result='';
+$temp='';
 $finalResult='';
 
 if(!empty($input["primerNombre"]) && !empty($input["email_usuario"])  && !empty($input["dpi_usuario"])  && !empty($input["password"])){
@@ -34,11 +34,11 @@ if(!empty($input["primerNombre"]) && !empty($input["email_usuario"])  && !empty(
     }
 }
 
-    $stmt = "SELECT id_DetalleUsuario FROM Detalle_Usuario WHERE dpi_usuario = " .$dpiTest;
-    $result = $conn->prepare($stmt) or die( mysqli_error($dbh) );
-    $result->bindParam('s', $driverNoText);
+    $sql = "SELECT id_DetalleUsuario FROM Detalle_Usuario WHERE dpi_usuario = " .$dpiTest;
+    $result = $conn->prepare($sql);
+    $result->bindParam(':id_DetalleUsuario', $temp);
     $result->execute();
-    $result->bindValue('s', $finalResult); 
+    $result->bindValue(':id_DetalleUsario', $finalResult); 
 
     if($result->execute()){
         $message= 'Query from ID was successful';

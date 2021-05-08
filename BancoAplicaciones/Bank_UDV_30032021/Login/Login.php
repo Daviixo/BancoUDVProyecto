@@ -170,8 +170,12 @@
         <!-- THIS IS JUST TO SIMULATE A LARGER PAGE -->
 
         <footer class="site-footer2">
-            
-        </footer>
+            <div class="container">
+                
+
+            </div>
+    </div>
+    </footer>
 
     <!-- END OF> THIS IS JUST TO SIMULATE A LARGER PAGE -->
 

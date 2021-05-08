@@ -38,7 +38,10 @@ if(!empty($input["primerNombre"]) && !empty($input["email_usuario"])  && !empty(
 
         $password= password_hash($input['password'], PASSWORD_BCRYPT);
         $statement->bindParam(':password',$password);
-        $statement->execute();
+        if($statement->execute()){
+            $message='insert into Usuario';
+        echo $message;
+        }
         
     }else {
         $message='Sorry thre must have been an issue creating your password';

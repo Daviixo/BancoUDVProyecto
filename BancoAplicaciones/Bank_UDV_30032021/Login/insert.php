@@ -21,8 +21,13 @@ if(!empty($input["primerNombre"]) && !empty($input["email_usuario"])  && !empty(
     $stmt->bindParam(':fecha_nacimiento',$input['fecha_nacimiento']);
     $stmt->bindParam(':direccion',$input['direccion']);
 
-    echo '<script type="text/javascript">console.log("'.$dpiTest.'")</script>';
+    $id=mysqli_insert_id($conex);
 
+    echo 'The ID is: '.$stmt->insert_id;
+    print ("PF > The ID is: " .$id);
+
+    echo '<script type="text/javascript">console.log("'.$dpiTest.'")</script>';
+    
     if($stmt->execute()){
         $message= 'Successfully created new user';
         echo '<script>alert("Successfully created new user")</script>';
@@ -34,34 +39,9 @@ if(!empty($input["primerNombre"]) && !empty($input["email_usuario"])  && !empty(
     }
 }
 
-    $consulta = "SELECT * FROM Detalle_Usuario";
-    $resultado=mysqli_query($conex,$consulta);
+    $sql = "SELECT id_DetalleUsuario FROM Detalle_Usuario WHERE dpi_usuario = {$dpiTest}";
+    $stmt = $conn ->prepare($sql);
 
-    if ($resultado) { // si el resultado es igual a true
-        while ($row = $resultado->fetch_array()) { // hacemos un array con los datos que obtenemos de la consulta
-            $id = $row['id_DetalleUsuario'];
-            $nombre = $row['primerNombre'];
-            $email = $row['email_usuario'];
-            $password = $row['password'];
-            // verificar contraseña cifrada y validacion de correo 
-            if($email_usuario==$email){
-              
-              $contador++;
-
-            }  
-          }
-
-        if ($contador>0){
-
-            echo "<script>console.log('ID is: " . $id . "' );</script>";
-        }else{
-
-            $message='No che peye...';
-            echo $message;
-        }
-
-        }
-      
     //$sql = "INSERT INTO Usuario (email_usuario,password,id_DetalleUsuario
     //VALUES(:email_usuario,:password,id_DetalleUsuario)";
     

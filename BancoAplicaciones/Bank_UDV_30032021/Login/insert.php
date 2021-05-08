@@ -21,10 +21,15 @@ if(!empty($input["primerNombre"]) && !empty($input["email_usuario"])  && !empty(
         $message= 'Successfully created new user';
         echo '<script>alert("Successfully created new user")</script>';
 
-        // $last_id = $conn->insert_id;
+        $sql = "INSERT INTO Usuario (email_usuario,password)
+        VALUES (:email_usuario,:password)";
         
-        // echo '<script>alert("ID is:"' .$last_id '")</script>';
+        $password= password_hash($input['password'], PASSWORD_BCRYPT);
+        $stmt->bindParam(':password',$password);
 
+        //ESTO DE AQUI ABAJO JODE TODO. NO TOCAR!!!!! <================= FUE ARMANDO... xD
+        // $last_id = $conn->insert_id;
+        // echo '<script>alert("ID is:"' .$last_id '")</script>';
         // echo "New record created successfully. Last inserted ID is: " . $last_id;
     
     }else {

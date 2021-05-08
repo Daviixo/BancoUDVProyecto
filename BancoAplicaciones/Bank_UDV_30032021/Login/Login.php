@@ -167,6 +167,27 @@
                 </div><!-- /.row -->
             </div><!-- /.container -->
         </footer><!-- /.site-footer -->
+
+        <!-- THIS IS JUST TO SIMULATE A LARGER PAGE -->
+        
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+                   
+                   
+
+                        <!---->
+                        <main>
+                        </main>
+                 </div>
+                    
+                   
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </footer><!-- /.site-footer -->
+
+        <!-- THIS IS JUST TO SIMULATE A LARGER PAGE -->
+
         <div class="bottom-footer">
             <div class="container">
                 <p>© Copyright 2020 by Company.com</p>

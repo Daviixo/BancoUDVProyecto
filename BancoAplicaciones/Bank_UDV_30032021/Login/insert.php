@@ -18,7 +18,7 @@ if(!empty($input["primerNombre"]) && !empty($input["email_usuario"])  && !empty(
     $stmt->bindParam(':fecha_nacimiento',$input['fecha_nacimiento']);
     $stmt->bindParam(':direccion',$input['direccion']);
 
-    echo '<script type="text/javascript"> alert("'.$dpiTest.'")</script>';
+    echo '<script type="text/javascript">console.log("'.$dpiTest.'")</script>';
 
     if($stmt->execute()){
         $message= 'Successfully created new user';

@@ -185,7 +185,7 @@
     </div>
     </footer>
 
-    <!-- THIS IS JUST TO SIMULATE A LARGER PAGE -->
+    <!-- END OF> THIS IS JUST TO SIMULATE A LARGER PAGE -->
 
     <div class="bottom-footer">
         <div class="container">

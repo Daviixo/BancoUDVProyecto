@@ -1,6 +1,4 @@
-﻿
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -48,41 +46,41 @@
                             <a href="#" class="fab fa-pinterest-p"></a>
                             <a href="#" class="fab fa-instagram"></a>
                         </div><!-- /.topbar__social -->
-                        <a href="../Login.php" >Login</a>
+                        <a href="../Login.php">Login</a>
                         <a href="#">Company News</a>
                         <a href="#">FAQs</a>
                     </div><!-- /.topbar__left -->
                     <div class="topbar__right">
                         <a href="#"><i class="pylon-icon-email1"></i>needhelp@company.com</a>
-                        
-                       
+
+
                     </div><!-- /.topbar__right -->
                 </div><!-- /.container -->
             </div><!-- /.topbar -->
             <nav class="main-menu">
                 <div class="container">
                     <div class="logo-box">
-                    <a href="index-1.php" aria-label="logo image"><img src="assets\images\UDV_Bank.JPG" width="155" alt=""></a>
+                        <a href="index-1.php" aria-label="logo image"><img src="assets\images\UDV_Bank.JPG" width="155" alt=""></a>
                         <span class="fa fa-bars mobile-nav__toggler"></span>
                     </div><!-- /.logo-box -->
                     <ul class="main-menu__list">
                         <li class="dropdown">
-                        <div style="width:100px;" margin:0 auto;>
-                            <a href="../index.php">Home</a>
+                            <div style="width:100px;" margin:0 auto;>
+                                <a href="../index.php">Home</a>
                             </div>
                         </li>
-                        
-                    <!-- /.main-menu__list -->
 
-                    <div class="main-header__info">
-                        <div class="main-header__info-phone">
-                            <i class="pylon-icon-tech-support"></i>
-                            <div class="main-header__info-phone-content">
-                                <span>Call Anytime</span>
-                                <h3><a href="tel:92-666-888-0000">92 666 888 0000</a></h3>
-                            </div><!-- /.main-header__info-phone-content -->
-                        </div><!-- /.main-header__info-phone -->
-                    </div><!-- /.main-header__info -->
+                        <!-- /.main-menu__list -->
+
+                        <div class="main-header__info">
+                            <div class="main-header__info-phone">
+                                <i class="pylon-icon-tech-support"></i>
+                                <div class="main-header__info-phone-content">
+                                    <span>Call Anytime</span>
+                                    <h3><a href="tel:92-666-888-0000">92 666 888 0000</a></h3>
+                                </div><!-- /.main-header__info-phone-content -->
+                            </div><!-- /.main-header__info-phone -->
+                        </div><!-- /.main-header__info -->
                 </div><!-- /.container -->
             </nav>
             <!-- /.main-menu -->
@@ -92,113 +90,114 @@
             <div class="sticky-header__content"></div><!-- /.sticky-header__content -->
         </div><!-- /.stricky-header -->
 
-                           
 
-    
 
-                            <?php 
-                       require "insert.php";
-                            ?>
-               
+
+
+        <?php
+        require "insert.php";
+        ?>
+
         <footer class="site-footer">
             <div class="container">
                 <div class="row">
-                   
-                   
+
+
                     <div class="login">
                         <!---->
                         <main>
                             <div class="Contenedor">
-                            <div class="caja">
-                                <div class="caja_login">
-                                    <h3 class="titulo">¿Ya posees una cuenta?</h3>
-                                    <p>Inicia sesión para ingresar al sitio</p>
-                                    <button id="Iniciar_sesión">Iniciar sesión</button>
+                                <div class="caja">
+                                    <div class="caja_login">
+                                        <h3 class="titulo">¿Ya posees una cuenta?</h3>
+                                        <p>Inicia sesión para ingresar al sitio</p>
+                                        <button id="Iniciar_sesión">Iniciar sesión</button>
+                                    </div>
+                                    <div class="caja_registro">
+                                        <h3 class="titulo">¿No posees cuenta?</h3>
+                                        <p>Crea una cuenta</p>
+                                        <button id="Registro">Registrate</button>
+                                    </div>
                                 </div>
-                                <div class="caja_registro">
-                                    <h3 class="titulo">¿No posees cuenta?</h3>
-                                    <p>Crea una cuenta</p>
-                                <button id="Registro">Registrate</button>
+                                <!--Formulario registro-->
+                                <!--Login-->
+                                <div class="Contenedor_login">
+                                    <form action="ingresar.php" id="prueba" class="Formulario" method="post" autocomplete="off">
+                                        <h2>Iniciar sesión</h2>
+                                        <input type="email" placeholder="Correo Electronico" name="email_usuario">
+                                        <input type="password" placeholder="Contraseña" name="password">
+                                        <input type="submit" value="Ingresar" class="boton">
+
+                                    </form>
+                                    <!--Registro-->
+                                    <form action="login.php" id="prueba1" class="Formulario_Registro" method="post" autocomplete="off" style="padding-top:0 !important">
+                                        <br>
+                                        <h2>Registrarse</h2>
+                                        <!--Local-->
+                                        <input type="text" placeholder="Nombre" name="primerNombre" require>
+                                        <!--Local-->
+                                        <input type="text" placeholder="Segundo Nombre" name="segundoNombre" require>
+                                        <!--Local-->
+                                        <input type="text" placeholder="Primer Apellido" name="primerApellido" require>
+                                        <!--Local-->
+                                        <input type="text" placeholder="Segundo Apellido" name="segundoApellido" require>
+                                        <!--Local-->
+                                        <input type="text" placeholder="Tercer Apellido" name="tercerApellido" require>
+                                        <!--Local-->
+                                        <input type="email" placeholder="Correo Electronico" name="email_usuario" require>
+                                        <!--Local-->
+                                        <input type="text" placeholder="DPI" name="dpi_usuario" require>
+                                        <!--Local-->
+                                        <input type="date" placeholder="Fecha Nacimiento" name="fecha_nacimiento" require>
+                                        <!--Local-->
+                                        <input type="text" placeholder="Direccion" name="direccion" require>
+                                        <!--Local-->
+                                        <input type="password" placeholder="Contraseña" name="password" require>
+                                        <input type="submit" value="Crear usuario" class="boton">
+
+                                    </form>
                                 </div>
                             </div>
-                            <!--Formulario registro-->
-                            <!--Login-->
-                            <div class="Contenedor_login">
-                                <form action="ingresar.php" id="prueba" class="Formulario" method="post" autocomplete="off">
-                                    <h2>Iniciar sesión</h2>
-                                    <input  type="email" placeholder="Correo Electronico" name="email_usuario"  >
-                                    <input  type="password" placeholder="Contraseña" name="password" >
-                                    <input type="submit" value="Ingresar" class="boton" >
-                                  
-                                </form>
-                                <!--Registro-->
-                                <form action="login.php" id="prueba1" class="Formulario_Registro" method="post" autocomplete="off" style= "padding-top:0 !important">
-                                    <h2 >Registrarse</h2>
-                                    <!--Local-->
-                                    <input  type="text" placeholder="Nombre"  name="primerNombre" require>
-                                    <!--Local-->
-                                    <input  type="text" placeholder="Segundo Nombre"  name="segundoNombre" require>
-                                    <!--Local-->
-                                    <input  type="text" placeholder="Primer Apellido"  name="primerApellido" require>
-                                    <!--Local-->
-                                    <input  type="text" placeholder="Segundo Apellido"  name="segundoApellido" require>
-                                    <!--Local-->
-                                    <input  type="text" placeholder="Tercer Apellido" name="tercerApellido" require>
-                                    <!--Local-->
-                                    <input  type="email" placeholder="Correo Electronico" name="email_usuario" require>
-                                    <!--Local-->
-                                    <input  type="text" placeholder="DPI" name="dpi_usuario" require>
-                                    <!--Local-->
-                                    <input  type="date" placeholder="Fecha Nacimiento" name="fecha_nacimiento" require>
-                                    <!--Local-->
-                                    <input  type="text" placeholder="Direccion" name="direccion" require>
-                                    <!--Local-->
-                                    <input  type="password"placeholder="Contraseña" name="password" require>
-                                    <input type="submit" value="Crear usuario" class="boton"  >
-                                   
-                                </form>
-                            </div>
-                        </div>
                         </main>
                         <script src="./script.js"></script>
-                 </div>
-                    
-                   
+                    </div>
+
+
                 </div><!-- /.row -->
             </div><!-- /.container -->
         </footer><!-- /.site-footer -->
 
         <!-- THIS IS JUST TO SIMULATE A LARGER PAGE -->
-        
-        <footer class="site-footer">
+
+        <footer class="site-footer2">
             <div class="container">
                 <div class="row">
-                   
-                   
 
-                        <!---->
-                        <main>
-                        </main>
-                 </div>
-                    
-                   
-                </div><!-- /.row -->
-            </div><!-- /.container -->
-        </footer><!-- /.site-footer -->
 
-        <!-- THIS IS JUST TO SIMULATE A LARGER PAGE -->
 
-        <div class="bottom-footer">
-            <div class="container">
-                <p>© Copyright 2020 by Company.com</p>
-                <div class="bottom-footer__social">
-                    <a href="#" class="fab fa-facebook-square"></a>
-                    <a href="#" class="fab fa-twitter"></a>
-                    <a href="#" class="fab fa-pinterest-p"></a>
-                    <a href="#" class="fab fa-instagram"></a>
-                </div><!-- /.bottom-footer__social -->
-            </div><!-- /.container -->
-        </div><!-- /.bottom-footer -->
+
+                    <main>
+                    </main>
+                </div>
+
+
+            </div>
+    </div>
+    </footer>
+
+    <!-- THIS IS JUST TO SIMULATE A LARGER PAGE -->
+
+    <div class="bottom-footer">
+        <div class="container">
+            <p>© Copyright 2020 by Company.com</p>
+            <div class="bottom-footer__social">
+                <a href="#" class="fab fa-facebook-square"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-pinterest-p"></a>
+                <a href="#" class="fab fa-instagram"></a>
+            </div><!-- /.bottom-footer__social -->
+        </div><!-- /.container -->
+    </div><!-- /.bottom-footer -->
 
     </div><!-- /.page-wrapper -->
 
@@ -284,77 +283,78 @@
 
     <!-- template js -->
     <script src="assets\js\theme.js"></script>
-    <script >
-    
-    function getFormData($form){
-    var unindexed_array = $form.serializeArray();
-    var indexed_array = {};
+    <script>
+        function getFormData($form) {
+            var unindexed_array = $form.serializeArray();
+            var indexed_array = {};
 
-    $.map(unindexed_array, function(n, i){
-    indexed_array[n['name']] = n['value'];
-    });
+            $.map(unindexed_array, function(n, i) {
+                indexed_array[n['name']] = n['value'];
+            });
 
-return indexed_array;
-}
-
-    let form = document.querySelector("#prueba1");
-
-form.addEventListener('submit', event => { event.preventDefault(); 
-console.log('Form submission cancelled.');
-var $form = $("#prueba1");
-var data = getFormData($form);
-console.log (data);
-
-
-fetch("https://banco-vivienda.club/clientes/registro", {
-    "method": "POST",
-    "headers": {
-        "content-type": "application/json",
-        'Accept': 'application/json',
-        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZFN1Y3Vyc2FsIjo1LCJ1c2VybmFtZSI6IlNVQ1VSU0FMMSIsInBhc3N3b3JkIjoicXdlcnR5IiwiaWF0IjoxNjE5NTQ3NzQ0LCJleHAiOjE2MjI2NTgxNDR9.1awdMkX9_Ajun1OLcYXD19_UbtKVgx4Uzbmy55Jlrt4"
-    },
-    body: JSON.stringify({
-        "dpi": data.dpi_usuario,
-        "name": data.primerNombre, 
-        "lastNameOne": data.primerApellido, 
-        "lastNameTwo": data.segundoApellido, 
-        "typeIde": 1,  
-        "bornDate": data.fecha_nacimiento 
-    })
-})
-    .then(
-        response => response.json()
-    )
-    .then(response => {
-        console.log(response);
-        if (response.Code==100) {
-            fetch("insert.php", {
-	method: 'post',
-    headers: {
-    'Content-Type': 'charset=utf-8',
-    },
-	body: JSON.stringify(data)
-}).then(respuesta => {
-	console.log (respuesta.statusText)
-    $("#prueba1")[0].reset()
-    if (!respuesta.ok) {
-        alert ("NO se puede y punto");
-    }else{
-        alert ("Si se pudo");
-    }
-});
-        } else {
-          alert (`Error\n ${response.Message}`);  
+            return indexed_array;
         }
-    })
-    .catch(err => {
-        console.error(err);
-    });
+
+        let form = document.querySelector("#prueba1");
+
+        form.addEventListener('submit', event => {
+            event.preventDefault();
+            console.log('Form submission cancelled.');
+            var $form = $("#prueba1");
+            var data = getFormData($form);
+            console.log(data);
+
+
+            fetch("https://banco-vivienda.club/clientes/registro", {
+                    "method": "POST",
+                    "headers": {
+                        "content-type": "application/json",
+                        'Accept': 'application/json',
+                        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZFN1Y3Vyc2FsIjo1LCJ1c2VybmFtZSI6IlNVQ1VSU0FMMSIsInBhc3N3b3JkIjoicXdlcnR5IiwiaWF0IjoxNjE5NTQ3NzQ0LCJleHAiOjE2MjI2NTgxNDR9.1awdMkX9_Ajun1OLcYXD19_UbtKVgx4Uzbmy55Jlrt4"
+                    },
+                    body: JSON.stringify({
+                        "dpi": data.dpi_usuario,
+                        "name": data.primerNombre,
+                        "lastNameOne": data.primerApellido,
+                        "lastNameTwo": data.segundoApellido,
+                        "typeIde": 1,
+                        "bornDate": data.fecha_nacimiento
+                    })
+                })
+                .then(
+                    response => response.json()
+                )
+                .then(response => {
+                    console.log(response);
+                    if (response.Code == 100) {
+                        fetch("insert.php", {
+                            method: 'post',
+                            headers: {
+                                'Content-Type': 'charset=utf-8',
+                            },
+                            body: JSON.stringify(data)
+                        }).then(respuesta => {
+                            console.log(respuesta.statusText)
+                            $("#prueba1")[0].reset()
+                            if (!respuesta.ok) {
+                                alert("NO se puede y punto");
+                            } else {
+                                alert("Si se pudo");
+                            }
+                        });
+                    } else {
+                        alert(`Error\n ${response.Message}`);
+                    }
+                })
+                .catch(err => {
+                    console.error(err);
+                });
 
 
 
 
-});
+        });
     </script>
 </body>
+
 </html>

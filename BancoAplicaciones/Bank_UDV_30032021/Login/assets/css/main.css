@@ -2783,6 +2783,14 @@ h6 {
   padding-bottom: 70px;
 }
 
+.site-footer2 {
+  background-color: #0c2139;
+  background-position: top left;
+  background-size: cover;
+  padding-top: 100px;
+  padding-bottom: 70px;
+}
+
 .footer-widget {
   margin-bottom: 30px;
 }

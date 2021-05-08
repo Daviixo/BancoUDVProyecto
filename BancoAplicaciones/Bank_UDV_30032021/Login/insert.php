@@ -39,7 +39,16 @@ if(!empty($input["primerNombre"]) && !empty($input["email_usuario"])  && !empty(
     $result->bindParam('s', $driverNoText);
     $result->execute();
     $result->bindValue('s', $finalResult); 
-    echo "ID QUE NECESITAMOS ES: " + $finalResult;
+
+    if($result->execute()){
+        $message= 'Query from ID was successful';
+        echo "<script>console.log('ID from query is: " . $finalResult . "' );</script>";
+
+        
+    }else {
+        $message='There was an error, please try again.';
+        echo $message;
+    }
 
     //$sql = "INSERT INTO Usuario (email_usuario,password,id_DetalleUsuario
     //VALUES(:email_usuario,:password,id_DetalleUsuario)";

@@ -341,18 +341,20 @@ if (isset($_POST['logout'])) {
             let template = ({
                 ...json
 
-            }) => `
-    
+            }) => {
+                let temp = "";
+                for (let index = 0; index < json.tbcliente_creditos.length; index++) {
+                    const element = array[index];
+
+                    temp += `<tr>
+            <td>${ json.tbcliente_creditos[index].credito_id}</td>
             
-            <tr>
-            <td>${ json.tbcliente_creditos[0].credito_id}</td>
-            
-            <td>${ json.tbcliente_creditos[0].clientecred_dsc}</td>
-            </tr>
-           
-       
-    
-    `
+            <td>${ json.tbcliente_creditos[index].clientecred_dsc}</td>
+            </tr>`
+                }
+                return temp;
+            }
+
             let infocliente = document.querySelector("#dataCliente");
             fetch("https://banco-vivienda.club/clientes/113", {
                     "headers": {

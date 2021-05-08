@@ -3004,31 +3004,6 @@ h6 {
   align-items: center;
 }
 
-.bottom-footerx {
-  background-color: #09192c;
-  padding-top: 125.5px;
-  padding-bottom: 27.5px;
-}
-
-.bottom-footerx .container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.bottom-footerx p {
-  font-size: 16px;
-  color: var(--thm-text-dark);
-  margin: 0;
-}
-
-@media (max-width: 667px) {
-  .bottom-footerx p {
-    margin-bottom: 10px;
-  }
-}
-
 @media (max-width: 667px) {
   .bottom-footer .container {
     flex-direction: column;

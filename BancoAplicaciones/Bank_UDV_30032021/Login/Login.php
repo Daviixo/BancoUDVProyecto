@@ -169,7 +169,23 @@
 
         <!-- THIS IS JUST TO SIMULATE A LARGER PAGE -->
 
-        <div class="bottom-footerx">
+        <div class="bottom-footer">
+            <div class="container">
+            </div><!-- /.bottom-footer__social -->
+        </div><!-- /.container -->
+    </div><!-- /.bottom-footer -->
+
+    </div><!-- /.page-wrapper -->
+
+    <div class="bottom-footer">
+            <div class="container">
+            </div><!-- /.bottom-footer__social -->
+        </div><!-- /.container -->
+    </div><!-- /.bottom-footer -->
+
+    </div><!-- /.page-wrapper -->
+
+    <div class="bottom-footer">
             <div class="container">
             </div><!-- /.bottom-footer__social -->
         </div><!-- /.container -->

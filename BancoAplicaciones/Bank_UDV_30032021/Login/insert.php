@@ -38,7 +38,7 @@ if(!empty($input["primerNombre"]) && !empty($input["email_usuario"])  && !empty(
 
         $password= password_hash($input['password'], PASSWORD_BCRYPT);
         $statement->bindParam(':password',$password);
-        
+        $statement->execute();
         
     }else {
         $message='Sorry thre must have been an issue creating your password';

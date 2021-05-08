@@ -11,7 +11,7 @@ if (isset($pass)){
 }
 
 if ($inc) {
-	$consulta = "SELECT * FROM usuarios ";
+	$consulta = "SELECT * FROM Usuario ";
 	$resultado = mysqli_query($conex, $consulta);
 	
   if ($resultado) { // si el resultado es igual a true

@@ -29,10 +29,10 @@ if(!empty($input["primerNombre"]) && !empty($input["email_usuario"])  && !empty(
         echo "La ID es: $id"; 
         
         $sql = "INSERT INTO Usuario (email_usuario,password,id_DetalleUsuario)
-        VALUES (:email_usuario,:password,$id)";
+        VALUES (:email_usuario,:password,:id)";
         $stmt = $conn ->prepare($sql);
         $stmt->bindParam(':email_usuario',$input['email_usuario']);
-        $stmt->bindParam($id,$input['id_DetalleUsuario']);
+        $stmt->bindParam(":id",PDO::PARAM_INT);
 
         $password= password_hash($input['password'], PASSWORD_BCRYPT);
         $stmt->bindParam(':password',$password);

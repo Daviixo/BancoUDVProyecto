@@ -34,10 +34,10 @@ if(!empty($input["primerNombre"]) && !empty($input["email_usuario"])  && !empty(
     }
 }
 
-    $sql = "SELECT id_DetalleUsuario FROM Detalle_Usuario WHERE dpi_usuario = " .$dpiTest;
+    $sql = "SELECT id_DetalleUsuario FROM Detalle_Usuario WHERE dpi_usuario = " + $dpiTest;
     $stmt = $conn ->prepare($sql);
     $stmt -> bindParam('id_DetalleUsuario',$finalResult);
-    echo "<script>console.log('ID is: " . $finalResult . "' );</script>";
+
 
     if($stmt->execute()){
         $message= 'ID query was successfull';

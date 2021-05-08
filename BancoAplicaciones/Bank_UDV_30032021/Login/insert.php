@@ -21,10 +21,8 @@ if(!empty($input["primerNombre"]) && !empty($input["email_usuario"])  && !empty(
     $stmt->bindParam(':fecha_nacimiento',$input['fecha_nacimiento']);
     $stmt->bindParam(':direccion',$input['direccion']);
 
-    $id=mysqli_insert_id($conex);
-
-    echo 'The ID is: '.$stmt->insert_id;
-    print ("PF > The ID is: " .$id);
+    echo $handler->lastinsertid($temp);
+    echo $temp;
 
     echo '<script type="text/javascript">console.log("'.$dpiTest.'")</script>';
     
@@ -39,11 +37,10 @@ if(!empty($input["primerNombre"]) && !empty($input["email_usuario"])  && !empty(
     }
 }
 
-    $sql = "SELECT id_DetalleUsuario FROM Detalle_Usuario WHERE dpi_usuario = {$dpiTest}";
-    $stmt = $conn ->prepare($sql);
+    //$sql = "SELECT id_DetalleUsuario FROM Detalle_Usuario WHERE dpi_usuario = {$dpiTest}";
+    //$stmt = $conn ->prepare($sql);
 
-    //$sql = "INSERT INTO Usuario (email_usuario,password,id_DetalleUsuario
-    //VALUES(:email_usuario,:password,id_DetalleUsuario)";
+    //$idUsuario = mysqli_query("SELECT id_DetalleUsuario FROM Detalle_Usuario WHERE dpi_usuario = '$dpiTest'",$temp);
     
 
 ?>

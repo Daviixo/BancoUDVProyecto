@@ -3,6 +3,7 @@
 require "database.php";
 $input = json_decode(file_get_contents('php://input'), true);
 $message='';
+$dpiTest=$_POST['dpi_usuario'];
 
 if(!empty($input["primerNombre"]) && !empty($input["email_usuario"])  && !empty($input["dpi_usuario"])  && !empty($input["password"])){
     $sql = "INSERT INTO Detalle_Usuario (primerNombre,segundoNombre,primerApellido,segundoApellido,tercerApellido,dpi_usuario,fecha_nacimiento, direccion) 
@@ -20,6 +21,7 @@ if(!empty($input["primerNombre"]) && !empty($input["email_usuario"])  && !empty(
     if($stmt->execute()){
         $message= 'Successfully created new user';
         echo '<script>alert("Successfully created new user")</script>';
+        echo '<script type="text/javascript"> alert('.$dpiTest.')</script>';
 
         //$sql = "SELECT id_DetalleUsuario FROM Detalle_Usuario WHERE dpi_usuario = :dpi_usuario"; 
         

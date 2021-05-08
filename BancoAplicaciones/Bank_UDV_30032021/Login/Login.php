@@ -170,20 +170,8 @@
         <!-- THIS IS JUST TO SIMULATE A LARGER PAGE -->
 
         <footer class="site-footer2">
-            <div class="container">
-                <div class="row">
-
-
-
-
-                    <main>
-                    </main>
-                </div>
-
-
-            </div>
-    </div>
-    </footer>
+            
+        </footer>
 
     <!-- END OF> THIS IS JUST TO SIMULATE A LARGER PAGE -->
 

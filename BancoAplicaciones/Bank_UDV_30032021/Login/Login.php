@@ -169,7 +169,7 @@
 
     <!-- THIS IS JUST TO SIMULATE A LARGER PAGE -->
 
-    <footer class="site-footer">
+    <footer class="site-footer2">
             <div class="container">
                 <div class="row">
 

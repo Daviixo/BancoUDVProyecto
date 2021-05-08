@@ -134,12 +134,23 @@
                                 <!--Registro-->
                                 <form action="login.php" id="prueba1" class="Formulario_Registro" method="post" autocomplete="off" style= "padding-top:0 !important">
                                     <h2 >Registrarse</h2>
+                                    <!--Local-->
                                     <input  type="text" placeholder="Nombre"  name="nombre_usuario" require>
+                                    <!--Local-->
                                     <input  type="text" placeholder="Primer Apellido"  name="primerApellido" require>
+                                    <!--Local-->
                                     <input  type="text" placeholder="Segundo Apellido"  name="segundoApellido" require>
+                                    <!--Local-->
+                                    <input  type="text" placeholder="Tercer Apellido" name="tercerApellido" require>
+                                    <!--Local-->
                                     <input  type="email" placeholder="Correo Electronico" name="email_usuario" require>
+                                    <!--Local-->
                                     <input  type="text" placeholder="DPI" name="dpi_usuario" require>
+                                    <!--Local-->
                                     <input  type="date" placeholder="Fecha Nacimiento" name="fechaNacimiento" require>
+                                    <!--Local-->
+                                    <input  type="text" placeholder="Direccion" name="direccion" require>
+                                    <!--Local-->
                                     <input  type="password"placeholder="Contraseña" name="password" require>
                                     <input type="submit" value="Crear usuario" class="boton"  >
                                    

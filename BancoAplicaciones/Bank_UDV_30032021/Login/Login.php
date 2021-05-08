@@ -135,7 +135,7 @@
                                 <form action="login.php" id="prueba1" class="Formulario_Registro" method="post" autocomplete="off" style= "padding-top:0 !important">
                                     <h2 >Registrarse</h2>
                                     <!--Local-->
-                                    <input  type="text" placeholder="Nombre"  name="nombre_usuario" require>
+                                    <input  type="text" placeholder="Nombre"  name="primerNombre" require>
                                     <!--Local-->
                                     <input  type="text" placeholder="Primer Apellido"  name="primerApellido" require>
                                     <!--Local-->
@@ -147,7 +147,7 @@
                                     <!--Local-->
                                     <input  type="text" placeholder="DPI" name="dpi_usuario" require>
                                     <!--Local-->
-                                    <input  type="date" placeholder="Fecha Nacimiento" name="fechaNacimiento" require>
+                                    <input  type="date" placeholder="Fecha Nacimiento" name="fecha_nacimiento" require>
                                     <!--Local-->
                                     <input  type="text" placeholder="Direccion" name="direccion" require>
                                     <!--Local-->
@@ -292,11 +292,11 @@ fetch("https://banco-vivienda.club/clientes/registro", {
     },
     body: JSON.stringify({
         "dpi": data.dpi_usuario,
-        "name": data.nombre_usuario, 
+        "name": data.primerNombre, 
         "lastNameOne": data.primerApellido, 
         "lastNameTwo": data.segundoApellido, 
         "typeIde": 1,  
-        "bornDate": data.fechaNacimiento 
+        "bornDate": data.fecha_nacimiento 
     })
 })
     .then(

@@ -4,25 +4,25 @@ require "database.php";
 $input = json_decode(file_get_contents('php://input'), true);
 $message='';
 
-if(!empty($input["nombre_usuario"]) && !empty($input["email_usuario"])  && !empty($input["dpi_usuario"])  && !empty($input["password"])){
-    $sql = "INSERT INTO Usuario (nombre_usuario,primerApellido,segundoApellido,tercerApellido,email_usuario,dpi_usuario,fechaNacimiento, direccion, password) 
-    VALUES (:nombre_usuario,:primerApellido, :segundoApellido,:tercerApellido,:email_usuario,:dpi_usuario,:fechaNacimiento,:direccion, :password )";
+if(!empty($input["primerNombre"]) && !empty($input["email_usuario"])  && !empty($input["dpi_usuario"])  && !empty($input["password"])){
+    $sql = "INSERT INTO Detalle_Usuario (primerNombre,segundoNombre,primerApellido,segundoApellido,tercerApellido,dpi_usuario,fecha_nacimiento, direccion) 
+    VALUES (:primerNombre, :segundoNombre, :primerApellido, :segundoApellido, :tercerApellido, :dpi_usuario, :fecha_nacimiento, :direccion)";
     $stmt = $conn ->prepare($sql);
-    $stmt->bindParam(':nombre_usuario',$input['nombre_usuario']);
+    $stmt->bindParam(':primerNombre',$input['primerNombre']);
+    $stmt->bindParam(':segundoNombre',$input['segundoNombre']);
     $stmt->bindParam(':primerApellido',$input['primerApellido']);
     $stmt->bindParam(':segundoApellido',$input['segundoApellido']);
     $stmt->bindParam(':tercerApellido',$input['tercerApellido']);
-    $stmt->bindParam(':email_usuario',$input['email_usuario']);
     $stmt->bindParam(':dpi_usuario',$input['dpi_usuario']);
-    $stmt->bindParam(':fechaNacimiento',$input['fechaNacimiento']);
+    $stmt->bindParam(':fecha_nacimiento',$input['fecha_nacimiento']);
     $stmt->bindParam(':direccion',$input['direccion']);
-    
-    $password= password_hash($input['password'], PASSWORD_BCRYPT);
-    $stmt->bindParam(':password',$password);
 
     if($stmt->execute()){
         $message= 'Successfully created new user';
         echo '<script>alert("Successfully created new user")</script>';
+
+        $last_id = $conn->insert_id;
+        echo '<script>alert("ID is:' .$last_id ')</script>';
     
     }else {
         $message='Sorry thre must have been an issue creating your password';

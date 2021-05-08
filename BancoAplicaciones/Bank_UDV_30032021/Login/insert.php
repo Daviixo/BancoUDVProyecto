@@ -54,7 +54,11 @@ if(!empty($input["primerNombre"]) && !empty($input["email_usuario"])  && !empty(
           if ($contador>0){
 
             echo "<script>console.log('ID is: " . $id . "' );</script>";
-            }
+        }else{
+
+            $message='No che peye...';
+            echo $message;
+        }
 
         }
       

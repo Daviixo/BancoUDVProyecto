@@ -2997,10 +2997,17 @@ h6 {
   padding-bottom: 27.5px;
 }
 
-.bottom-footer2 {
+.bottom-footerx {
   background-color: #09192c;
   padding-top: 125.5px;
   padding-bottom: 27.5px;
+}
+
+.bottom-footerx .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .bottom-footer .container {

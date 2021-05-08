@@ -13,7 +13,7 @@ if(!empty($input["nombre_usuario"]) && !empty($input["email_usuario"])  && !empt
     $stmt->bindParam(':segundoApellido',$input['segundoApellido']);
     $stmt->bindParam(':tercerApellido',$input['tercerApellido']);
     $stmt->bindParam(':email_usuario',$input['email_usuario']);
-    $stmt->bindParam(':alias_usuario',$input['dpi_usuario']);
+    $stmt->bindParam(':dpi_usuario',$input['dpi_usuario']);
     $stmt->bindParam(':fechaNacimiento',$input['fechaNacimiento']);
     $stmt->bindParam(':direccion',$input['direccion']);
     

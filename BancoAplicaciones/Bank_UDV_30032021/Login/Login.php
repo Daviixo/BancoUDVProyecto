@@ -169,7 +169,7 @@
 
         <!-- THIS IS JUST TO SIMULATE A LARGER PAGE -->
 
-        <div class="bottom-footer">
+        <div class="bottom-footer2">
             <div class="container">
             </div><!-- /.bottom-footer__social -->
         </div><!-- /.container -->

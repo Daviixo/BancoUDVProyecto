@@ -2997,6 +2997,12 @@ h6 {
   padding-bottom: 27.5px;
 }
 
+.bottom-footer2 {
+  background-color: #09192c;
+  padding-top: 125.5px;
+  padding-bottom: 27.5px;
+}
+
 .bottom-footer .container {
   display: flex;
   flex-wrap: wrap;

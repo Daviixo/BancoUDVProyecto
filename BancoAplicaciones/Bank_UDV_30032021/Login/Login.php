@@ -173,8 +173,8 @@
             <div class="container">
                 <div class="row">
 
-                    <body style="background-color:blue;">
-                    </body>
+                    <div style="background-color:blue;">
+                    </div>
                     <main>
 
 

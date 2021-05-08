@@ -11,15 +11,12 @@ if (isset($pass)){
 }
 
 if ($inc) {
-	$consulta = "SELECT * FROM Usuario ";
+	$consulta = "SELECT * FROM Usuario";
 	$resultado = mysqli_query($conex, $consulta);
 	
   if ($resultado) { // si el resultado es igual a true
 		while ($row = $resultado->fetch_array()) { // hacemos un array con los datos que obtenemos de la consulta
-	    $id = $row['id'];
-	    $nombre = $row['nombre'];
-      $telefono = $row['telefono'];
-      $email = $row['email'];
+      $email = $row['email_usuario'];
       $password = $row['password'];
       // verificar contraseña cifrada y validacion de correo 
       if(password_verify($pass, $password )&&($email_usuario==$email)){

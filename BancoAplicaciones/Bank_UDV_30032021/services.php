@@ -7,9 +7,9 @@
 
 session_start();
 
-$email=$_SESSION['username'];
+$email = $_SESSION['username'];
 
-if(isset($_POST['logout'])){
+if (isset($_POST['logout'])) {
 
     session_destroy();
     echo '<script language="javascript">alert("Logout in process...");</script>';
@@ -64,8 +64,8 @@ if(isset($_POST['logout'])){
                             <a href="#" class="fab fa-pinterest-p"></a>
                             <a href="#" class="fab fa-instagram"></a>
                         </div><!-- /.topbar__social -->
-                        <form method="post"><button type="submit" class="btn btn-primary" name="logout"value="Logout">Logout</button>
-                        <!-- <a href="#">Login</a>
+                        <form method="post"><button type="submit" class="btn btn-primary" name="logout" value="Logout">Logout</button>
+                            <!-- <a href="#">Login</a>
                         <a href="#">Company News</a>
                         <a href="#">FAQs</a> -->
                     </div><!-- /.topbar__left -->
@@ -156,252 +156,239 @@ if(isset($_POST['logout'])){
             </div><!-- /.container -->
         </section><!-- /.page-header -->
 
-        <section class="service-page pt-120 pb-60">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 mb-60">
-                        <div class="service-one__card">
-                            <div class="service-one__image">
-                                <img src="assets\images\services\services-1-1.png" alt="">
-                            </div><!-- /.service-one__image -->
-                            <div class="service-one__content">
-                                <h3><a href="service-details.php">Personal Loan</a></h3>
-                                <p>There are many variations of passages of lorem ipsum available the majority have some.</p>
-                                <a href="service-details.php" class="pylon-icon-right-arrow service-one__link"></a><!-- /.service-one__link -->
-                            </div><!-- /.service-one__content -->
-                        </div><!-- /.service-one__card -->
-                    </div><!-- /.col-lg-4 col-md-6 mb-60 -->
-                    <div class="col-lg-4 col-md-6 mb-60">
-                        <div class="service-one__card">
-                            <div class="service-one__image">
-                                <img src="assets\images\services\services-1-2.png" alt="">
-                            </div><!-- /.service-one__image -->
-                            <div class="service-one__content">
-                                <h3><a href="service-details.php">Education Loan</a></h3>
-                                <p>There are many variations of passages of lorem ipsum available the majority have some.</p>
-                                <a href="service-details.php" class="pylon-icon-right-arrow service-one__link"></a><!-- /.service-one__link -->
-                            </div><!-- /.service-one__content -->
-                        </div><!-- /.service-one__card -->
-                    </div><!-- /.col-lg-4 col-md-6 mb-60 -->
-                    <div class="col-lg-4 col-md-6 mb-60">
-                        <div class="service-one__card">
-                            <div class="service-one__image">
-                                <img src="assets\images\services\services-1-3.png" alt="">
-                            </div><!-- /.service-one__image -->
-                            <div class="service-one__content">
-                                <h3><a href="service-details.php">Business Loan</a></h3>
-                                <p>There are many variations of passages of lorem ipsum available the majority have some.</p>
-                                <a href="service-details.php" class="pylon-icon-right-arrow service-one__link"></a><!-- /.service-one__link -->
-                            </div><!-- /.service-one__content -->
-                        </div><!-- /.service-one__card -->
-                    </div><!-- /.col-lg-4 col-md-6 mb-60 -->
-                    <div class="col-lg-4 col-md-6 mb-60">
-                        <div class="service-one__card">
-                            <div class="service-one__image">
-                                <img src="assets\images\services\services-1-4.png" alt="">
-                            </div><!-- /.service-one__image -->
-                            <div class="service-one__content">
-                                <h3><a href="service-details.php">Property Loan</a></h3>
-                                <p>There are many variations of passages of lorem ipsum available the majority have some.</p>
-                                <a href="service-details.php" class="pylon-icon-right-arrow service-one__link"></a><!-- /.service-one__link -->
-                            </div><!-- /.service-one__content -->
-                        </div><!-- /.service-one__card -->
-                    </div><!-- /.col-lg-4 col-md-6 mb-60 -->
-                    <div class="col-lg-4 col-md-6 mb-60">
-                        <div class="service-one__card">
-                            <div class="service-one__image">
-                                <img src="assets\images\services\services-1-5.png" alt="">
-                            </div><!-- /.service-one__image -->
-                            <div class="service-one__content">
-                                <h3><a href="service-details.php">Wedding Loan</a></h3>
-                                <p>There are many variations of passages of lorem ipsum available the majority have some.</p>
-                                <a href="service-details.php" class="pylon-icon-right-arrow service-one__link"></a><!-- /.service-one__link -->
-                            </div><!-- /.service-one__content -->
-                        </div><!-- /.service-one__card -->
-                    </div><!-- /.col-lg-4 col-md-6 mb-60 -->
-                    <div class="col-lg-4 col-md-6 mb-60">
-                        <div class="service-one__card">
-                            <div class="service-one__image">
-                                <img src="assets\images\services\services-1-6.png" alt="">
-                            </div><!-- /.service-one__image -->
-                            <div class="service-one__content">
-                                <h3><a href="service-details.php">Car Loan</a></h3>
-                                <p>There are many variations of passages of lorem ipsum available the majority have some.</p>
-                                <a href="service-details.php" class="pylon-icon-right-arrow service-one__link"></a><!-- /.service-one__link -->
-                            </div><!-- /.service-one__content -->
-                        </div><!-- /.service-one__card -->
-                    </div><!-- /.col-lg-4 col-md-6 mb-60 -->
-                </div><!-- /.row -->
-            </div><!-- /.container -->
-        </section><!-- /.service-page -->
+        <h2>--Credit's Info--</h2>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Credit ID</th>
+                        <th>Credit Description</th>
+                    </tr>
+                </thead>
+                <tbody id="dataCliente">
+                </tbody>
+            </table>
 
-        <footer class="site-footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="footer-widget footer-widget__about">
-                            <a href="index-1.php">
-                                <img src="assets\images\logo-light.png" width="155" alt="">
-                            </a>
-                            <p>Lorem ipsum is not dolor sit amet, consect etur adi pisicing elit sed eiusmod tempor ut labore.</p>
-                            <div class="footer-widget__about-phone">
-                                <i class="pylon-icon-tech-support"></i>
-                                <div class="footer-widget__about-phone-content">
-                                    <span>Call Anytime</span>
-                                    <h3><a href="tel:92-666-888-0000">92 666 888 0000</a></h3>
-                                </div><!-- /.footer-widget__about-phone-content -->
-                            </div><!-- /.footer-widget__about-phone -->
-                        </div><!-- /.footer-widget footer-widget__about -->
-                    </div><!-- /.col-lg-3 -->
-                    <div class="col-lg-2 col-md-6">
-                        <div class="footer-widget footer-widget__link">
-                            <h3 class="footer-widget__title">Explore</h3>
-                            <ul class="list-unstyled footer-widget__link-list">
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Our Services</a></li>
-                                <li><a href="#">Latest News</a></li>
-                                <li><a href="#">Testimonials</a></li>
-                                <li><a href="#">Contact</a></li>
-                            </ul><!-- /.list-unstyled -->
-                        </div><!-- /.footer-widget -->
-                    </div><!-- /.col-lg-2 -->
-                    <div class="col-lg-3 col-md-6">
-                        <div class="footer-widget footer-widget__post">
-                            <h3 class="footer-widget__title">Latest News</h3>
-                            <ul class="list-unstyled footer-widget__post-list">
-                                <li>
-                                    <img src="assets\images\resources\footer-post-1-1.png" alt="">
-                                    <div class="footer-widget__post-list-content">
-                                        <span>16 Oct, 2020</span>
-                                        <h3><a href="news-details.php">We’re Providing the Quality Services</a></h3>
-                                    </div><!-- /.footer-widget__post-content -->
-                                </li>
-                                <li>
-                                    <img src="assets\images\resources\footer-post-1-2.png" alt="">
-                                    <div class="footer-widget__post-list-content">
-                                        <span>16 Oct, 2020</span>
-                                        <h3><a href="news-details.php">We’re Providing the Quality Services</a></h3>
-                                    </div><!-- /.footer-widget__post-content -->
-                                </li>
-                            </ul><!-- /.list-unstyled -->
-                        </div><!-- /.footer-widget -->
-                    </div><!-- /.col-lg-3 -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="footer-widget footer-widget__contact">
-                            <h3>Contact</h3>
-                            <ul class="list-unstyled footer-widget__contact-list">
-                                <li>
-                                    <a href="#"><i class="pylon-icon-email1"></i>needhelp@company.com</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="pylon-icon-clock2"></i>Mon - Sat 8:00 AM - 6:00 PM</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="pylon-icon-pin1"></i>80 Broklyn Golden Street,
-                                        New York. USA</a>
-                                </li>
-                            </ul>
-                        </div><!-- /.footer-widget footer-widget__contact -->
-                    </div><!-- /.col-lg-4 -->
-                </div><!-- /.row -->
-            </div><!-- /.container -->
-        </footer><!-- /.site-footer -->
-        <div class="bottom-footer">
-            <div class="container">
-                <p>© Copyright 2020 by Company.com</p>
-                <div class="bottom-footer__social">
-                    <a href="#" class="fab fa-facebook-square"></a>
-                    <a href="#" class="fab fa-twitter"></a>
-                    <a href="#" class="fab fa-pinterest-p"></a>
-                    <a href="#" class="fab fa-instagram"></a>
-                </div><!-- /.bottom-footer__social -->
-            </div><!-- /.container -->
-        </div><!-- /.bottom-footer -->
+            <footer class="site-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="footer-widget footer-widget__about">
+                                <a href="index-1.php">
+                                    <img src="assets\images\logo-light.png" width="155" alt="">
+                                </a>
+                                <p>Lorem ipsum is not dolor sit amet, consect etur adi pisicing elit sed eiusmod tempor ut labore.</p>
+                                <div class="footer-widget__about-phone">
+                                    <i class="pylon-icon-tech-support"></i>
+                                    <div class="footer-widget__about-phone-content">
+                                        <span>Call Anytime</span>
+                                        <h3><a href="tel:92-666-888-0000">92 666 888 0000</a></h3>
+                                    </div><!-- /.footer-widget__about-phone-content -->
+                                </div><!-- /.footer-widget__about-phone -->
+                            </div><!-- /.footer-widget footer-widget__about -->
+                        </div><!-- /.col-lg-3 -->
+                        <div class="col-lg-2 col-md-6">
+                            <div class="footer-widget footer-widget__link">
+                                <h3 class="footer-widget__title">Explore</h3>
+                                <ul class="list-unstyled footer-widget__link-list">
+                                    <li><a href="#">About</a></li>
+                                    <li><a href="#">Our Services</a></li>
+                                    <li><a href="#">Latest News</a></li>
+                                    <li><a href="#">Testimonials</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                </ul><!-- /.list-unstyled -->
+                            </div><!-- /.footer-widget -->
+                        </div><!-- /.col-lg-2 -->
+                        <div class="col-lg-3 col-md-6">
+                            <div class="footer-widget footer-widget__post">
+                                <h3 class="footer-widget__title">Latest News</h3>
+                                <ul class="list-unstyled footer-widget__post-list">
+                                    <li>
+                                        <img src="assets\images\resources\footer-post-1-1.png" alt="">
+                                        <div class="footer-widget__post-list-content">
+                                            <span>16 Oct, 2020</span>
+                                            <h3><a href="news-details.php">We’re Providing the Quality Services</a></h3>
+                                        </div><!-- /.footer-widget__post-content -->
+                                    </li>
+                                    <li>
+                                        <img src="assets\images\resources\footer-post-1-2.png" alt="">
+                                        <div class="footer-widget__post-list-content">
+                                            <span>16 Oct, 2020</span>
+                                            <h3><a href="news-details.php">We’re Providing the Quality Services</a></h3>
+                                        </div><!-- /.footer-widget__post-content -->
+                                    </li>
+                                </ul><!-- /.list-unstyled -->
+                            </div><!-- /.footer-widget -->
+                        </div><!-- /.col-lg-3 -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="footer-widget footer-widget__contact">
+                                <h3>Contact</h3>
+                                <ul class="list-unstyled footer-widget__contact-list">
+                                    <li>
+                                        <a href="#"><i class="pylon-icon-email1"></i>needhelp@company.com</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="pylon-icon-clock2"></i>Mon - Sat 8:00 AM - 6:00 PM</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="pylon-icon-pin1"></i>80 Broklyn Golden Street,
+                                            New York. USA</a>
+                                    </li>
+                                </ul>
+                            </div><!-- /.footer-widget footer-widget__contact -->
+                        </div><!-- /.col-lg-4 -->
+                    </div><!-- /.row -->
+                </div><!-- /.container -->
+            </footer><!-- /.site-footer -->
+            <div class="bottom-footer">
+                <div class="container">
+                    <p>© Copyright 2020 by Company.com</p>
+                    <div class="bottom-footer__social">
+                        <a href="#" class="fab fa-facebook-square"></a>
+                        <a href="#" class="fab fa-twitter"></a>
+                        <a href="#" class="fab fa-pinterest-p"></a>
+                        <a href="#" class="fab fa-instagram"></a>
+                    </div><!-- /.bottom-footer__social -->
+                </div><!-- /.container -->
+            </div><!-- /.bottom-footer -->
 
-    </div><!-- /.page-wrapper -->
+        </div><!-- /.page-wrapper -->
 
 
-    <div class="mobile-nav__wrapper">
-        <div class="mobile-nav__overlay mobile-nav__toggler"></div>
-        <!-- /.mobile-nav__overlay -->
-        <div class="mobile-nav__content">
-            <span class="mobile-nav__close mobile-nav__toggler"><i class="far fa-times"></i></span>
+        <div class="mobile-nav__wrapper">
+            <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+            <!-- /.mobile-nav__overlay -->
+            <div class="mobile-nav__content">
+                <span class="mobile-nav__close mobile-nav__toggler"><i class="far fa-times"></i></span>
 
-            <div class="logo-box">
-                <a href="index-1.php" aria-label="logo image"><img src="assets\images\logo-light.png" width="155" alt=""></a>
+                <div class="logo-box">
+                    <a href="index-1.php" aria-label="logo image"><img src="assets\images\logo-light.png" width="155" alt=""></a>
+                </div>
+                <!-- /.logo-box -->
+                <div class="mobile-nav__container"></div>
+                <!-- /.mobile-nav__container -->
+
+                <ul class="mobile-nav__contact list-unstyled">
+                    <li>
+                        <i class="pylon-icon-email1"></i>
+                        <a href="mailto:needhelp@azino.com">needhelp@pylon.com</a>
+                    </li>
+                    <li>
+                        <i class="pylon-icon-telephone"></i>
+                        <a href="tel:666-888-0000">666 888 0000</a>
+                    </li>
+                </ul><!-- /.mobile-nav__contact -->
+                <div class="mobile-nav__top">
+                    <div class="mobile-nav__language">
+                        <img src="assets\images\resources\flag-1-1.jpg" alt="">
+                        <label class="sr-only" for="language-select">select language</label><!-- /#language-select.sr-only -->
+                        <select class="selectpicker" id="language-select">
+                            <option value="english">English</option>
+                            <option value="arabic">Arabic</option>
+                        </select>
+                    </div><!-- /.mobile-nav__language -->
+                    <div class="mobile-nav__social">
+                        <a href="#" aria-label="twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="facebook"><i class="fab fa-facebook-square"></i></a>
+                        <a href="#" aria-label="pinterest"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#" aria-label="instagram"><i class="fab fa-instagram"></i></a>
+                    </div><!-- /.mobile-nav__social -->
+                </div><!-- /.mobile-nav__top -->
+
+
+
             </div>
-            <!-- /.logo-box -->
-            <div class="mobile-nav__container"></div>
-            <!-- /.mobile-nav__container -->
-
-            <ul class="mobile-nav__contact list-unstyled">
-                <li>
-                    <i class="pylon-icon-email1"></i>
-                    <a href="mailto:needhelp@azino.com">needhelp@pylon.com</a>
-                </li>
-                <li>
-                    <i class="pylon-icon-telephone"></i>
-                    <a href="tel:666-888-0000">666 888 0000</a>
-                </li>
-            </ul><!-- /.mobile-nav__contact -->
-            <div class="mobile-nav__top">
-                <div class="mobile-nav__language">
-                    <img src="assets\images\resources\flag-1-1.jpg" alt="">
-                    <label class="sr-only" for="language-select">select language</label><!-- /#language-select.sr-only -->
-                    <select class="selectpicker" id="language-select">
-                        <option value="english">English</option>
-                        <option value="arabic">Arabic</option>
-                    </select>
-                </div><!-- /.mobile-nav__language -->
-                <div class="mobile-nav__social">
-                    <a href="#" aria-label="twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" aria-label="facebook"><i class="fab fa-facebook-square"></i></a>
-                    <a href="#" aria-label="pinterest"><i class="fab fa-pinterest-p"></i></a>
-                    <a href="#" aria-label="instagram"><i class="fab fa-instagram"></i></a>
-                </div><!-- /.mobile-nav__social -->
-            </div><!-- /.mobile-nav__top -->
-
-
-
+            <!-- /.mobile-nav__content -->
         </div>
-        <!-- /.mobile-nav__content -->
-    </div>
-    <!-- /.mobile-nav__wrapper -->
+        <!-- /.mobile-nav__wrapper -->
 
-    <div class="search-popup">
-        <div class="search-popup__overlay search-toggler"></div>
-        <!-- /.search-popup__overlay -->
-        <div class="search-popup__content">
-            <form action="#">
-                <label for="search" class="sr-only">search here</label><!-- /.sr-only -->
-                <input type="text" id="search" placeholder="Search Here...">
-                <button type="submit" aria-label="search submit" class="thm-btn">
-                    <i class="fa fa-search"></i>
-                </button>
-            </form>
+        <div class="search-popup">
+            <div class="search-popup__overlay search-toggler"></div>
+            <!-- /.search-popup__overlay -->
+            <div class="search-popup__content">
+                <form action="#">
+                    <label for="search" class="sr-only">search here</label><!-- /.sr-only -->
+                    <input type="text" id="search" placeholder="Search Here...">
+                    <button type="submit" aria-label="search submit" class="thm-btn">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+            </div>
+            <!-- /.search-popup__content -->
         </div>
-        <!-- /.search-popup__content -->
-    </div>
-    <!-- /.search-popup -->
+        <!-- /.search-popup -->
 
-    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
+        <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
 
 
-    <script src="assets\js\jquery-3.5.1.min.js"></script>
-    <script src="assets\js\bootstrap.bundle.min.js"></script>
-    <script src="assets\js\swiper.min.js"></script>
-    <script src="assets\js\jquery.ajaxchimp.min.js"></script>
-    <script src="assets\js\jquery.magnific-popup.min.js"></script>
-    <script src="assets\js\jquery.validate.min.js"></script>
-    <script src="assets\js\bootstrap-select.min.js"></script>
-    <script src="assets\js\wow.js"></script>
-    <script src="assets\js\odometer.min.js"></script>
-    <script src="assets\js\jquery.appear.min.js"></script>
-    <script src="assets\js\wNumb.min.js"></script>
-    <script src="assets\js\nouislider.min.js"></script>
+        <script src="assets\js\jquery-3.5.1.min.js"></script>
+        <script src="assets\js\bootstrap.bundle.min.js"></script>
+        <script src="assets\js\swiper.min.js"></script>
+        <script src="assets\js\jquery.ajaxchimp.min.js"></script>
+        <script src="assets\js\jquery.magnific-popup.min.js"></script>
+        <script src="assets\js\jquery.validate.min.js"></script>
+        <script src="assets\js\bootstrap-select.min.js"></script>
+        <script src="assets\js\wow.js"></script>
+        <script src="assets\js\odometer.min.js"></script>
+        <script src="assets\js\jquery.appear.min.js"></script>
+        <script src="assets\js\wNumb.min.js"></script>
+        <script src="assets\js\nouislider.min.js"></script>
 
-    <!-- template js -->
-    <script src="assets\js\theme.js"></script>
+        <!-- template js -->
+        <script src="assets\js\theme.js"></script>
+
+        <script>
+            let template = ({
+                ...json
+
+            }) => `
+    
+   
+            <tr>
+                <td>Nombre</td>
+                <td>${ json.tbcliente_creditos[0]}</td>
+            </tr>
+            <tr>
+                <td>DPI</td>
+                <td></td>
+            </tr>
+           
+       
+    
+    `
+
+            fetch("https://banco-vivienda.club/clientes/113", {
+                    "headers": {
+                        'Accept': 'application/json',
+                        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZFN1Y3Vyc2FsIjo1LCJ1c2VybmFtZSI6IlNVQ1VSU0FMMSIsInBhc3N3b3JkIjoicXdlcnR5IiwiaWF0IjoxNjE5NTQ3NzQ0LCJleHAiOjE2MjI2NTgxNDR9.1awdMkX9_Ajun1OLcYXD19_UbtKVgx4Uzbmy55Jlrt4"
+                    }
+                })
+                .then(response => {
+
+                    let respuestaServer = response.json().then(respuesta => {
+                        return respuesta;
+                    }).catch(error => {
+                        alert("El número de DPI no existe en la base de datos.");
+                        infocliente.innerHTML = "";
+                    })
+                    return respuestaServer;
+
+                })
+                .then(response => {
+                    console.log(response);
+
+                    infocliente.innerHTML = template(response);
+                    console.log(response.ok)
+
+                })
+                .catch(err => {
+                    console.error(err);
+                });
+
+            
+        </script>
+
+
 </body>
 
 </html>

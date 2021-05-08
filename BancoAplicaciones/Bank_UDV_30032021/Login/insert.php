@@ -21,11 +21,15 @@ if(!empty($input["primerNombre"]) && !empty($input["email_usuario"])  && !empty(
         $message= 'Successfully created new user';
         echo '<script>alert("Successfully created new user")</script>';
 
-        $sql = "INSERT INTO Usuario (email_usuario,password)
-        VALUES (:email_usuario,:password)";
+        //$sql = "SELECT id_DetalleUsuario FROM Detalle_Usuario WHERE dpi_usuario = :dpi_usuario"; 
         
-        $password= password_hash($input['password'], PASSWORD_BCRYPT);
-        $stmt->bindParam(':password',$password);
+        echo $input['dpi_usuario'];
+
+        //$sql = "INSERT INTO Usuario (email_usuario,password,id_DetalleUsuario)
+        //VALUES (:email_usuario,:password,:id_DetalleUsuario)";
+        
+        //$password= password_hash($input['password'], PASSWORD_BCRYPT);
+        //$stmt->bindParam(':password',$password);
 
         //ESTO DE AQUI ABAJO JODE TODO. NO TOCAR!!!!! <================= FUE ARMANDO... xD
         // $last_id = $conn->insert_id;

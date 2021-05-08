@@ -343,7 +343,7 @@ if (isset($_POST['logout'])) {
 
             }) => {
                 let temp = "";
-                for (let index = 0; index < json.tbcliente_creditos.length; index++) {
+                for (let index = 0; index < json.tbcliente_creditos.ob_get_length; index++) {
                     const element = array[index];
 
                     temp += `<tr>

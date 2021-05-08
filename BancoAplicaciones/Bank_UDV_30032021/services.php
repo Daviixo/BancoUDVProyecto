@@ -345,12 +345,11 @@ if (isset($_POST['logout'])) {
     
    
             <tr>
-                <td>Nombre</td>
-                <td>${ json.tbcliente_creditos[0]}</td>
+            <td>${ json.tbcliente_creditos[0].credito_id}</td>
+                
             </tr>
             <tr>
-                <td>DPI</td>
-                <td></td>
+            <td>${ json.tbcliente_creditos[0].clientecred_dsc}</td>
             </tr>
            
        

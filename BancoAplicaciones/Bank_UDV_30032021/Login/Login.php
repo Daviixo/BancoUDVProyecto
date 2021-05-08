@@ -171,7 +171,13 @@
 
         <footer class="site-footer2">
             <div class="container">
-                
+                <div class="row">
+
+                    <main>
+                    <body style="background-color:blue;">
+                    </body>
+                    </main>
+                </div>
 
             </div>
     </div>

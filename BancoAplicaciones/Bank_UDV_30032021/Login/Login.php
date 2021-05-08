@@ -169,20 +169,13 @@
 
         <!-- THIS IS JUST TO SIMULATE A LARGER PAGE -->
 
-        <footer class="site-footer2">
+        <div class="bottom-footer">
             <div class="container">
-                <div class="row">
+            </div><!-- /.bottom-footer__social -->
+        </div><!-- /.container -->
+    </div><!-- /.bottom-footer -->
 
-                    <main>
-                    <div style="background-color:blue;">
-                    </div>
-
-                    </main>
-                </div>
-
-            </div>
-    </div>
-    </footer>
+    </div><!-- /.page-wrapper -->
 
     <!-- END OF> THIS IS JUST TO SIMULATE A LARGER PAGE -->
 

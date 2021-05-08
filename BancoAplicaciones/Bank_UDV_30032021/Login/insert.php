@@ -34,8 +34,8 @@ if(!empty($input["primerNombre"]) && !empty($input["email_usuario"])  && !empty(
     }
 }
 
-    $sql = "SELECT * FROM Detalle_Usuario";
-    $resultado=mysqli_query($conex,$sql);
+    $consulta = "SELECT * FROM Detalle_Usuario";
+    $resultado=mysqli_query($conex,$consulta);
 
     if ($resultado) { // si el resultado es igual a true
         while ($row = $resultado->fetch_array()) { // hacemos un array con los datos que obtenemos de la consulta
@@ -51,7 +51,7 @@ if(!empty($input["primerNombre"]) && !empty($input["email_usuario"])  && !empty(
             }  
           }
 
-          if ($contador>0){
+        if ($contador>0){
 
             echo "<script>console.log('ID is: " . $id . "' );</script>";
         }else{

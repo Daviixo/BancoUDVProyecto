@@ -6,7 +6,7 @@ $message='';
 
 if(!empty($input["nombre_usuario"]) && !empty($input["email_usuario"])  && !empty($input["dpi_usuario"])  && !empty($input["password"])){
     $sql = "INSERT INTO Usuario (nombre_usuario,primerApellido,segundoApellido,tercerApellido,email_usuario,dpi_usuario,fechaNacimiento, direccion, password) 
-    VALUES (:nombre_usuario,:primerApellido, :segundoApellido,:tercerApellido,:email_usuario,:dpi_usuario,:fechaNacimiento,:direccion :password )";
+    VALUES (:nombre_usuario,:primerApellido, :segundoApellido,:tercerApellido,:email_usuario,:dpi_usuario,:fechaNacimiento,:direccion, :password )";
     $stmt = $conn ->prepare($sql);
     $stmt->bindParam(':nombre_usuario',$input['nombre_usuario']);
     $stmt->bindParam(':primerApellido',$input['primerApellido']);

@@ -21,7 +21,7 @@ if(!empty($input["primerNombre"]) && !empty($input["email_usuario"])  && !empty(
     if($stmt->execute()){
         $message= 'Successfully created new user';
         echo '<script>alert("Successfully created new user")</script>';
-        echo '<script type="text/javascript"> alert('.$dpiTest.')</script>';
+        echo '<script type="text/javascript"> alert("'.$dpiTest.'")</script>';
 
         //$sql = "SELECT id_DetalleUsuario FROM Detalle_Usuario WHERE dpi_usuario = :dpi_usuario"; 
         

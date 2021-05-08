@@ -173,9 +173,11 @@
             <div class="container">
                 <div class="row">
 
-                    <main>
                     <body style="background-color:blue;">
                     </body>
+                    <main>
+
+
                     </main>
                 </div>
 

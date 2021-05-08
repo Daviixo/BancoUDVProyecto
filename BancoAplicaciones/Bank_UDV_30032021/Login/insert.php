@@ -21,8 +21,8 @@ if(!empty($input["primerNombre"]) && !empty($input["email_usuario"])  && !empty(
     $stmt->bindParam(':fecha_nacimiento',$input['fecha_nacimiento']);
     $stmt->bindParam(':direccion',$input['direccion']);
 
-    echo $handler->lastinsertid($temp);
-    echo $temp;
+    $id = $conn -> lastInsertId();
+    echo "La ID es: $id"; 
 
     echo '<script type="text/javascript">console.log("'.$dpiTest.'")</script>';
     
@@ -39,8 +39,6 @@ if(!empty($input["primerNombre"]) && !empty($input["email_usuario"])  && !empty(
 
     //$sql = "SELECT id_DetalleUsuario FROM Detalle_Usuario WHERE dpi_usuario = {$dpiTest}";
     //$stmt = $conn ->prepare($sql);
-
-    //$idUsuario = mysqli_query("SELECT id_DetalleUsuario FROM Detalle_Usuario WHERE dpi_usuario = '$dpiTest'",$temp);
     
 
 ?>

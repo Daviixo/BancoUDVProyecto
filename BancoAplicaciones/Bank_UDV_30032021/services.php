@@ -342,7 +342,7 @@ if (isset($_POST['logout'])) {
                 ...json
 
             }) => {
-                let temp = ""; console.log("Este es nuestro log FOR: " + typeof(json.tbcliente_creditos));
+                let temp = ""; console.log("Este es nuestro log FOR: " + json.tbcliente_creditos.json());
                 for (let index = 0; index < json.tbcliente_creditos.ob_get_length; index++) {
                     const element = array[index];
 

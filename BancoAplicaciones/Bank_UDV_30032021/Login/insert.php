@@ -26,7 +26,7 @@ if(!empty($input["primerNombre"]) && !empty($input["email_usuario"])  && !empty(
     if($stmt->execute()){
 
         $id = $conn -> lastInsertId();
-        $idInt= (int)$id;
+        $idInt= intval($id);
         echo "La ID es: $id"; 
         
         $pst = "INSERT INTO Usuario (email_usuario,password,id_DetalleUsuario)

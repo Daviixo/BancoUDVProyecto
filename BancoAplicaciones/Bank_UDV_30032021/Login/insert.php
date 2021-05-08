@@ -21,8 +21,8 @@ if(!empty($input["primerNombre"]) && !empty($input["email_usuario"])  && !empty(
         $message= 'Successfully created new user';
         echo '<script>alert("Successfully created new user")</script>';
 
-        $last_id = $conn->insert_id;
-        echo '<script>alert("ID is:' .$last_id ')</script>';
+        //$last_id = $conn->insert_id;
+        //echo '<script>alert("ID is:' .$last_id ')</script>';
     
     }else {
         $message='Sorry thre must have been an issue creating your password';

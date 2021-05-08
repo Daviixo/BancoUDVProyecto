@@ -137,6 +137,8 @@
                                     <!--Local-->
                                     <input  type="text" placeholder="Nombre"  name="primerNombre" require>
                                     <!--Local-->
+                                    <input  type="text" placeholder="Segundo Nombre"  name="segundoNombre" require>
+                                    <!--Local-->
                                     <input  type="text" placeholder="Primer Apellido"  name="primerApellido" require>
                                     <!--Local-->
                                     <input  type="text" placeholder="Segundo Apellido"  name="segundoApellido" require>

@@ -6,7 +6,7 @@ $message='';
 
 if(!empty($input["primerNombre"]) && !empty($input["email_usuario"])  && !empty($input["dpi_usuario"])  && !empty($input["password"])){
     $sql = "INSERT INTO Detalle_Usuario (primerNombre,segundoNombre,primerApellido,segundoApellido,tercerApellido,dpi_usuario,fecha_nacimiento, direccion) 
-    VALUES (:primerNombre, :segundoNombre, :primerApellido, :segundoApellido, :tercerApellido, :dpi_usuario, :fecha_nacimiento, :direccion)";
+    VALUES (:primerNombre,:segundoNombre,:primerApellido,:segundoApellido,:tercerApellido,:dpi_usuario,:fecha_nacimiento,:direccion)";
     $stmt = $conn ->prepare($sql);
     $stmt->bindParam(':primerNombre',$input['primerNombre']);
     $stmt->bindParam(':segundoNombre',$input['segundoNombre']);
@@ -23,7 +23,7 @@ if(!empty($input["primerNombre"]) && !empty($input["email_usuario"])  && !empty(
 
         $last_id = $conn->insert_id;
         
-        //echo '<script>alert("ID is:' .$last_id ')</script>';
+        echo '<script>alert("ID is:"' .$last_id '")</script>';
 
         echo "New record created successfully. Last inserted ID is: " . $last_id;
     

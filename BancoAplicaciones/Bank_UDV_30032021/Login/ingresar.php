@@ -18,7 +18,9 @@ if ($inc) {
 		while ($row = $resultado->fetch_array()) { // hacemos un array con los datos que obtenemos de la consulta
       $email = $row['email_usuario'];
       $password = $row['password'];
+      $dpi = $row['dpi_usuario'];
       // verificar contraseña cifrada y validacion de correo 
+      $_SESSION['dpi_usuario'] = $dpi;
       if(password_verify($pass, $password )&&($email_usuario==$email)){
         echo '<script language="javascript">alert("Login successfully!");window.location.href="Login.php"</script>';
         $contador++;

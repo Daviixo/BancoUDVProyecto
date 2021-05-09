@@ -389,7 +389,11 @@ if (isset($_POST['logout'])) {
 
         </script>
 
+        <?php
 
+                echo $_SESSION['dpi_usuario'];
+
+        ?>        
 </body>
 
 </html>

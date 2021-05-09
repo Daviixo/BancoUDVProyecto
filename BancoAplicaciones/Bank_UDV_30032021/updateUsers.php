@@ -22,7 +22,7 @@
     
 
    
-
+    console.log ("el dpi enviado a eliminar es: "+ dpi);
     fetch("https://banco-vivienda.club/clientes/administracion", {
     "method": "DELETE",
     "headers": {

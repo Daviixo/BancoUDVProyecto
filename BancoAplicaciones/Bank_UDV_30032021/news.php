@@ -196,7 +196,7 @@ if (isset($_POST['logout'])) {
                     <button type="button" class="btn btn-primary" onclick="consultData()">Consult</button>
                     <br>
                     <button type="button" class="btn btn-primary" onclick="deleteUser()">Delete</button>
-                    
+
         </form>
         <!--FINAL DE FORMULARIO-->
 
@@ -402,44 +402,40 @@ if (isset($_POST['logout'])) {
     <!-- Boton para consulta de datos por DPI -->
 
     <script>
+        function consultData() {
 
-    function consultData(){
+            var dpi = document.getElementById("dpi").value;
 
-    var dpi = document.getElementById("dpi").value;    
-    
-    console.log("El DPI a ser consultado es: " + dpi);
+            console.log("El DPI a ser consultado es: " + dpi);
 
-        fetch("https://banco-vivienda.club/clientes/consulta/" + dpi, {
-    "headers": {
-        'Accept': 'application/json',
-        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZFN1Y3Vyc2FsIjo1LCJ1c2VybmFtZSI6IlNVQ1VSU0FMMSIsInBhc3N3b3JkIjoicXdlcnR5IiwiaWF0IjoxNjE5NTQ3NzQ0LCJleHAiOjE2MjI2NTgxNDR9.1awdMkX9_Ajun1OLcYXD19_UbtKVgx4Uzbmy55Jlrt4"
-    }
-})
-    .then(response => {
-        return response.json()
-    })
-    .then(response => {
-        console.log(response);
-    })
-    .catch(err => {
-        console.error(err);
-    });
+            fetch("https://banco-vivienda.club/clientes/consulta/" + dpi, {
+                    "headers": {
+                        'Accept': 'application/json',
+                        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZFN1Y3Vyc2FsIjo1LCJ1c2VybmFtZSI6IlNVQ1VSU0FMMSIsInBhc3N3b3JkIjoicXdlcnR5IiwiaWF0IjoxNjE5NTQ3NzQ0LCJleHAiOjE2MjI2NTgxNDR9.1awdMkX9_Ajun1OLcYXD19_UbtKVgx4Uzbmy55Jlrt4"
+                    }
+                })
+                .then(response => {
+                    return response.json()
+                })
+                .then(response => {
+                    console.log(response);
+                })
+                .catch(err => {
+                    console.error(err);
+                });
+            var obj = JSON.parse(json);
 
-    }
-
-    var obj = JSON.parse(json);
-
-    if (obj.cliente_ide != NULL) {
-        `<td>${obj.cliente_ide}</td>
-            
-        <td>${obj.cliente_nombre1}</td>
+            if (obj.cliente_ide != NULL) {
+                `<td>${obj.cliente_ide}</td>
         
-        <td>${obj.cliente_ape1}</td>`
-    } else {
-        return `<tr><td colspan = "2"> No data to disply! :) </td></tr>`
-    }
-
-
+    <td>${obj.cliente_nombre1}</td>
+    
+    <td>${obj.cliente_ape1}</td>`
+            } else {
+                return `<tr><td colspan = "2"> No data to disply! :) </td></tr>`
+            }
+            
+        }
     </script>
 
 

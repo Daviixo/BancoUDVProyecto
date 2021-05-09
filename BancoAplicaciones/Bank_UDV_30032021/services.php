@@ -344,18 +344,18 @@ if (isset($_POST['logout'])) {
             }) => {
                 json.tbcliente_creditos.map(data=>{
                     console.log("Nuestro data credito es: " + data.credito_id);
-                    console.log("Nuestro data credito DSC es: " + data.credito_dsc);
+                    console.log("Nuestro data credito DSC es: " + data.clientecred_dsc);
                 })
-                let temp = ""; console.log("Este es nuestro log FOR: " + json.tbcliente_creditos.json());
-                for (let index = 0; index < json.tbcliente_creditos.ob_get_length; index++) {
-                    const element = array[index];
+            //     let temp = ""; console.log("Este es nuestro log FOR: " + json.tbcliente_creditos.json());
+            //     for (let index = 0; index < json.tbcliente_creditos.ob_get_length; index++) {
+            //         const element = array[index];
 
-                    temp += `<tr>
-            <td>${ json.tbcliente_creditos[index].credito_id}</td>
+            //         temp += `<tr>
+            // <td>${ json.tbcliente_creditos[index].credito_id}</td>
             
-            <td>${ json.tbcliente_creditos[index].clientecred_dsc}</td>
-            </tr>`
-                }
+            // <td>${ json.tbcliente_creditos[index].clientecred_dsc}</td>
+            // </tr>`
+            //     }
                 return temp;
             }
 

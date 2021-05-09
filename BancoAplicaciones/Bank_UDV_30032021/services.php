@@ -342,7 +342,7 @@ if (isset($_POST['logout'])) {
                 ...json
 
             }) => {
-
+                temp = "";
                 json.tbcliente_creditos.map(data => {
                     // console.log("Data es: " + JSON.stringify(data));
                     // console.log("Nuestro data credito es: " + data.credito_id);

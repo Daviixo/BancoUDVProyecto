@@ -485,7 +485,8 @@ if (isset($_POST['logout'])) {
         function payCredit() {
 
             var credit_id = document.getElementById("creditid").value;
-            var amountToPay = document.getElementById("amountToPay").value;
+            var amountToPayTemp = document.getElementById("amountToPay").value;
+            var amountToPay = parseInt(amountToPayTemp);
 
             console.log("Credit ID es: " + credit_id);
             console.log("Amount to pay es: " + amountToPay);

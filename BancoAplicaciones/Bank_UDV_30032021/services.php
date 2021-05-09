@@ -342,6 +342,10 @@ if (isset($_POST['logout'])) {
                 ...json
 
             }) => {
+                json.tbcliente_creditos.map(data=>{
+                    console.log("Nuestro data credito es: " + data.credito_id);
+                    console.log("Nuestro data credito DSC es: " + data.credito_dsc);
+                })
                 let temp = ""; console.log("Este es nuestro log FOR: " + json.tbcliente_creditos.json());
                 for (let index = 0; index < json.tbcliente_creditos.ob_get_length; index++) {
                     const element = array[index];

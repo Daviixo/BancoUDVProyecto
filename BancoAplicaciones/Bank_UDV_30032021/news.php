@@ -172,50 +172,27 @@ if(isset($_POST['logout'])){
 
         <!--INICIO DE FORMULARIO-->
 <form id="mostrarClientes" method="post">
+  
+<h2 class="text-center">--User Info--</h2><br>
+        <div>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>DPI</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                    </tr>
+                </thead>
+                <tbody id="dataUser">
+                </tbody>
+            </table>
+  
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="inputEmail4">DPI</label>
       <input type="text" class="form-control" id="dpi" placeholder="dpi">
     </div>
-    </br></br>
-    <div class="form-group col-md-6">
-      <label for="inputPassword4">Primer Nombre</label>
-      <input type="text" class="form-control" id="primerNombre" placeholder="Primer Nombre">
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="inputAddress"></label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-  </div>
-  <div class="form-group">
-    <label for="inputAddress2">Address 2</label>
-    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-  </div>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputCity">City</label>
-      <input type="text" class="form-control" id="inputCity">
-    </div>
-    <div class="form-group col-md-4">
-      <label for="inputState">State</label>
-      <select id="inputState" class="form-control">
-        <option selected>Choose...</option>
-        <option>...</option>
-      </select>
-    </div>
-    <div class="form-group col-md-2">
-      <label for="inputZip">Zip</label>
-      <input type="text" class="form-control" id="inputZip">
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="gridCheck">
-      <label class="form-check-label" for="gridCheck">
-        Check me out
-      </label>
-    </div>
-  </div>
+    
   <button type="button" class="btn btn-primary" onclick="deleteUser()">Mostrar</button>
 </form>
         <!--FINAL DE FORMULARIO-->

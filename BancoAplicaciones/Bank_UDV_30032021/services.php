@@ -464,27 +464,46 @@ if (isset($_POST['logout'])) {
             json.tbcliente_creditos.map(data => {
                 console.log("Entro al MAP!");
                 if (data.credito_id != null) {
-                    Iterator = map.keySet().iterator();
-                    while (Iterator.hasNext()) {
-                        temp += `<tr>
-                    <td>${data.credito_id}</td>
+                    temp += `<tr>
+        <td>${data.credito_id}</td>
 
-                    <td>${data.clientecred_dsc}</td>
+        <td>${data.clientecred_dsc}</td>
 
-                    <td>${data.clientecred_monto}</td>
-                    </tr>`
-                        console.log("Temp es: " + temp);
-
-                    }
+        <td>${data.clientecred_monto}</td>
+    </tr>`
+                    console.log("Temp es: " + temp);
                 }
 
+
             })
+
+            json.tbcliente.map((f, i) => {
+                if (i === 0) {
+                    temp += `<tr>
+        <td>${data.credito_id}</td>
+
+        <td>${data.clientecred_dsc}</td>
+
+        <td>${data.clientecred_monto}</td>
+    </tr>`
+                    console.log("Temp es: " + temp);
+                }
+            });
+
+
             if (temp == "") {
                 return `<tr><td colspan = "2"> You have no credits. Ask for one NOW! :) </td></tr>`
             } else {
                 return temp;
             }
         }
+
+        if (temp == "") {
+            return `<tr><td colspan = "2"> You have no credits. Ask for one NOW! :) </td></tr>`
+        } else {
+            return temp;
+        }
+
 
         let dpi_usuario = document.getElementById("user_dpi").value;
         console.log("El DPI FINAL FINAL ES: " + dpi_usuario);

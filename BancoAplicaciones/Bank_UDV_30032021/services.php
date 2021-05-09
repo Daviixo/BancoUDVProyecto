@@ -220,7 +220,7 @@ if (isset($_POST['logout'])) {
 
             <div class="form-group row">
                 <div class="col-sm-10">
-                    <button type="submit" onclick="readCreditForm()" class="btn btn-primary">Submit Request</button>
+                    <button type="button" onclick="readCreditForm()" class="btn btn-primary">Submit Request</button>
                 </div>
             </div>
     </div>
@@ -399,6 +399,12 @@ if (isset($_POST['logout'])) {
             var daysToPay = "";
             var description = "";
 
+
+            var today = new Date();
+
+            var time = today.getHours() + today.getMinutes() + today.getSeconds();
+            var resultTime = time;
+
             howMuch = document.getElementById("inputMoney").value;
             daysToPay = document.getElementById("daysToPay").value;
 
@@ -431,7 +437,7 @@ if (isset($_POST['logout'])) {
                         "descripcion": description,
                         "monto": howMuch,
                         "diapago": daysToPay,
-                        "cred_tipo": "tar_visa2"
+                        "cred_tipo": "tar_visa2" + resultTime
                     })
                 })
                 .then(response => {

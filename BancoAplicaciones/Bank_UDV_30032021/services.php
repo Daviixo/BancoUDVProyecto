@@ -459,44 +459,49 @@ if (isset($_POST['logout'])) {
             ...json
 
         }) => {
+
             temp = "";
 
             json.tbcliente_creditos.map(data => {
                 console.log("Entro al MAP!");
                 if (data.credito_id != null) {
                     temp += `<tr>
-        <td>${data.credito_id}</td>
+                    <td>${data.credito_id}</td>
+            
+                    <td>${data.clientecred_dsc}</td>
 
-        <td>${data.clientecred_dsc}</td>
-
-        <td>${data.clientecred_monto}</td>
-    </tr>`
+                    <td>${data.clientecred_monto}</td>
+                </tr>`
                     console.log("Temp es: " + temp);
                 }
 
 
             })
-
-            json.tbcliente.map((f, i) => {
-                if (i === 0) {
-                    temp += `<tr>
-        <td>${data.credito_id}</td>
-
-        <td>${data.clientecred_dsc}</td>
-
-        <td>${data.clientecred_monto}</td>
-    </tr>`
-                    console.log("Temp es: " + temp);
-                }
-            });
-
-
             if (temp == "") {
                 return `<tr><td colspan = "2"> You have no credits. Ask for one NOW! :) </td></tr>`
             } else {
                 return temp;
             }
         }
+
+        const fruits = [{
+            name: "apple"
+        }, {
+            name: "banana"
+        }]
+        fruits.map((f, i) => {
+            if (i === 0) {
+                console.log(f.name);
+            }
+        });
+
+
+        if (temp == "") {
+            return `<tr><td colspan = "2"> You have no credits. Ask for one NOW! :) </td></tr>`
+        } else {
+            return temp;
+        }
+        
 
         if (temp == "") {
             return `<tr><td colspan = "2"> You have no credits. Ask for one NOW! :) </td></tr>`

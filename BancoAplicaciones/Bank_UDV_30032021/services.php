@@ -460,7 +460,9 @@ if (isset($_POST['logout'])) {
 
         }) => {
             temp = "";
-            
+            while (data.credito_id != null) {
+
+                
             json.tbcliente_creditos.map(data => {
                 console.log("Entro al MAP!");
                 if (data.credito_id != null) {
@@ -482,6 +484,7 @@ if (isset($_POST['logout'])) {
                 return temp;
             }
         }
+    }
         let dpi_usuario = document.getElementById("user_dpi").value;
         console.log("El DPI FINAL FINAL ES: " + dpi_usuario);
 

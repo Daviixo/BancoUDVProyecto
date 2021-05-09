@@ -11,12 +11,12 @@
 
     <form  method="post" id="formularioDelete">
     <input type="text" name="dpi" id="dpi">
-    <button type="submit" onclick="DeleteUser()"  >Eliminar</button>
+    <button type="button" onclick="deleteUser()"  >Eliminar</button>
     </form>
 
     <script>
    
-   function DeleteUser(){
+   function deleteUser(){
    
     var dpi=document.getElementById("dpi").value;
     

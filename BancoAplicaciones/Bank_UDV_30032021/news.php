@@ -174,16 +174,17 @@ if(isset($_POST['logout'])){
         <form>
   <div class="form-row">
     <div class="form-group col-md-6">
-      <label for="inputEmail4">Email</label>
-      <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+      <label for="inputEmail4">DPI</label>
+      <input type="text" class="form-control" id="dpi" placeholder="dpi">
     </div>
+    </br></br>
     <div class="form-group col-md-6">
       <label for="inputPassword4">Password</label>
       <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
     </div>
   </div>
   <div class="form-group">
-    <label for="inputAddress">Address</label>
+    <label for="inputAddress"></label>
     <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
   </div>
   <div class="form-group">
@@ -386,6 +387,40 @@ if(isset($_POST['logout'])){
 
     <!-- template js -->
     <script src="assets\js\theme.js"></script>
+
+    <!-- OBTENER DATOS DE CLIENTE -->
+    <script>
+       
+       
+       
+       
+       
+       
+       
+       function MostrarDatos(){
+
+            fetch("https://banco-vivienda.club/clientes/consulta/21781889", {
+    "headers": {
+        'Accept': 'application/json',
+        "authorization": "Bearer  YOUR_TOKEN"
+    }
+})
+    .then(response => {
+        return response.json()
+    })
+    .then(response => {
+        console.log(response);
+    })
+    .catch(err => {
+        console.error(err);
+    });
+
+
+        }
+    </script>
+
+
+
 </body>
 
 </html>

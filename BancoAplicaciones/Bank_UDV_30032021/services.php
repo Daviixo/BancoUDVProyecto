@@ -431,7 +431,7 @@ if (isset($_POST['logout'])) {
                         "descripcion": description,
                         "monto": howMuch,
                         "diapago": daysToPay,
-                        "cred_tipo": "tar_visa1"
+                        "cred_tipo": "tar_visa2"
                     })
                 })
                 .then(response => {

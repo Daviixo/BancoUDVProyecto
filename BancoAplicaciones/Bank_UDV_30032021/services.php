@@ -344,9 +344,6 @@ if (isset($_POST['logout'])) {
             }) => {
                 temp = "";
                 json.tbcliente_creditos.map(data => {
-                    // console.log("Data es: " + JSON.stringify(data));
-                    // console.log("Nuestro data credito es: " + data.credito_id);
-                    // console.log("Nuestro data credito DSC es: " + data.clientecred_dsc);
 
                     if (data.credito_id != null) {
                         temp += `<tr>
@@ -358,16 +355,7 @@ if (isset($_POST['logout'])) {
 
 
                 })
-                //     let temp = ""; console.log("Este es nuestro log FOR: " + json.tbcliente_creditos.json());
-                //     for (let index = 0; index < json.tbcliente_creditos.ob_get_length; index++) {
-                //         const element = array[index];
 
-                //         temp += `<tr>
-                // <td>${ json.tbcliente_creditos[index].credito_id}</td>
-
-                // <td>${ json.tbcliente_creditos[index].clientecred_dsc}</td>
-                // </tr>`
-                //     }
                 return temp;
             }
 
@@ -393,22 +381,12 @@ if (isset($_POST['logout'])) {
                     console.log(response);
 
                     infocliente.innerHTML = template(response);
-                    console.log(response.ok)
 
                 })
                 .catch(err => {
                     console.error(err);
                 });
 
-            // // let formulario = document.querySelector("#formulario");
-            // // formulario.addEventListener("submit", function(e) {
-            // //     e.preventDefault()
-            // //     let dpi = document.querySelector("#dpi");
-            // //     console.log(dpi.value);
-
-
-
-            // })
         </script>
 
 

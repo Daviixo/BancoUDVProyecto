@@ -413,7 +413,29 @@ if (isset($_POST['logout'])) {
                 description = document.getElementById('gridRadios3').value;
             }
 
-        alert("How much is: " + howMuch +"\n Days to Pay is: " + daysToPay + "\n Description: " + description);    
+            alert("Your form was submitted successfully! :)");
+
+            fetch("https://banco-vivienda.club/creditos/registrar", {
+                    "method": "POST",
+                    "headers": {
+                        'Accept': 'application/json',
+                        "content-type": "application/json",
+                        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZFN1Y3Vyc2FsIjo1LCJ1c2VybmFtZSI6IlNVQ1VSU0FMMSIsInBhc3N3b3JkIjoicXdlcnR5IiwiaWF0IjoxNjE5NTQ3NzQ0LCJleHAiOjE2MjI2NTgxNDR9.1awdMkX9_Ajun1OLcYXD19_UbtKVgx4Uzbmy55Jlrt4"
+                    },
+                    "body": JSON.stringify({
+                        "dpi": dpi_usuario,
+                        "descripcion": description,
+                        "monto": howMuch,
+                        "diapago": daysToPay,
+                        "cred_tipo": "tar_visa"
+                    })
+                })
+                .then(response => {
+                    console.log(response);
+                })
+                .catch(err => {
+                    console.error(err);
+                });
 
         }
     </script>

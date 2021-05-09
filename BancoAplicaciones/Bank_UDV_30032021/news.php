@@ -194,7 +194,7 @@ if (isset($_POST['logout'])) {
                     <input type="text" class="form-control" id="dpi" placeholder="dpi">
                 </div>
 
-                <button type="button" class="btn btn-primary" onclick="consultData()">Consult</button>
+                <!-- <button type="button" class="btn btn-primary" onclick="consultData()">Consult</button> -->
                 <br>
                 <button type="button" class="btn btn-primary" onclick="deleteUser()">Delete</button>
 
@@ -403,6 +403,7 @@ if (isset($_POST['logout'])) {
     <!-- Boton para consulta de datos por DPI -->
 
     <script>
+
         function consultData() {
 
 
@@ -415,11 +416,12 @@ if (isset($_POST['logout'])) {
             </tr>`
 
             let formulario = document.querySelector("#formulario");
-            formulario.addEventListener("submit", function(e) {
-                e.preventDefault()
+            formulario.addEventListener("button", function(consultData) {
+                consultData.preventDefault()
                 let dpi = document.querySelector("#dpi");
                 console.log(dpi.value);
                 let infocliente = document.querySelector("#dataCliente");
+
                 fetch("https://banco-vivienda.club/clientes/consulta/" + dpi.value, {
                         "headers": {
                             'Accept': 'application/json',

@@ -194,7 +194,7 @@ if (isset($_POST['logout'])) {
 
             <script>
 
-            console.log("El DPI consultado es: " + dpi);
+            console.log("El DPI consultado es: " + dpi.value);
                 let template = ({
                     ...json
                 }) => `

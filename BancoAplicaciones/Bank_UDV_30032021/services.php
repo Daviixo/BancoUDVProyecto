@@ -415,6 +415,9 @@ if (isset($_POST['logout'])) {
             }
 
             alert("Your form was submitted successfully! :)");
+            console.log("How much did the client asked? " + howMuch);
+            console.log("Days to pay? " + daysToPay);
+            console.log("Card selected? " + description);
 
             fetch("https://banco-vivienda.club/creditos/registrar", {
                     "method": "POST",
@@ -428,10 +431,11 @@ if (isset($_POST['logout'])) {
                         "descripcion": description,
                         "monto": howMuch,
                         "diapago": daysToPay,
-                        "cred_tipo": "tar_visa"
+                        "cred_tipo": "tar_visa1"
                     })
                 })
                 .then(response => {
+                    console.log("Data was inserted correctly.");
                     console.log(response);
                 })
                 .catch(err => {

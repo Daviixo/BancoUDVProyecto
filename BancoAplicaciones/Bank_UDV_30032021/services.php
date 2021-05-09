@@ -175,139 +175,139 @@ if (isset($_POST['logout'])) {
             <!-- Form para solicitar credito -->
             <br><br><br><br>
             <form style="margin: auto;">
-                    <div class="form-group row">
-                        <label for="inputEmail3" class="col-sm-2 col-form-label">How much do you need?</label>
-                        <div class="col-sm-2">
-                            <input type="text" class="form-control" id="inputMoney" placeholder="$$$" maxlength="3">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="inputEmail3" class="col-sm-2 col-form-label">Days to pay it?</label>
-                        <div class="col-sm-2">
-                            <input type="text" class="form-control" id="daysToPay" placeholder="Days?" maxlength="2">
-                        </div>
+                <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">How much do you need?</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" id="inputMoney" placeholder="$$$" maxlength="3">
                     </div>
                 </div>
-
-                <!-- Credit Type -->
-                <fieldset class="form-group">
-                    <div class="row">
-                        <legend class="col-form-label col-sm-2 pt-0">Description</legend>
-                        <div class="col-sm-10">
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="Visa Gold" checked>
-                                <label class="form-check-label" for="gridRadios1">
-                                    Visa Gold
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="Visa Black">
-                                <label class="form-check-label" for="gridRadios2">
-                                    Visa Black
-                                </label>
-                            </div>
-                            <div class="form-check disabled">
-                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="Visa Platinum">
-                                <label class="form-check-label" for="gridRadios3">
-                                    Visa Platinum
-                                </label>
-                            </div>
-                        </div>
+                <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Days to pay it?</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" id="daysToPay" placeholder="Days?" maxlength="2">
                     </div>
-
-                    <!-- End of: Credit Type -->
-
-                    <div class="form-group row">
-                        <div class="col-sm-10">
-                            <button type="submit" class="btn btn-primary">Submit Request</button>
-                        </div>
-                    </div>
+                </div>
         </div>
-        </form>
 
-        <!-- END OF: Form para solicitar credito -->
-        <footer class="site-footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="footer-widget footer-widget__about">
-                            <a href="index-1.php">
-                                <img src="assets\images\logo-light.png" width="155" alt="">
-                            </a>
-                            <p>Lorem ipsum is not dolor sit amet, consect etur adi pisicing elit sed eiusmod tempor ut labore.</p>
-                            <div class="footer-widget__about-phone">
-                                <i class="pylon-icon-tech-support"></i>
-                                <div class="footer-widget__about-phone-content">
-                                    <span>Call Anytime</span>
-                                    <h3><a href="tel:92-666-888-0000">92 666 888 0000</a></h3>
-                                </div><!-- /.footer-widget__about-phone-content -->
-                            </div><!-- /.footer-widget__about-phone -->
-                        </div><!-- /.footer-widget footer-widget__about -->
-                    </div><!-- /.col-lg-3 -->
-                    <div class="col-lg-2 col-md-6">
-                        <div class="footer-widget footer-widget__link">
-                            <h3 class="footer-widget__title">Explore</h3>
-                            <ul class="list-unstyled footer-widget__link-list">
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Our Services</a></li>
-                                <li><a href="#">Latest News</a></li>
-                                <li><a href="#">Testimonials</a></li>
-                                <li><a href="#">Contact</a></li>
-                            </ul><!-- /.list-unstyled -->
-                        </div><!-- /.footer-widget -->
-                    </div><!-- /.col-lg-2 -->
-                    <div class="col-lg-3 col-md-6">
-                        <div class="footer-widget footer-widget__post">
-                            <h3 class="footer-widget__title">Latest News</h3>
-                            <ul class="list-unstyled footer-widget__post-list">
-                                <li>
-                                    <img src="assets\images\resources\footer-post-1-1.png" alt="">
-                                    <div class="footer-widget__post-list-content">
-                                        <span>16 Oct, 2020</span>
-                                        <h3><a href="news-details.php">We’re Providing the Quality Services</a></h3>
-                                    </div><!-- /.footer-widget__post-content -->
-                                </li>
-                                <li>
-                                    <img src="assets\images\resources\footer-post-1-2.png" alt="">
-                                    <div class="footer-widget__post-list-content">
-                                        <span>16 Oct, 2020</span>
-                                        <h3><a href="news-details.php">We’re Providing the Quality Services</a></h3>
-                                    </div><!-- /.footer-widget__post-content -->
-                                </li>
-                            </ul><!-- /.list-unstyled -->
-                        </div><!-- /.footer-widget -->
-                    </div><!-- /.col-lg-3 -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="footer-widget footer-widget__contact">
-                            <h3>Contact</h3>
-                            <ul class="list-unstyled footer-widget__contact-list">
-                                <li>
-                                    <a href="#"><i class="pylon-icon-email1"></i>needhelp@company.com</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="pylon-icon-clock2"></i>Mon - Sat 8:00 AM - 6:00 PM</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="pylon-icon-pin1"></i>80 Broklyn Golden Street,
-                                        New York. USA</a>
-                                </li>
-                            </ul>
-                        </div><!-- /.footer-widget footer-widget__contact -->
-                    </div><!-- /.col-lg-4 -->
-                </div><!-- /.row -->
-            </div><!-- /.container -->
-        </footer><!-- /.site-footer -->
-        <div class="bottom-footer">
-            <div class="container">
-                <p>© Copyright 2020 by Company.com</p>
-                <div class="bottom-footer__social">
-                    <a href="#" class="fab fa-facebook-square"></a>
-                    <a href="#" class="fab fa-twitter"></a>
-                    <a href="#" class="fab fa-pinterest-p"></a>
-                    <a href="#" class="fab fa-instagram"></a>
-                </div><!-- /.bottom-footer__social -->
-            </div><!-- /.container -->
-        </div><!-- /.bottom-footer -->
+        <!-- Credit Type -->
+        <fieldset class="form-group">
+            <div class="row">
+                <legend class="col-form-label col-sm-2 pt-0">Description</legend>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="Visa Gold" checked>
+                        <label class="form-check-label" for="gridRadios1">
+                            Visa Gold
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="Visa Black">
+                        <label class="form-check-label" for="gridRadios2">
+                            Visa Black
+                        </label>
+                    </div>
+                    <div class="form-check disabled">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="Visa Platinum">
+                        <label class="form-check-label" for="gridRadios3">
+                            Visa Platinum
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- End of: Credit Type -->
+
+            <div class="form-group row">
+                <div class="col-sm-10">
+                    <button type="submit" onclick="readCreditForm()" class="btn btn-primary">Submit Request</button>
+                </div>
+            </div>
+    </div>
+    </form>
+
+    <!-- END OF: Form para solicitar credito -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget footer-widget__about">
+                        <a href="index-1.php">
+                            <img src="assets\images\logo-light.png" width="155" alt="">
+                        </a>
+                        <p>Lorem ipsum is not dolor sit amet, consect etur adi pisicing elit sed eiusmod tempor ut labore.</p>
+                        <div class="footer-widget__about-phone">
+                            <i class="pylon-icon-tech-support"></i>
+                            <div class="footer-widget__about-phone-content">
+                                <span>Call Anytime</span>
+                                <h3><a href="tel:92-666-888-0000">92 666 888 0000</a></h3>
+                            </div><!-- /.footer-widget__about-phone-content -->
+                        </div><!-- /.footer-widget__about-phone -->
+                    </div><!-- /.footer-widget footer-widget__about -->
+                </div><!-- /.col-lg-3 -->
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-widget footer-widget__link">
+                        <h3 class="footer-widget__title">Explore</h3>
+                        <ul class="list-unstyled footer-widget__link-list">
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Our Services</a></li>
+                            <li><a href="#">Latest News</a></li>
+                            <li><a href="#">Testimonials</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul><!-- /.list-unstyled -->
+                    </div><!-- /.footer-widget -->
+                </div><!-- /.col-lg-2 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget footer-widget__post">
+                        <h3 class="footer-widget__title">Latest News</h3>
+                        <ul class="list-unstyled footer-widget__post-list">
+                            <li>
+                                <img src="assets\images\resources\footer-post-1-1.png" alt="">
+                                <div class="footer-widget__post-list-content">
+                                    <span>16 Oct, 2020</span>
+                                    <h3><a href="news-details.php">We’re Providing the Quality Services</a></h3>
+                                </div><!-- /.footer-widget__post-content -->
+                            </li>
+                            <li>
+                                <img src="assets\images\resources\footer-post-1-2.png" alt="">
+                                <div class="footer-widget__post-list-content">
+                                    <span>16 Oct, 2020</span>
+                                    <h3><a href="news-details.php">We’re Providing the Quality Services</a></h3>
+                                </div><!-- /.footer-widget__post-content -->
+                            </li>
+                        </ul><!-- /.list-unstyled -->
+                    </div><!-- /.footer-widget -->
+                </div><!-- /.col-lg-3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-widget footer-widget__contact">
+                        <h3>Contact</h3>
+                        <ul class="list-unstyled footer-widget__contact-list">
+                            <li>
+                                <a href="#"><i class="pylon-icon-email1"></i>needhelp@company.com</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="pylon-icon-clock2"></i>Mon - Sat 8:00 AM - 6:00 PM</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="pylon-icon-pin1"></i>80 Broklyn Golden Street,
+                                    New York. USA</a>
+                            </li>
+                        </ul>
+                    </div><!-- /.footer-widget footer-widget__contact -->
+                </div><!-- /.col-lg-4 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </footer><!-- /.site-footer -->
+    <div class="bottom-footer">
+        <div class="container">
+            <p>© Copyright 2020 by Company.com</p>
+            <div class="bottom-footer__social">
+                <a href="#" class="fab fa-facebook-square"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-pinterest-p"></a>
+                <a href="#" class="fab fa-instagram"></a>
+            </div><!-- /.bottom-footer__social -->
+        </div><!-- /.container -->
+    </div><!-- /.bottom-footer -->
 
     </div><!-- /.page-wrapper -->
 
@@ -390,6 +390,33 @@ if (isset($_POST['logout'])) {
     <script src="assets\js\jquery.appear.min.js"></script>
     <script src="assets\js\wNumb.min.js"></script>
     <script src="assets\js\nouislider.min.js"></script>
+
+    <script>
+        function readCreditForm() {
+
+            var howMuch = "";
+            var daysToPay = "";
+            var description = "";
+
+            howMuch = document.getElementById("inputMoney").value;
+            daysToPay = document.getElementById("daysToPay").value;
+
+            if (document.getElementById('gridRadios1').checked) {
+                description = document.getElementById('gridRadios1').value;
+            }
+
+            if (document.getElementById('gridRadios2').checked) {
+                description = document.getElementById('gridRadios2').value;
+            }
+
+            if (document.getElementById('gridRadios3').checked) {
+                description = document.getElementById('gridRadios3').value;
+            }
+
+        alert("How much is: " + howMuch +"\n Days to Pay is: " + daysToPay + "\n Description: " + description);    
+
+        }
+    </script>
 
     <!-- template js -->
     <script src="assets\js\theme.js"></script>

@@ -535,8 +535,6 @@ if (isset($_POST['logout'])) {
                 <td>&nbsp;${it.credito_id}</td
                 <td>&nbsp;${it.clientecred_dsc}</td>
                 <td>&nbsp;${it.clientecred_monto}</td>
-                <td>&nbsp;${it.clientecred_diapago}</td>
-               <td>&nbsp;${it.clientecred_fcreacion}</td>
            
        `
             }

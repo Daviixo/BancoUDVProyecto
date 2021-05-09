@@ -12,6 +12,11 @@
     <input type="submit" value="search">
     </form>
 
+    <form  method="post" id="formDelete">
+    <input type="text" name="dpi" id="dpiDelete">
+    <input type="submit" value="eliminar">
+    </form>
+
     <h2>Información de cliente.</h2>
     <div >
     <table>
@@ -33,17 +38,8 @@
    
             <tr>
                 <td>Nombre</td>
-                <td>${ json.cliente_nombre1}</td>
+                <td>${ json.cliente_nombre1} ${json.cliente_ape1} ${json.cliente_ape2}</td>
             </tr>
-            <tr>
-                <td>DPI</td>
-                <td>${json.cliente_ape1}</td>
-            </tr>
-            <tr>
-                <td>DPI</td>
-                <td> ${json.cliente_ape2}</td>
-            </tr>
-
             <tr>
                 <td>DPI</td>
                 <td>${json.cliente_ide}</td>
@@ -67,9 +63,7 @@
 })
     .then(response => {
     
-            
-            
-        let respuestaServer= response.json().then(respuesta=>{ 
+            let respuestaServer= response.json().then(respuesta=>{ 
                 return respuesta;
             }) .catch(error=>{
                 alert ("El número de DPI no existe en la base de datos.");
@@ -91,6 +85,31 @@
 
     })
 
+    let formulario=document.querySelector("#formDelete");
+    formulario.addEventListener("submit",function(e){  
+        e.preventDefault() 
+    let dpi=document.querySelector("#dpiDelete");
+    console.log(dpi.value);
+    fetch("https://banco-vivienda.club/clientes/administracion"+dpi.value, {
+    "method": "DELETE",
+    "headers": {
+        'Accept': 'application/json',
+        "content-type": "application/json",
+        "authorization": "Bearer YOUR_TOKEN"
+    },
+    "body": JSON.stringify({
+        "dpi": 21781889
+    })
+})
+    .then(
+        response => response.json()
+    )
+    .then(response => {
+        console.log(response);
+    })
+    .catch(err => {
+        console.error(err);
+    });
    
     
     </script>

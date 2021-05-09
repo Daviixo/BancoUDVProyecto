@@ -50,7 +50,7 @@
     let dpi=document.querySelector("#dpi");
     console.log(dpi.value);
     let infocliente=document.querySelector("#dataCliente");
-    fetch("https://banco-vivienda.club/clientes/consulta/"+dpi.value, {
+    fetch("https://banco-vivienda.club/clientes/consulta/", {
     "headers": {
         'Accept': 'application/json',
         "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZFN1Y3Vyc2FsIjo1LCJ1c2VybmFtZSI6IlNVQ1VSU0FMMSIsInBhc3N3b3JkIjoicXdlcnR5IiwiaWF0IjoxNjE5NTQ3NzQ0LCJleHAiOjE2MjI2NTgxNDR9.1awdMkX9_Ajun1OLcYXD19_UbtKVgx4Uzbmy55Jlrt4"
@@ -58,7 +58,10 @@
 })
     .then(response => {
     
-            let respuestaServer= response.json().then(respuesta=>{ 
+            
+               
+        
+        let respuestaServer= response.json().then(respuesta=>{ 
                 return respuesta;
             }) .catch(error=>{
                 alert ("El número de DPI no existe en la base de datos.");

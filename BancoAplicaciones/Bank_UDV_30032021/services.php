@@ -176,15 +176,17 @@ if (isset($_POST['logout'])) {
             <br><br><br><br>
             <form style="margin: auto;">
                 <div class="form-group row">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">How much do you need?</label>
-                    <div class="col-sm-2">
-                        <input type="text" class="form-control" id="inputMoney" placeholder="$$$" maxlength = "3">
+                    <div class="row justify-content-center">>
+                        <label for="inputEmail3" class="col-sm-2 col-form-label">How much do you need?</label>
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control" id="inputMoney" placeholder="$$$" maxlength="3">
+                        </div>
                     </div>
-                </div>
-                <div class="form-group row">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">Days to pay it?</label>
-                    <div class="col-sm-2">
-                        <input type="text" class="form-control" id="daysToPay" placeholder="Days?" maxlength = "2">
+                    <div class="form-group row">
+                        <label for="inputEmail3" class="col-sm-2 col-form-label">Days to pay it?</label>
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control" id="daysToPay" placeholder="Days?" maxlength="2">
+                        </div>
                     </div>
                 </div>
 

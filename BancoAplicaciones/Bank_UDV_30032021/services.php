@@ -470,7 +470,7 @@ if (isset($_POST['logout'])) {
                     <td>${data.clientecred_monto}</td>
                 </tr>`;
                 }
-            }); //Aqui termina la tabla 
+            }) //Aqui termina la tabla 
             if (temp == "") {
                 return `<tr><td colspan = "2"> You have no credits. Ask for one NOW! :) </td></tr>`
             } else {

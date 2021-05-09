@@ -342,23 +342,33 @@ if (isset($_POST['logout'])) {
                 ...json
 
             }) => {
-                                    
-                    json.tbcliente_creditos.map(data=>{
-                    console.log("Data es: " + JSON.stringify(data));
-                    console.log("Nuestro data credito es: " + data.credito_id);
-                    console.log("Nuestro data credito DSC es: " + data.clientecred_dsc);
-                })
-            //     let temp = ""; console.log("Este es nuestro log FOR: " + json.tbcliente_creditos.json());
-            //     for (let index = 0; index < json.tbcliente_creditos.ob_get_length; index++) {
-            //         const element = array[index];
 
-            //         temp += `<tr>
-            // <td>${ json.tbcliente_creditos[index].credito_id}</td>
+                json.tbcliente_creditos.map(data => {
+                    // console.log("Data es: " + JSON.stringify(data));
+                    // console.log("Nuestro data credito es: " + data.credito_id);
+                    // console.log("Nuestro data credito DSC es: " + data.clientecred_dsc);
+
+                    if (data.credito_id != null) {
+                        temp += `<tr>
+                    <td>${data.credito_id}</td>
             
-            // <td>${ json.tbcliente_creditos[index].clientecred_dsc}</td>
-            // </tr>`
-            //     }
-                //return temp;
+                    <td>${data.clientecred_dsc}</td>
+                </tr>`
+                    }
+
+
+                })
+                //     let temp = ""; console.log("Este es nuestro log FOR: " + json.tbcliente_creditos.json());
+                //     for (let index = 0; index < json.tbcliente_creditos.ob_get_length; index++) {
+                //         const element = array[index];
+
+                //         temp += `<tr>
+                // <td>${ json.tbcliente_creditos[index].credito_id}</td>
+
+                // <td>${ json.tbcliente_creditos[index].clientecred_dsc}</td>
+                // </tr>`
+                //     }
+                return temp;
             }
 
             let infocliente = document.querySelector("#dataCliente");

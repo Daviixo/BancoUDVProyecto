@@ -459,7 +459,7 @@ if (isset($_POST['logout'])) {
             ...json
 
         }) => {
-            for (let i = 0; i < data.tbcliente_creditos.length; i++) {
+            for (let i = 0; i < json.tbcliente_creditos.length; i++) {
                 `<tr>
                     <td>${tbcliente_creditos.credito_id[i]}</td>
 

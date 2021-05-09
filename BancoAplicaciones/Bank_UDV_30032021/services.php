@@ -174,16 +174,17 @@ if (isset($_POST['logout'])) {
             </table>
 
             <!-- Form para solicitar credito -->
-            <br><br><br><br>
+            <br><br>
+            <h1>Request for a Credit</h1>
             <form style="margin: auto;">
                 <div class="form-group row">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">How much do you need?</label>
+                    <label for="HowMuch" class="col-sm-2 col-form-label">How much do you need?</label>
                     <div class="col-sm-2">
                         <input type="text" class="form-control" id="inputMoney" placeholder="$$$" maxlength="3">
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">Days to pay it?</label>
+                    <label for="DaysToPay" class="col-sm-2 col-form-label">Days to pay it?</label>
                     <div class="col-sm-2">
                         <input type="text" class="form-control" id="daysToPay" placeholder="Days?" maxlength="2">
                     </div>
@@ -216,17 +217,41 @@ if (isset($_POST['logout'])) {
                 </div>
             </div>
 
-            <!-- End of: Credit Type -->
-
             <div class="form-group row">
                 <div class="col-sm-10">
                     <button type="button" onclick="readCreditForm()" class="btn btn-primary">Submit Request</button>
+                </div>
+
+                <!-- END OF Form para solicitar credito -->
+
+                <!-- Form para pagar credito -->
+                <br><br>
+                <h1>Pay for your Credit!</h1>
+                <form style="margin: auto;">
+                    <div class="form-group row">
+                        <label for="CID" class="col-sm-2 col-form-label">What's the Credit ID?</label>
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control" id="creditid" placeholder="CID" maxlength="3">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="HowMuch" class="col-sm-2 col-form-label">How much are you paying?</label>
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control" id="amountToPay" placeholder="$$$" maxlength="3">
+                        </div>
+                    </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-sm-10">
+                    <button type="button" onclick="payCredit()" class="btn btn-primary">Submit Payment</button>
                 </div>
             </div>
     </div>
     </form>
 
-    <!-- END OF: Form para solicitar credito -->
+    <!-- END OF > Form para pagar credito -->
+
     <footer class="site-footer">
         <div class="container">
             <div class="row">
@@ -392,6 +417,8 @@ if (isset($_POST['logout'])) {
     <script src="assets\js\wNumb.min.js"></script>
     <script src="assets\js\nouislider.min.js"></script>
 
+    <!-- Reading creadit form -->
+
     <script>
         function readCreditForm() {
 
@@ -451,11 +478,29 @@ if (isset($_POST['logout'])) {
         }
     </script>
 
+    <!-- END OF Reading creadit form -->
+
+    <!-- Paying credit form -->
+    <script>    
+    function payCredit(){
+
+        var credit_id = document.getElementById("creditid").value;
+        var amountToPay = document.getElementById("amountToPay").value;
+
+        console.log("Credit ID es: " + credit_id);
+        console.log("Amount to pay es: " + amountToPay);
+
+    }
+    
+    </script>
+
+    <!-- END OF > Paying credit form -->
+
     <!-- template js -->
     <script src="assets\js\theme.js"></script>
 
     <script>
-let template = ({
+        let template = ({
             ...json
 
         }) => {

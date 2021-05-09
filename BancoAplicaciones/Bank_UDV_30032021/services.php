@@ -460,20 +460,21 @@ if (isset($_POST['logout'])) {
 
         }) => {
             temp = "";
-            while (data.credito_id != null) {
 
-                
             json.tbcliente_creditos.map(data => {
                 console.log("Entro al MAP!");
                 if (data.credito_id != null) {
-                    temp += `<tr>
+                    data.foreach((f, i) => {
+                        temp += `<tr>
                     <td>${data.credito_id}</td>
             
                     <td>${data.clientecred_dsc}</td>
 
                     <td>${data.clientecred_monto}</td>
-                </tr>`
-                console.log("Temp es: " + temp);
+                    </tr>`
+                        console.log("Temp es: " + temp);
+
+                    })
                 }
 
 
@@ -484,7 +485,7 @@ if (isset($_POST['logout'])) {
                 return temp;
             }
         }
-    }
+
         let dpi_usuario = document.getElementById("user_dpi").value;
         console.log("El DPI FINAL FINAL ES: " + dpi_usuario);
 

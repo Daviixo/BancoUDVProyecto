@@ -465,15 +465,16 @@ if (isset($_POST['logout'])) {
                 console.log("Entro al MAP!");
                 if (data.credito_id != null) {
                     data.foreach((f, i) => {
-                        temp += `<tr>
+                        if (i === 0) {
+                            temp += `<tr>
                     <td>${data.credito_id}</td>
             
                     <td>${data.clientecred_dsc}</td>
 
                     <td>${data.clientecred_monto}</td>
                     </tr>`
-                        console.log("Temp es: " + temp);
-
+                            console.log("Temp es: " + temp);
+                        }
                     })
                 }
 

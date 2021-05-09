@@ -11,7 +11,7 @@
 
     <form  method="post" id="formularioDelete">
     <input type="text" name="dpi" id="dpi">
-    <input type="submit" value="eliminar">
+    <button type="submit" onclick="DeleteUser()"  >Eliminar</button>
     </form>
 
     <script>

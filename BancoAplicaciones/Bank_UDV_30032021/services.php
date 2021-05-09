@@ -526,7 +526,7 @@ if (isset($_POST['logout'])) {
 
         }) => {
             temp = "";
-            json.tbcliente_creditos.map(data => {
+            json.tbcliente_creditos.foreach(data => {
 
                 if (data.credito_id != null) {
                     temp += `<tr>

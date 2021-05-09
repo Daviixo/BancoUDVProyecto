@@ -11,7 +11,7 @@ if (isset($pass)){
 }
 
 if ($inc) {
-	$consulta = "SELECT * FROM Usuario";
+	$consulta = "SELECT * FROM Usuario LEFT JOIN Detalle_Usuario ON Detalle_Usuario.id_DetalleUsuario = Usuario.id_DetalleUsuario;";
 	$resultado = mysqli_query($conex, $consulta);
 	
   if ($resultado) { // si el resultado es igual a true

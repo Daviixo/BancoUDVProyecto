@@ -464,18 +464,14 @@ if (isset($_POST['logout'])) {
             json.tbcliente_creditos.map(data => {
                 console.log("Entro al MAP!");
                 if (data.credito_id != null) {
-                    data.credito_id.foreach((f, i) => {
-                        if (i === 0) {
-                            temp += `<tr>
-                    <td>${data.credito_id}</td>
-            
-                    <td>${data.clientecred_dsc}</td>
+                    temp += `<tr>
+        <td>${data.credito_id}</td>
 
-                    <td>${data.clientecred_monto}</td>
-                    </tr>`
-                            console.log("Temp es: " + temp);
-                        }
-                    })
+        <td>${data.clientecred_dsc}</td>
+
+        <td>${data.clientecred_monto}</td>
+        </tr>`
+                    console.log("Temp es: " + temp);
                 }
 
 

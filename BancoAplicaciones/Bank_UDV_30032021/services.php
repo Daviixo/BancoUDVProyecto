@@ -460,10 +460,9 @@ if (isset($_POST['logout'])) {
 
         }) => {
             temp = "";
-            console.log("Temp es: " + temp);
+            
             json.tbcliente_creditos.map(data => {
                 console.log("Entro al MAP!");
-                console("Table credito es: " + json.tbcliente_creditos.credito_id[0]);   
                 if (data.credito_id != null) {
                     temp += `<tr>
                     <td>${data.credito_id}</td>
@@ -472,6 +471,7 @@ if (isset($_POST['logout'])) {
 
                     <td>${data.clientecred_monto}</td>
                 </tr>`
+                console.log("Temp es: " + temp);
                 }
 
 

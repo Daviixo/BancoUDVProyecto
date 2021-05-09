@@ -171,7 +171,7 @@ if (isset($_POST['logout'])) {
         </section><!-- /.page-header -->
 
         <!--INICIO DE FORMULARIO-->
-        <form id="mostrarClientes" method="post">
+        <form id="formulario" method="post">
 
             <h2 class="text-center">--User Info--</h2><br>
             <div>
@@ -403,47 +403,69 @@ if (isset($_POST['logout'])) {
     <!-- Boton para consulta de datos por DPI -->
 
     <script>
-        function consultData() {
 
-            var dpi = document.getElementById("dpi").value;
+    function consultData(){
 
-            console.log("El DPI a ser consultado es: " + dpi);
 
-            fetch("https://banco-vivienda.club/clientes/consulta/" + dpi, {
-                    "headers": {
-                        'Accept': 'application/json',
-                        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZFN1Y3Vyc2FsIjo1LCJ1c2VybmFtZSI6IlNVQ1VSU0FMMSIsInBhc3N3b3JkIjoicXdlcnR5IiwiaWF0IjoxNjE5NTQ3NzQ0LCJleHAiOjE2MjI2NTgxNDR9.1awdMkX9_Ajun1OLcYXD19_UbtKVgx4Uzbmy55Jlrt4"
-                    }
-                })
-                .then(response => {
-                    console.log("Entro al 1er response")
-                    return response.json()
-                })
-                .then(response => {
-                    console.log("Entro al 2do response")
-                    console.log(response);
-                })
-                .catch(err => {
-                    console.log("Entro al catch")
-                    console.error(err);
-                });
+        let template= ({...json})=>`
 
-            let template = ({
-                    ...json
-                }) =>
+        
+<tr>
+    <td>${json.cliente_ide}</td>
+    <td>${ json.cliente_nombre1}</td>
+    <td>${json.cliente_ape1}</td>
+    
+</tr>
 
-                `<tr>
 
-                 <td>${json.cliente_ide}</td>
 
-                 <td>${json.cliente_nombre1} </td>
 
-                 <td>${json.cliente_ape1}</td>
+`
 
-                </tr>`
+let formulario=document.querySelector("#formulario");
+formulario.addEventListener("submit",function(e){  
+e.preventDefault() 
+let dpi=document.querySelector("#dpi");
+console.log(dpi.value);
+let infocliente=document.querySelector("#dataCliente");
+fetch("https://banco-vivienda.club/clientes/consulta/"+dpi.value, {
+"headers": {
+'Accept': 'application/json',
+"authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZFN1Y3Vyc2FsIjo1LCJ1c2VybmFtZSI6IlNVQ1VSU0FMMSIsInBhc3N3b3JkIjoicXdlcnR5IiwiaWF0IjoxNjE5NTQ3NzQ0LCJleHAiOjE2MjI2NTgxNDR9.1awdMkX9_Ajun1OLcYXD19_UbtKVgx4Uzbmy55Jlrt4"
+}
+})
+.then(response => {
 
-        }
-    </script>
+let respuestaServer= response.json().then(respuesta=>{ 
+    return respuesta;
+}) .catch(error=>{
+    alert ("El número de DPI no existe en la base de datos.");
+    infocliente.innerHTML="";
+})
+return respuestaServer;
+
+})
+.then(response => {
+console.log(response);
+
+infocliente.innerHTML=template(response);
+console.log(response.ok)
+
+})
+.catch(err => {
+console.error(err);
+});
+
+})
+
+
+
+    }
+
+
+
+
+</script>
 
 </body>
 

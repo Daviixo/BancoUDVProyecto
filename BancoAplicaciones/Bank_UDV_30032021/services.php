@@ -21,8 +21,8 @@ if (isset($_POST['logout'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services Page || Pylon || Loan HTML Template</title>
-    - favicons Icons -->
+    <title>Services Page || Bank UDV ||</title>
+    <!-- favicons Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets\images\favicons\apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets\images\favicons\favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets\images\favicons\favicon-16x16.png">
@@ -371,14 +371,17 @@ if (isset($_POST['logout'])) {
                     }
                 })
                 .then(response => {
+                    console.log("Entro al primer RESPONSE");
                     return response.json()
                 })
                 .then(response => {
+                    console.log("Entro al segundo RESPONSE");
                     console.log("Este es el ID: " + response.cliente_id);
                     solicitudCredito(response.cliente_id);
                     console.log(response);
                 })
                 .catch(err => {
+                    console.log("Entro al catch");
                     console.error(err);
                 }); 
             

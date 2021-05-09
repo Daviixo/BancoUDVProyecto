@@ -481,17 +481,36 @@ if (isset($_POST['logout'])) {
     <!-- END OF Reading creadit form -->
 
     <!-- Paying credit form -->
-    <script>    
-    function payCredit(){
+    <script>
+        function payCredit() {
 
-        var credit_id = document.getElementById("creditid").value;
-        var amountToPay = document.getElementById("amountToPay").value;
+            var credit_id = document.getElementById("creditid").value;
+            var amountToPay = document.getElementById("amountToPay").value;
 
-        console.log("Credit ID es: " + credit_id);
-        console.log("Amount to pay es: " + amountToPay);
+            console.log("Credit ID es: " + credit_id);
+            console.log("Amount to pay es: " + amountToPay);
 
-    }
-    
+            fetch("https://banco-vivienda.club/creditos/ingresarpago", {
+                    "method": "POST",
+                    "headers": {
+                        'Accept': 'application/json',
+                        "content-type": "application/json",
+                        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZFN1Y3Vyc2FsIjo1LCJ1c2VybmFtZSI6IlNVQ1VSU0FMMSIsInBhc3N3b3JkIjoicXdlcnR5IiwiaWF0IjoxNjE5NTQ3NzQ0LCJleHAiOjE2MjI2NTgxNDR9.1awdMkX9_Ajun1OLcYXD19_UbtKVgx4Uzbmy55Jlrt4"
+                    },
+                    "body": JSON.stringify({
+                        "id_credito": credit_id,
+                        "monto": amountToPay
+                    })
+                })
+                .then(response => response.json())
+                .then(response => {
+                    console.log(response);
+                })
+                .catch(err => {
+                    console.error(err);
+                });
+
+        }
     </script>
 
     <!-- END OF > Paying credit form -->

@@ -460,20 +460,17 @@ if (isset($_POST['logout'])) {
 
         }) => {
             temp = "";
-            json.tbcliente_creditos.map(data => {
-
-                if (data.credito_id != null) {
+            json.tbcliente_creditos.map((f, i) => {
+                if (i === 0) {
                     temp += `<tr>
                     <td>${data.credito_id}</td>
             
                     <td>${data.clientecred_dsc}</td>
 
                     <td>${data.clientecred_monto}</td>
-                </tr>`
+                </tr>`;
                 }
-
-
-            })
+            }); //Aqui termina la tabla 
             if (temp == "") {
                 return `<tr><td colspan = "2"> You have no credits. Ask for one NOW! :) </td></tr>`
             } else {

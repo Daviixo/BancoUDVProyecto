@@ -14,35 +14,19 @@
     <input type="submit" value="eliminar">
     </form>
 
-    <h2>Información de cliente.</h2>
-    <div >
-    <table>
-        <thead>
-            <tr>
-                <th>campo</th>
-                <th>descripción</th>
-            </tr>
-        </thead>
-        <tbody id="dataCliente">
-        </tbody>
-    </table>
-    </div>
+    <script>
+   
+    var dpi=document.getElementById("dpi").value;
+    
 
+   function DeleteUser(){
 
-<script>
-
-
-    let formularioDelete=document.querySelector("#formularioDelete");
-    formularioDelete.addEventListener("submit",function(e){  
-        e.preventDefault() 
-    let dpi=document.querySelector("#dpi");
-    console.log(dpi.value);
-    fetch("https://banco-vivienda.club/clientes/administracion", {
+        fetch("https://banco-vivienda.club/clientes/administracion", {
     "method": "DELETE",
     "headers": {
         'Accept': 'application/json',
         "content-type": "application/json",
-        "authorization": "Bearer YOUR_TOKEN"
+        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZFN1Y3Vyc2FsIjo1LCJ1c2VybmFtZSI6IlNVQ1VSU0FMMSIsInBhc3N3b3JkIjoicXdlcnR5IiwiaWF0IjoxNjE5NTQ3NzQ0LCJleHAiOjE2MjI2NTgxNDR9.1awdMkX9_Ajun1OLcYXD19_UbtKVgx4Uzbmy55Jlrt4"
     },
     "body": JSON.stringify({
         "dpi": dpi
@@ -57,9 +41,15 @@
     .catch(err => {
         console.error(err);
     });
-   
-    
-</script>
+
+
+    }
+    </script>
+
+
+
+
+
 
 </body>
 </html>

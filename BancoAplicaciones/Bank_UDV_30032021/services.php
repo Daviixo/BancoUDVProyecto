@@ -530,8 +530,6 @@ if (isset($_POST['logout'])) {
             for (let it of item.tbcliente_creditos) {
                 respuesta.innerHTML += `
 
-                <td>${item.cliente_ide}</td>
-                <td>${item.cliente_nombre1} &nbsp; ${item.cliente_ape1}</td>
                 <td>&nbsp;${it.credito_id}</td
                 <td>&nbsp;${it.clientecred_dsc}</td>
                 <td>&nbsp;${it.clientecred_monto}</td>

@@ -520,29 +520,12 @@ if (isset($_POST['logout'])) {
     <script src="assets\js\theme.js"></script>
 
     <script>
-        let datos = response;
-        //let item= response
-        let respuesta = document.querySelector('#body_creditos');
-        respuesta.innerHTML = '';
-
-        //item.forEach(item => {
-        for (let item of datos) {
-            for (let it of item.tbcliente_creditos) {
-                respuesta.innerHTML += `
-
-                <td>&nbsp;${it.credito_id}</td
-                <td>&nbsp;${it.clientecred_dsc}</td>
-                <td>&nbsp;${it.clientecred_monto}</td>
-           
-       `
-            }
-        }
         if (temp == "") {
             return `<tr><td colspan = "2"> You have no credits. Ask for one NOW! :) </td></tr>`
         } else {
             return temp;
         }
-        
+
 
 
         let dpi_usuario = document.getElementById("user_dpi").value;
@@ -561,6 +544,23 @@ if (isset($_POST['logout'])) {
             .then(response => {
                 console.log("Entro al segundo RESPONSE");
                 console.log("Este es el ID: " + response.cliente_id);
+                let datos = response;
+                //let item= response
+                let respuesta = document.querySelector('#body_creditos');
+                respuesta.innerHTML = '';
+
+                //item.forEach(item => {
+                for (let item of datos) {
+                    for (let it of item.tbcliente_creditos) {
+                        respuesta.innerHTML += `
+
+                <td>&nbsp;${it.credito_id}</td
+                <td>&nbsp;${it.clientecred_dsc}</td>
+                <td>&nbsp;${it.clientecred_monto}</td>
+           
+       `
+                    }
+                }
                 solicitudCredito(response.cliente_id);
                 console.log(response);
             })

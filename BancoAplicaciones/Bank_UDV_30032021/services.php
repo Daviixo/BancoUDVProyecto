@@ -484,17 +484,6 @@ if (isset($_POST['logout'])) {
             }
         }
 
-        const fruits = [{
-            name: "apple"
-        }, {
-            name: "banana"
-        }]
-        fruits.map((f, i) => {
-            if (i === 0) {
-                console.log(f.name);
-            }
-        });
-
 
         if (temp == "") {
             return `<tr><td colspan = "2"> You have no credits. Ask for one NOW! :) </td></tr>`

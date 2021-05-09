@@ -172,9 +172,10 @@ if (isset($_POST['logout'])) {
 
         <!--INICIO DE FORMULARIO-->
         <form id="formulario" method="post">
+            <input type="text" name="dpi" id="dpi"><br>
             <input type="submit" value="Search">    
             <button type="button" class="btn btn-primary" onclick="deleteUser()">Delete</button>
-            <input type="text" name="dpi" id="dpi">
+            
             </form>
 
             <h2 class="text-center">--User Info--</h2><br>
@@ -192,10 +193,6 @@ if (isset($_POST['logout'])) {
                 </table>
             </div>
 
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <input type="text" name="dpi" class="form-control" id="dpi" placeholder="dpi">
-            </div>
         <!--FINAL DE FORMULARIO-->
 
         <footer class="site-footer">

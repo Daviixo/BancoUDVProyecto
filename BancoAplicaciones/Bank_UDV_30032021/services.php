@@ -356,7 +356,7 @@ if (isset($_POST['logout'])) {
             // <td>${ json.tbcliente_creditos[index].clientecred_dsc}</td>
             // </tr>`
             //     }
-                return temp;
+                //return temp;
             }
 
             let infocliente = document.querySelector("#dataCliente");

@@ -520,21 +520,24 @@ if (isset($_POST['logout'])) {
     <script src="assets\js\theme.js"></script>
 
     <script>
+        
         let template = ({
             ...json
 
         }) => {
             temp = "";
-            json.tbcliente_creditos.foreach(data => {
-                const row = document.createDocument('tr');
-                    row.innerHTML+=`
+            json.tbcliente_creditos.map(data => {
+
+                if (data.credito_id != null) {
+                    temp += `<tr>
                     <td>${data.credito_id}</td>
             
                     <td>${data.clientecred_dsc}</td>
 
                     <td>${data.clientecred_monto}</td>
-                    `;
-                    tccliente_creditos.appendChild(row);
+                </tr>`
+                }
+
 
             })
             if (temp == "") {
@@ -543,15 +546,6 @@ if (isset($_POST['logout'])) {
                 return temp;
             }
         }
-
-
-        if (temp == "") {
-            return `<tr><td colspan = "2"> You have no credits. Ask for one NOW! :) </td></tr>`
-        } else {
-            return temp;
-        }
-
-
 
         let dpi_usuario = document.getElementById("user_dpi").value;
         console.log("El DPI FINAL FINAL ES: " + dpi_usuario);

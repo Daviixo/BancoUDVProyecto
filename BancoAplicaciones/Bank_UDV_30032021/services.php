@@ -174,7 +174,7 @@ if (isset($_POST['logout'])) {
 
             <!-- Form para solicitar credito -->
             <br><br><br><br>
-            <form>
+            <form style="margin: auto;">
                 <div class="form-group row">
                     <label for="inputEmail3" class="col-sm-2 col-form-label">How much do you need?</label>
                     <div class="col-sm-2">

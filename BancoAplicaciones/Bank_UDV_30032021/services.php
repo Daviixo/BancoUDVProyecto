@@ -175,6 +175,7 @@ if (isset($_POST['logout'])) {
 
             <!-- Form para solicitar credito -->
             <br><br>
+    <div style="margin-left:50px" > 
             <h1>Request for a Credit</h1>
             <form style="margin: auto;">
                 <div class="form-group row">
@@ -221,8 +222,10 @@ if (isset($_POST['logout'])) {
                 <div class="col-sm-10">
                     <button type="button" onclick="readCreditForm()" class="btn btn-primary">Submit Request</button>
                 </div>
-
+    
                 <!-- END OF Form para solicitar credito -->
+    </div>   
+            
 
                 <!-- Form para pagar credito -->
                 <br><br>
@@ -426,7 +429,7 @@ if (isset($_POST['logout'])) {
             var daysToPay = "";
             var description = "";
 
-
+            
             var today = new Date();
 
             var time = today.getHours() + today.getMinutes() + today.getSeconds();

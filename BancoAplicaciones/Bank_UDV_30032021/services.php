@@ -520,31 +520,33 @@ if (isset($_POST['logout'])) {
     <script src="assets\js\theme.js"></script>
 
     <script>
-        let template = ({
-            ...json
+        let datos = response;
+        //let item= response
+        let respuesta = document.querySelector('#body_creditos');
+        respuesta.innerHTML = '';
 
-        }) => {
-            temp = "";
-            json.tbcliente_creditos.map(data => {
+        //item.forEach(item => {
+        for (let item of datos) {
+            for (let it of item.tbcliente_creditos) {
+                respuesta.innerHTML += `
 
-                if (data.credito_id != null) {
-                    temp += `<tr>
-                    <td>${data.credito_id}</td>
-            
-                    <td>${data.clientecred_dsc}</td>
-
-                    <td>${data.clientecred_monto}</td>
-                </tr>`
-                }
-
-
-            })
-            if (temp == "") {
-                return `<tr><td colspan = "2"> You have no credits. Ask for one NOW! :) </td></tr>`
-            } else {
-                return temp;
+                <td>${item.cliente_ide}</td>
+                <td>${item.cliente_nombre1} &nbsp; ${item.cliente_ape1}</td>
+                <td>&nbsp;${it.credito_id}</td
+                <td>&nbsp;${it.clientecred_dsc}</td>
+                <td>&nbsp;${it.clientecred_monto}</td>
+                <td>&nbsp;${it.clientecred_diapago}</td>
+               <td>&nbsp;${it.clientecred_fcreacion}</td>
+           
+       `
             }
         }
+        if (temp == "") {
+            return `<tr><td colspan = "2"> You have no credits. Ask for one NOW! :) </td></tr>`
+        } else {
+            return temp;
+        }
+        
 
 
         let dpi_usuario = document.getElementById("user_dpi").value;

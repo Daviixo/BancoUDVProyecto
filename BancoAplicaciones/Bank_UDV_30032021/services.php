@@ -524,13 +524,25 @@ if (isset($_POST['logout'])) {
             ...json
 
         }) => {
-            console.log("Antes del for...");
-            for (var i = 0; i <tbcliente_creditos.lenght; i++) {
-            console.log("Entro al for, el valor de i es: "+ i);
-	        console.log( tbcliente_credits.credito_id[i].name);
-	    }
+            temp = "";
+            json.tbcliente_creditos.foreach(data => {
+                const row = document.createDocument('tr');
+                    row.innerHTML+=`
+                    <td>${data.credito_id}</td>
+            
+                    <td>${data.clientecred_dsc}</td>
 
-    }
+                    <td>${data.clientecred_monto}</td>
+                    `;
+                    tccliente_creditos.appendChild(row);
+
+            })
+            if (temp == "") {
+                return `<tr><td colspan = "2"> You have no credits. Ask for one NOW! :) </td></tr>`
+            } else {
+                return temp;
+            }
+        }
 
 
         if (temp == "") {

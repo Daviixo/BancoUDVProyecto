@@ -432,9 +432,11 @@ if (isset($_POST['logout'])) {
                 ...json
             }) => 
             console.log("Cliente IDE es: " + json.cliente_ide);
-                `<td>${json.cliente_ide}</td>
+                `<tr>
+                 <td>${json.cliente_ide}</td>
                  <td>${json.cliente_nombre1} </td>
-                 <td>${json.cliente_ape1}</td>`
+                 <td>${json.cliente_ape1}</td>
+                </tr>`
 
         }
 

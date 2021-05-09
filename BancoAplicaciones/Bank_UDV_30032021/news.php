@@ -7,9 +7,9 @@
 
 session_start();
 
-$email=$_SESSION['username'];
+$email = $_SESSION['username'];
 
-if(isset($_POST['logout'])){
+if (isset($_POST['logout'])) {
 
     session_destroy();
     echo '<script language="javascript">alert("Logout in process...");</script>';
@@ -23,30 +23,30 @@ if(isset($_POST['logout'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News Page || Pylon || Loan HTML Template</title>
     <-- favicons Icons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets\images\favicons\apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets\images\favicons\favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets\images\favicons\favicon-16x16.png">
-    <link rel="manifest" href="assets\images\favicons\site.webmanifest">
-    <meta name="description" content="Pylon Loan HTML Template">
+<link rel="apple-touch-icon" sizes="180x180" href="assets\images\favicons\apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets\images\favicons\favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets\images\favicons\favicon-16x16.png">
+<link rel="manifest" href="assets\images\favicons\site.webmanifest">
+<meta name="description" content="Pylon Loan HTML Template">
 
-    <!-- fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<!-- fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets\css\bootstrap.min.css">
-    <link rel="stylesheet" href="assets\css\fontawesome-all.min.css">
-    <link rel="stylesheet" href="assets\css\swiper.min.css">
-    <link rel="stylesheet" href="assets\css\animate.min.css">
-    <link rel="stylesheet" href="assets\css\pylon-icons.css">
-    <link rel="stylesheet" href="assets\css\odometer.min.css">
-    <link rel="stylesheet" href="assets\css\magnific-popup.css">
-    <link rel="stylesheet" href="assets\css\bootstrap-select.min.css">
-    <link rel="stylesheet" href="assets\css\nouislider.min.css">
-    <link rel="stylesheet" href="assets\css\nouislider.pips.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+<link rel="stylesheet" href="assets\css\bootstrap.min.css">
+<link rel="stylesheet" href="assets\css\fontawesome-all.min.css">
+<link rel="stylesheet" href="assets\css\swiper.min.css">
+<link rel="stylesheet" href="assets\css\animate.min.css">
+<link rel="stylesheet" href="assets\css\pylon-icons.css">
+<link rel="stylesheet" href="assets\css\odometer.min.css">
+<link rel="stylesheet" href="assets\css\magnific-popup.css">
+<link rel="stylesheet" href="assets\css\bootstrap-select.min.css">
+<link rel="stylesheet" href="assets\css\nouislider.min.css">
+<link rel="stylesheet" href="assets\css\nouislider.pips.css">
 
-    <!-- template styles -->
-    <h1>Welcome, <?php echo $email; ?></h1>
-    <link rel="stylesheet" href="assets\css\main.css">
+<!-- template styles -->
+<h1>Welcome, <?php echo $email; ?></h1>
+<link rel="stylesheet" href="assets\css\main.css">
 </head>
 
 <body>
@@ -64,8 +64,8 @@ if(isset($_POST['logout'])){
                             <a href="#" class="fab fa-pinterest-p"></a>
                             <a href="#" class="fab fa-instagram"></a>
                         </div><!-- /.topbar__social -->
-                        <form method="post"><button type="submit" class="btn btn-primary" name="logout"value="Logout">Logout</button>
-                        <!-- <a href="#">Login</a>
+                        <form method="post"><button type="submit" class="btn btn-primary" name="logout" value="Logout">Logout</button>
+                            <!-- <a href="#">Login</a>
                         <a href="#">Company News</a>
                         <a href="#">FAQs</a> -->
                     </div><!-- /.topbar__left -->
@@ -171,30 +171,33 @@ if(isset($_POST['logout'])){
         </section><!-- /.page-header -->
 
         <!--INICIO DE FORMULARIO-->
-<form id="mostrarClientes" method="post">
-  
-<h2 class="text-center">--User Info--</h2><br>
-        <div>
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>DPI</th>
-                        <th>Nombre</th>
-                        <th>Apellido</th>
-                    </tr>
-                </thead>
-                <tbody id="dataUser">
-                </tbody>
-            </table>
-  
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputEmail4">DPI</label>
-      <input type="text" class="form-control" id="dpi" placeholder="dpi">
-    </div>
-    
-  <button type="button" class="btn btn-primary" onclick="deleteUser()">Delete</button>
-</form>
+        <form id="mostrarClientes" method="post">
+
+            <h2 class="text-center">--User Info--</h2><br>
+            <div>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>DPI</th>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                        </tr>
+                    </thead>
+                    <tbody id="dataUser">
+                    </tbody>
+                </table>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail4">DPI</label>
+                        <input type="text" class="form-control" id="dpi" placeholder="dpi">
+                    </div>
+
+                    <button type="button" class="btn btn-primary" onclick="consultData()">Consult</button>
+                    <br>
+                    <button type="button" class="btn btn-primary" onclick="deleteUser()">Delete</button>
+                    
+        </form>
         <!--FINAL DE FORMULARIO-->
 
         <footer class="site-footer">
@@ -367,7 +370,64 @@ if(isset($_POST['logout'])){
 
     <!-- ELIMINAR DATOS -->
     <script>
-    
+        function deleteUser() {
+
+            var dpi = document.getElementById("dpi").value;
+
+
+
+            console.log("el dpi enviado a eliminar es: " + dpi);
+            fetch("https://banco-vivienda.club/clientes/administracion", {
+                    "method": "DELETE",
+                    "headers": {
+                        'Accept': 'application/json',
+                        "content-type": "application/json",
+                        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZFN1Y3Vyc2FsIjo1LCJ1c2VybmFtZSI6IlNVQ1VSU0FMMSIsInBhc3N3b3JkIjoicXdlcnR5IiwiaWF0IjoxNjE5NTQ3NzQ0LCJleHAiOjE2MjI2NTgxNDR9.1awdMkX9_Ajun1OLcYXD19_UbtKVgx4Uzbmy55Jlrt4"
+                    },
+                    "body": JSON.stringify({
+                        "dpi": dpi
+                    })
+                })
+
+                .then(response => {
+                    alert("User Delete.");
+                    console.log(response);
+                })
+                .catch(err => {
+                    console.error(err);
+                });
+
+
+        }
+    </script>
+
+    <!-- Boton para consulta de datos por DPI -->
+
+    <script>
+
+    var dpi = document.getElementById("dpi").value;
+
+    function consultData(){
+
+        fetch("https://banco-vivienda.club/clientes/consulta/" + dpi, {
+    "headers": {
+        'Accept': 'application/json',
+        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZFN1Y3Vyc2FsIjo1LCJ1c2VybmFtZSI6IlNVQ1VSU0FMMSIsInBhc3N3b3JkIjoicXdlcnR5IiwiaWF0IjoxNjE5NTQ3NzQ0LCJleHAiOjE2MjI2NTgxNDR9.1awdMkX9_Ajun1OLcYXD19_UbtKVgx4Uzbmy55Jlrt4"
+    }
+})
+    .then(response => {
+        return response.json()
+    })
+    .then(response => {
+        console.log(response);
+    })
+    .catch(err => {
+        console.error(err);
+    });
+
+    }
+
+            
     let template = ({
             ...json
 
@@ -375,58 +435,27 @@ if(isset($_POST['logout'])){
             temp = "";
             json.tbcliente_creditos.map(data => {
                 
-                if (data.cliente_id != null) {
+                if (data.clientecred_id != null) {
                     temp += `<tr>
                     
                     <td>${data.cliente_ide}</td>
+            
+                    <td>${data.cliente_nombre1}</td>
 
                     <td>${data.cliente_nombre1}</td>
-            
-                    <td>${data.cliente_ape1}</td>
- 
                 </tr>`
                 }
 
 
             })
             if (temp == "") {
-                return `<tr><td colspan = "2"> No information yet! :) </td></tr>`
+                return `<tr><td colspan = "2"> You have no credits. Ask for one NOW! :) </td></tr>`
             } else {
                 return temp;
             }
         }
-    
-        function deleteUser(){
-   
-    var dpi=document.getElementById("dpi").value;
-    
 
-   
-    console.log ("el dpi enviado a eliminar es: "+ dpi);
-    fetch("https://banco-vivienda.club/clientes/administracion", {
-    "method": "DELETE",
-    "headers": {
-        'Accept': 'application/json',
-        "content-type": "application/json",
-        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZFN1Y3Vyc2FsIjo1LCJ1c2VybmFtZSI6IlNVQ1VSU0FMMSIsInBhc3N3b3JkIjoicXdlcnR5IiwiaWF0IjoxNjE5NTQ3NzQ0LCJleHAiOjE2MjI2NTgxNDR9.1awdMkX9_Ajun1OLcYXD19_UbtKVgx4Uzbmy55Jlrt4"
-    },
-    "body": JSON.stringify({
-        "dpi": dpi
-    })
-})
-    
-    .then(response => {
-       alert("User Delete.");
-        console.log(response);
-    })
-    .catch(err => {
-        console.error(err);
-    });
-
-
-    }
     </script>
-
 
 
 </body>

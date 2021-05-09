@@ -36,7 +36,7 @@
 })
     
     .then(response => {
-        console.log("User Delete .");
+       alert("User Delete.");
         console.log(response);
     })
     .catch(err => {

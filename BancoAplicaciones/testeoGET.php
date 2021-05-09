@@ -11,7 +11,7 @@
     <input type="text" name="dpi" id="dpi">
     <input type="submit" value="search">
     </form>
-
+    <input type="text" name="mostrarNombre" id="mostrarNombre">
     <h2>Información de cliente.</h2>
     <div >
     <table>
@@ -28,9 +28,10 @@
 
     <script>
 
+    
     let template= ({...json})=>`
     
-   
+            
             <tr>
                 <td>Nombre</td>
                 <td>${ json.cliente_nombre1} ${json.cliente_ape1} ${json.cliente_ape2}</td>

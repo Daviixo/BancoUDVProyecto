@@ -245,7 +245,7 @@ if (isset($_POST['logout'])) {
                     </div>
             </div>
 
-            <div class="form-group row" style="margin-left:50px">
+            <div class="form-group row" style="margin-left:40px">
                 <div class="col-sm-10">
                     <button type="button" onclick="payCredit()" class="btn btn-primary">Submit Payment</button>
                 </div>

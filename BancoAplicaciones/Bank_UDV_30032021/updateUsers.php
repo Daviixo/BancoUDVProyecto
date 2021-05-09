@@ -84,6 +84,10 @@
     });
 
     })
+    </script>
+
+<script>
+
 
     let formularioDelete=document.querySelector("#formDelete");
     formularioDelete.addEventListener("submit",function(e){  

@@ -12,8 +12,8 @@
     <input type="submit" value="search">
     </form>
 
-    <form  method="post" id="formDelete">
-    <input type="text" name="dpi" id="dpiDelete">
+    <form  method="post" id="formularioDelete">
+    <input type="text" name="dpi" id="dpi">
     <input type="submit" value="eliminar">
     </form>
 
@@ -89,10 +89,10 @@
 <script>
 
 
-    let formularioDelete=document.querySelector("#formDelete");
+    let formularioDelete=document.querySelector("#formularioDelete");
     formularioDelete.addEventListener("submit",function(e){  
         e.preventDefault() 
-    let dpi=document.querySelector("#dpiDelete");
+    let dpi=document.querySelector("#dpi");
     console.log(dpi.value);
     fetch("https://banco-vivienda.club/clientes/administracion"+dpi.value, {
     "method": "DELETE",

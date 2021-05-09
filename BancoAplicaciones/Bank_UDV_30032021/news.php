@@ -193,7 +193,7 @@ if(isset($_POST['logout'])){
       <input type="text" class="form-control" id="dpi" placeholder="dpi">
     </div>
     
-  <button type="button" class="btn btn-primary" onclick="deleteUser()">Mostrar</button>
+  <button type="button" class="btn btn-primary" onclick="deleteUser()">Delete</button>
 </form>
         <!--FINAL DE FORMULARIO-->
 

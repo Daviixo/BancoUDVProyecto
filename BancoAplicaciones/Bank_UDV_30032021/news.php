@@ -179,23 +179,24 @@ if (isset($_POST['logout'])) {
                     <thead>
                         <tr>
                             <th>DPI</th>
-                            <th>Nombre</th>
-                            <th>Apellido</th>
+                            <th>Name</th>
+                            <th>Last Name</th>
                         </tr>
                     </thead>
-                    <tbody id="dataUser">
+                    <tbody id="dataCliente">
                     </tbody>
                 </table>
+            </div>
 
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="inputEmail4">DPI</label>
-                        <input type="text" class="form-control" id="dpi" placeholder="dpi">
-                    </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputEmail4">DPI</label>
+                    <input type="text" class="form-control" id="dpi" placeholder="dpi">
+                </div>
 
-                    <button type="button" class="btn btn-primary" onclick="consultData()">Consult</button>
-                    <br>
-                    <button type="button" class="btn btn-primary" onclick="deleteUser()">Delete</button>
+                <button type="button" class="btn btn-primary" onclick="consultData()">Consult</button>
+                <br>
+                <button type="button" class="btn btn-primary" onclick="deleteUser()">Delete</button>
 
         </form>
         <!--FINAL DE FORMULARIO-->
@@ -428,8 +429,8 @@ if (isset($_POST['logout'])) {
                 });
 
             let template = ({
-                ...json
-            }) => 
+                    ...json
+                }) =>
 
                 `<tr>
 
@@ -442,7 +443,6 @@ if (isset($_POST['logout'])) {
                 </tr>`
 
         }
-
     </script>
 
 </body>

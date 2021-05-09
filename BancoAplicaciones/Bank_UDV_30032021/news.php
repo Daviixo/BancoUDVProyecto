@@ -171,7 +171,7 @@ if(isset($_POST['logout'])){
         </section><!-- /.page-header -->
 
         <!--INICIO DE FORMULARIO-->
-        <form>
+<form id="mostrarClientes" method="post">
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="inputEmail4">DPI</label>
@@ -179,8 +179,8 @@ if(isset($_POST['logout'])){
     </div>
     </br></br>
     <div class="form-group col-md-6">
-      <label for="inputPassword4">Password</label>
-      <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+      <label for="inputPassword4">Primer Nombre</label>
+      <input type="text" class="form-control" id="primerNombre" placeholder="Primer Nombre">
     </div>
   </div>
   <div class="form-group">
@@ -216,7 +216,7 @@ if(isset($_POST['logout'])){
       </label>
     </div>
   </div>
-  <button type="submit" class="btn btn-primary">Sign in</button>
+  <button type="button" class="btn btn-primary" onclick="deleteUser()">Mostrar</button>
 </form>
         <!--FINAL DE FORMULARIO-->
 
@@ -388,27 +388,31 @@ if(isset($_POST['logout'])){
     <!-- template js -->
     <script src="assets\js\theme.js"></script>
 
-    <!-- OBTENER DATOS DE CLIENTE -->
+    <!-- ELIMINAR DATOS -->
     <script>
        
-       
-       
-       
-       
-       
-       
-       function MostrarDatos(){
+   
+        function deleteUser(){
+   
+    var dpi=document.getElementById("dpi").value;
+    
 
-            fetch("https://banco-vivienda.club/clientes/consulta/21781889", {
+   
+    console.log ("el dpi enviado a eliminar es: "+ dpi);
+    fetch("https://banco-vivienda.club/clientes/administracion", {
+    "method": "DELETE",
     "headers": {
         'Accept': 'application/json',
-        "authorization": "Bearer  YOUR_TOKEN"
-    }
-})
-    .then(response => {
-        return response.json()
+        "content-type": "application/json",
+        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZFN1Y3Vyc2FsIjo1LCJ1c2VybmFtZSI6IlNVQ1VSU0FMMSIsInBhc3N3b3JkIjoicXdlcnR5IiwiaWF0IjoxNjE5NTQ3NzQ0LCJleHAiOjE2MjI2NTgxNDR9.1awdMkX9_Ajun1OLcYXD19_UbtKVgx4Uzbmy55Jlrt4"
+    },
+    "body": JSON.stringify({
+        "dpi": dpi
     })
+})
+    
     .then(response => {
+       alert("User Delete.");
         console.log(response);
     })
     .catch(err => {
@@ -416,7 +420,7 @@ if(isset($_POST['logout'])){
     });
 
 
-        }
+    }
     </script>
 
 

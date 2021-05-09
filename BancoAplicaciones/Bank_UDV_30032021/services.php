@@ -363,6 +363,7 @@ if (isset($_POST['logout'])) {
             }
 
             let dpi_usuario = document.getElementById("user_dpi").value;
+            console.log("El DPI FINAL FINAL ES: " + dpi_usuario);
             let infocliente = document.querySelector("#dataCliente");
             fetch("https://banco-vivienda.club/clientes/" + dpi_usuario, {
                     "headers": {

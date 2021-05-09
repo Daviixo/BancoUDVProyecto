@@ -504,6 +504,7 @@ if (isset($_POST['logout'])) {
 
     <!-- Paying credit form -->
     <script>
+    
         function payCredit() {
 
             var credit_id = document.getElementById("creditid").value;

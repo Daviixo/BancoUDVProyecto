@@ -423,22 +423,24 @@ if (isset($_POST['logout'])) {
                 .catch(err => {
                     console.error(err);
                 });
-            var obj = JSON.parse(json);
 
-            if (obj.cliente_ide != NULL) {
-                `<td>${obj.cliente_ide}</td>
-        
-    <td>${obj.cliente_nombre1}</td>
-    
-    <td>${obj.cliente_ape1}</td>`
-            } else {
-                return `<tr><td colspan = "2"> No data to disply! :) </td></tr>`
-            }
-            
+            let template = ({
+                ...json
+            }) => `
+
+                <td>${json.cliente_ide}</td>
+                <td>${json.cliente_nombre1} </td>
+                <td>${json.cliente_ape1}</td>`
+
         }
+
+        
     </script>
 
 
 </body>
 
 </html>
+
+`}
+}

@@ -170,9 +170,7 @@ if(isset($_POST['logout'])){
             </div><!-- /.container -->
         </section><!-- /.page-header -->
 
-        <section class="blog-page pt-120 pb-120">
-            
-        </section><!-- /.blog-page -->
+        <!--Aqui esta el vacio-->
 
         <footer class="site-footer">
             <div class="container">

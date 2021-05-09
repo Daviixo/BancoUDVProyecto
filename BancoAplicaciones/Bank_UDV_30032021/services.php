@@ -215,6 +215,12 @@ if (isset($_POST['logout'])) {
                             Visa Platinum
                         </label>
                     </div>
+                    <div class="form-check disabled">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios4" value="Mastercard">
+                        <label class="form-check-label" for="gridRadios4">
+                            Mastercard
+                        </label>
+                    </div>
                 </div>
             </div>
 

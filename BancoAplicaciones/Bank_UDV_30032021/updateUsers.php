@@ -104,7 +104,7 @@
     "body": JSON.stringify({
         "dpi": 21781889
     })
-})
+    })
     .then(
         response => response.json()
     )
@@ -116,6 +116,7 @@
     });
    
     
-    </script>
+</script>
+
 </body>
 </html>

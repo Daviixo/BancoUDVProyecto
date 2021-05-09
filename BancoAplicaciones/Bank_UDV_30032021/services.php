@@ -524,7 +524,9 @@ if (isset($_POST['logout'])) {
             ...json
 
         }) => {
+            console.log("Antes del for...");
             for (var i = 0; i <tbcliente_creditos.lenght; i++) {
+            console.log("Entro al for, el valor de i es: "+ i);
 	        console.log( tbcliente_credits.credito_id[i].name);
 	    }
 

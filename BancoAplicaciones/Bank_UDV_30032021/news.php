@@ -176,6 +176,7 @@ if (isset($_POST['logout'])) {
                 <input type="text" name="dpi" id="dpi">
                 <input type="submit" value="search">
             </form>
+
             <h2>Información de cliente.</h2>
             <div>
                 <table>
@@ -192,6 +193,8 @@ if (isset($_POST['logout'])) {
             </div>
 
             <script>
+
+            console.log("El DPI consultado es: " + dpi);
                 let template = ({
                     ...json
                 }) => `

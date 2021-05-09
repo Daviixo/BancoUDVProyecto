@@ -50,6 +50,9 @@ if (isset($_POST['logout'])) {
 </head>
 
 <body>
+
+    <input type="hidden" value="<?php echo $_SESSION['dpi_usuario'];?>" id="user_dpi"> 
+
     <div class="preloader">
         <img class="preloader__image" src="assets\images\loader.png" alt="">
     </div><!-- /.preloader -->
@@ -359,8 +362,9 @@ if (isset($_POST['logout'])) {
                 return temp;
             }
 
+            let dpi_usuario = document.getElementById("user_dpi").value;
             let infocliente = document.querySelector("#dataCliente");
-            fetch("https://banco-vivienda.club/clientes/113", {
+            fetch("https://banco-vivienda.club/clientes/" + dpi_usuario, {
                     "headers": {
                         'Accept': 'application/json',
                         "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZFN1Y3Vyc2FsIjo1LCJ1c2VybmFtZSI6IlNVQ1VSU0FMMSIsInBhc3N3b3JkIjoicXdlcnR5IiwiaWF0IjoxNjE5NTQ3NzQ0LCJleHAiOjE2MjI2NTgxNDR9.1awdMkX9_Ajun1OLcYXD19_UbtKVgx4Uzbmy55Jlrt4"
@@ -389,11 +393,7 @@ if (isset($_POST['logout'])) {
 
         </script>
 
-        <?php
-
-                echo $_SESSION['dpi_usuario'];
-
-        ?>        
+             
 </body>
 
 </html>

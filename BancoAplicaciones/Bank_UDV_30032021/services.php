@@ -159,7 +159,7 @@ if (isset($_POST['logout'])) {
             </div><!-- /.container -->
         </section><!-- /.page-header -->
 
-        <h2>--Credit's Info--</h2>
+        <h2 class="text-center">--Credit's Info--</h2>
         <div>
             <table class="table table-striped">
                 <thead>

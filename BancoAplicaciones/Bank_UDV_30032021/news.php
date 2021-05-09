@@ -374,8 +374,6 @@ if (isset($_POST['logout'])) {
 
             var dpi = document.getElementById("dpi").value;
 
-
-
             console.log("el dpi enviado a eliminar es: " + dpi);
             fetch("https://banco-vivienda.club/clientes/administracion", {
                     "method": "DELETE",
@@ -405,9 +403,11 @@ if (isset($_POST['logout'])) {
 
     <script>
 
-    var dpi = document.getElementById("dpi").value;
-
     function consultData(){
+
+    var dpi = document.getElementById("dpi").value;    
+    
+    console.log("El DPI a ser consultado es: " + dpi);
 
         fetch("https://banco-vivienda.club/clientes/consulta/" + dpi, {
     "headers": {

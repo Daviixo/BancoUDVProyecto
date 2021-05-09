@@ -528,10 +528,10 @@ if (isset($_POST['logout'])) {
             temp = "";
             json.tbcliente_creditos.map(data => {
                 
-                if (data.credito_id == null) {
+                if (data.clientecred_id != null) {
                     temp += `<tr>
                     
-                    <td>${data.credito_id}</td>
+                    <td>${data.clientecred_id}</td>
             
                     <td>${data.clientecred_dsc}</td>
 

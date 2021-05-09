@@ -174,8 +174,8 @@ if (isset($_POST['logout'])) {
 
             <!-- Form para solicitar credito -->
             <br><br><br><br>
-            <div class="row justify-content-center">
-                <form style="margin: auto;">
+            <form style="margin: auto;">
+                <div class="row justify-content-center">
                     <div class="form-group row">
                         <label for="inputEmail3" class="col-sm-2 col-form-label">How much do you need?</label>
                         <div class="col-sm-2">
@@ -188,41 +188,41 @@ if (isset($_POST['logout'])) {
                             <input type="text" class="form-control" id="daysToPay" placeholder="Days?" maxlength="2">
                         </div>
                     </div>
-            </div>
-
-            <!-- Credit Type -->
-            <fieldset class="form-group">
-                <div class="row">
-                    <legend class="col-form-label col-sm-2 pt-0">Description</legend>
-                    <div class="col-sm-10">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="Visa Gold" checked>
-                            <label class="form-check-label" for="gridRadios1">
-                                Visa Gold
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="Visa Black">
-                            <label class="form-check-label" for="gridRadios2">
-                                Visa Black
-                            </label>
-                        </div>
-                        <div class="form-check disabled">
-                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="Visa Platinum">
-                            <label class="form-check-label" for="gridRadios3">
-                                Visa Platinum
-                            </label>
-                        </div>
-                    </div>
                 </div>
 
-                <!-- End of: Credit Type -->
-
-                <div class="form-group row">
-                    <div class="col-sm-10">
-                        <button type="submit" class="btn btn-primary">Submit Request</button>
+                <!-- Credit Type -->
+                <fieldset class="form-group">
+                    <div class="row">
+                        <legend class="col-form-label col-sm-2 pt-0">Description</legend>
+                        <div class="col-sm-10">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="Visa Gold" checked>
+                                <label class="form-check-label" for="gridRadios1">
+                                    Visa Gold
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="Visa Black">
+                                <label class="form-check-label" for="gridRadios2">
+                                    Visa Black
+                                </label>
+                            </div>
+                            <div class="form-check disabled">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="Visa Platinum">
+                                <label class="form-check-label" for="gridRadios3">
+                                    Visa Platinum
+                                </label>
+                            </div>
+                        </div>
                     </div>
-                </div>
+
+                    <!-- End of: Credit Type -->
+
+                    <div class="form-group row">
+                        <div class="col-sm-10">
+                            <button type="submit" class="btn btn-primary">Submit Request</button>
+                        </div>
+                    </div>
         </div>
         </form>
 

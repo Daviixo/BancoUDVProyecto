@@ -358,8 +358,11 @@ if (isset($_POST['logout'])) {
 
 
                 })
-
-                return temp;
+                if (temp=="") {
+                    return `<tr><td colspan = "2"> You have no credits. Ask for one NOW! :) </td></tr>`
+                } else {
+                    return temp;
+                }
             }
             let dpi_usuario = document.getElementById("user_dpi").value;
             console.log("El DPI FINAL FINAL ES: " + dpi_usuario);

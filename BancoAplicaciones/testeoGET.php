@@ -30,7 +30,6 @@
     </div>
 
     <script>
-
     
     let template= ({...json})=>`
     

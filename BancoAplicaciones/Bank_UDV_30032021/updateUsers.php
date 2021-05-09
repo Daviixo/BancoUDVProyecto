@@ -85,8 +85,8 @@
 
     })
 
-    let formulario=document.querySelector("#formDelete");
-    formulario.addEventListener("submit",function(e){  
+    let formularioDelete=document.querySelector("#formDelete");
+    formularioDelete.addEventListener("submit",function(e){  
         e.preventDefault() 
     let dpi=document.querySelector("#dpiDelete");
     console.log(dpi.value);

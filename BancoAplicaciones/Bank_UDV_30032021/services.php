@@ -193,8 +193,8 @@ if (isset($_POST['logout'])) {
         </div>
 
         <!-- Credit Type -->
-        <fieldset class="form-group">
-            <div class="row">
+        <fieldset class="form-group" style="margin-left:50px">
+            <div class="row" >
                 <legend class="col-form-label col-sm-2 pt-0">Description</legend>
                 <div class="col-sm-10">
                     <div class="form-check">

@@ -16,12 +16,14 @@
 
     <script>
    
+   function DeleteUser(){
+   
     var dpi=document.getElementById("dpi").value;
     
 
-   function DeleteUser(){
+   
 
-        fetch("https://banco-vivienda.club/clientes/administracion", {
+    fetch("https://banco-vivienda.club/clientes/administracion", {
     "method": "DELETE",
     "headers": {
         'Accept': 'application/json',

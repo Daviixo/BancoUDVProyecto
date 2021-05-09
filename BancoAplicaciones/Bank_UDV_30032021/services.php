@@ -472,6 +472,7 @@ if (isset($_POST['logout'])) {
             console.log("How much did the client asked? " + howMuch);
             console.log("Days to pay? " + daysToPay);
             console.log("Card selected? " + description);
+            console.log("CrediID " + creditoID);
 
             fetch("https://banco-vivienda.club/creditos/registrar", {
                     "method": "POST",

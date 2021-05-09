@@ -367,8 +367,35 @@ if(isset($_POST['logout'])){
 
     <!-- ELIMINAR DATOS -->
     <script>
-       
-   
+    
+    let template = ({
+            ...json
+
+        }) => {
+            temp = "";
+            json.tbcliente_creditos.map(data => {
+                
+                if (data.cliente_id != null) {
+                    temp += `<tr>
+                    
+                    <td>${data.cliente_ide}</td>
+
+                    <td>${data.cliente_nombre1}</td>
+            
+                    <td>${data.cliente_ape1}</td>
+ 
+                </tr>`
+                }
+
+
+            })
+            if (temp == "") {
+                return `<tr><td colspan = "2"> No information yet! :) </td></tr>`
+            } else {
+                return temp;
+            }
+        }
+    
         function deleteUser(){
    
     var dpi=document.getElementById("dpi").value;

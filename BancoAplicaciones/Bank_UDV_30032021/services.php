@@ -486,7 +486,7 @@ if (isset($_POST['logout'])) {
                         "descripcion": description,
                         "monto": howMuch,
                         "diapago": daysToPay,
-                        "cred_tipo": creditoID
+                        "cred_tipo": creditoID + resultTime
                     })
                 })
                 .then(response => {

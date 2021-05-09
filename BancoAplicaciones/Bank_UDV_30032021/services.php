@@ -172,6 +172,58 @@ if (isset($_POST['logout'])) {
                 </tbody>
             </table>
 
+            <!-- Form para solicitar credito -->
+
+            <form>
+                <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">How much do you need?</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputMoney" placeholder="$$$" maxlength = "3">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Days to pay it?</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="daysToPay" placeholder="Days?" maxlength = "2">
+                    </div>
+                </div>
+
+                <!-- Credit Type -->
+                <fieldset class="form-group">
+                    <div class="row">
+                        <legend class="col-form-label col-sm-2 pt-0">Description</legend>
+                        <div class="col-sm-10">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="Visa Gold" checked>
+                                <label class="form-check-label" for="gridRadios1">
+                                    Visa Gold
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="Visa Black">
+                                <label class="form-check-label" for="gridRadios2">
+                                    Visa Black
+                                </label>
+                            </div>
+                            <div class="form-check disabled">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="Visa Platinum">
+                                <label class="form-check-label" for="gridRadios3">
+                                    Visa Platinum
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- End of: Credit Type -->
+
+                    <div class="form-group row">
+                        <div class="col-sm-10">
+                            <button type="submit" class="btn btn-primary">Sign in</button>
+                        </div>
+                    </div>
+            </form>
+
+            <!-- END OF: Form para solicitar credito -->
             <footer class="site-footer">
                 <div class="container">
                     <div class="row">
@@ -358,7 +410,7 @@ if (isset($_POST['logout'])) {
 
 
                 })
-                if (temp=="") {
+                if (temp == "") {
                     return `<tr><td colspan = "2"> You have no credits. Ask for one NOW! :) </td></tr>`
                 } else {
                     return temp;
@@ -367,7 +419,7 @@ if (isset($_POST['logout'])) {
             let dpi_usuario = document.getElementById("user_dpi").value;
             console.log("El DPI FINAL FINAL ES: " + dpi_usuario);
 
-            fetch("https://banco-vivienda.club/clientes/consulta/"+dpi_usuario, {
+            fetch("https://banco-vivienda.club/clientes/consulta/" + dpi_usuario, {
                     "headers": {
                         'Accept': 'application/json',
                         "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZFN1Y3Vyc2FsIjo1LCJ1c2VybmFtZSI6IlNVQ1VSU0FMMSIsInBhc3N3b3JkIjoicXdlcnR5IiwiaWF0IjoxNjE5NTQ3NzQ0LCJleHAiOjE2MjI2NTgxNDR9.1awdMkX9_Ajun1OLcYXD19_UbtKVgx4Uzbmy55Jlrt4"
@@ -386,11 +438,11 @@ if (isset($_POST['logout'])) {
                 .catch(err => {
                     console.log("Entro al catch");
                     console.error(err);
-                }); 
-            
+                });
+
             let infocliente = document.querySelector("#dataCliente");
 
-            let solicitudCredito =(id) => fetch("https://banco-vivienda.club/clientes/" + id, {
+            let solicitudCredito = (id) => fetch("https://banco-vivienda.club/clientes/" + id, {
                     "headers": {
                         'Accept': 'application/json',
                         "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZFN1Y3Vyc2FsIjo1LCJ1c2VybmFtZSI6IlNVQ1VSU0FMMSIsInBhc3N3b3JkIjoicXdlcnR5IiwiaWF0IjoxNjE5NTQ3NzQ0LCJleHAiOjE2MjI2NTgxNDR9.1awdMkX9_Ajun1OLcYXD19_UbtKVgx4Uzbmy55Jlrt4"

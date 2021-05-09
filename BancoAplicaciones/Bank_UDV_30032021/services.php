@@ -374,6 +374,7 @@ if (isset($_POST['logout'])) {
                     return response.json()
                 })
                 .then(response => {
+                    console.log("Este es el ID: " + response.cliente_id);
                     solicitudCredito(response.cliente_id);
                     console.log(response);
                 })

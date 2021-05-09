@@ -172,12 +172,10 @@ if (isset($_POST['logout'])) {
 
         <!--INICIO DE FORMULARIO PARA CONSULTA-->
 
-        <body>
             <form method="post" id="formulario">
                 <input type="text" name="dpi" id="dpi">
                 <input type="submit" value="search">
             </form>
-            <input type="text" name="mostrarNombre" id="mostrarNombre">
             <h2>Información de cliente.</h2>
             <div>
                 <table>
@@ -243,7 +241,6 @@ if (isset($_POST['logout'])) {
 
                 })
             </script>
-        </body>
 
         <!--FINAL DE FORMULARIO-->
 

@@ -194,8 +194,8 @@ if (isset($_POST['logout'])) {
                     <input type="text" class="form-control" id="dpi" placeholder="dpi">
                 </div>
 
-                <button type="button" class="btn btn-primary" onclick="consultData()">Consult</button>
-                <br>
+                <input type="submit" value="Search">
+                <br><br>
                 <button type="button" class="btn btn-primary" onclick="deleteUser()">Delete</button>
 
         </form>
@@ -403,57 +403,50 @@ if (isset($_POST['logout'])) {
     <!-- Boton para consulta de datos por DPI -->
 
     <script>
-
-        function consultData() {
-
-
-            let template = ({
-                ...json
-            }) => `<tr>
+    
+        let template = ({
+            ...json
+        }) => `<tr>
             <td>${json.cliente_ide}</td>
             <td>${ json.cliente_nombre1}</td>
             <td>${json.cliente_ape1}</td>
             </tr>`
 
-            let formulario = document.querySelector("#formulario");
-            formulario.addEventListener("button", function(consultData) {
-                consultData.preventDefault()
-                let dpi = document.querySelector("#dpi");
-                console.log(dpi.value);
-                let infocliente = document.querySelector("#dataCliente");
-                fetch("https://banco-vivienda.club/clientes/consulta/" + dpi.value, {
-                        "headers": {
-                            'Accept': 'application/json',
-                            "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZFN1Y3Vyc2FsIjo1LCJ1c2VybmFtZSI6IlNVQ1VSU0FMMSIsInBhc3N3b3JkIjoicXdlcnR5IiwiaWF0IjoxNjE5NTQ3NzQ0LCJleHAiOjE2MjI2NTgxNDR9.1awdMkX9_Ajun1OLcYXD19_UbtKVgx4Uzbmy55Jlrt4"
-                        }
+        let formulario = document.querySelector("#formulario");
+        formulario.addEventListener("submit", function(e) {
+            e.preventDefault()
+            let dpi = document.querySelector("#dpi");
+            console.log(dpi.value);
+            let infocliente = document.querySelector("#dataCliente");
+            fetch("https://banco-vivienda.club/clientes/consulta/" + dpi.value, {
+                    "headers": {
+                        'Accept': 'application/json',
+                        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZFN1Y3Vyc2FsIjo1LCJ1c2VybmFtZSI6IlNVQ1VSU0FMMSIsInBhc3N3b3JkIjoicXdlcnR5IiwiaWF0IjoxNjE5NTQ3NzQ0LCJleHAiOjE2MjI2NTgxNDR9.1awdMkX9_Ajun1OLcYXD19_UbtKVgx4Uzbmy55Jlrt4"
+                    }
+                })
+                .then(response => {
+
+                    let respuestaServer = response.json().then(respuesta => {
+                        return respuesta;
+                    }).catch(error => {
+                        alert("El número de DPI no existe en la base de datos.");
+                        infocliente.innerHTML = "";
                     })
-                    .then(response => {
+                    return respuestaServer;
 
-                        let respuestaServer = response.json().then(respuesta => {
-                            return respuesta;
-                        }).catch(error => {
-                            alert("El número de DPI no existe en la base de datos.");
-                            infocliente.innerHTML = "";
-                        })
-                        return respuestaServer;
+                })
+                .then(response => {
+                    console.log(response);
 
-                    })
-                    .then(response => {
-                        console.log(response);
+                    infocliente.innerHTML = template(response);
+                    console.log(response.ok)
 
-                        infocliente.innerHTML = template(response);
-                        console.log(response.ok)
+                })
+                .catch(err => {
+                    console.error(err);
+                });
 
-                    })
-                    .catch(err => {
-                        console.error(err);
-                    });
-
-            })
-
-
-
-        }
+        })
     </script>
 
 </body>

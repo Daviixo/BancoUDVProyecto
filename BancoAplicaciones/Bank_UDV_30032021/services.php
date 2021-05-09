@@ -434,6 +434,7 @@ if (isset($_POST['logout'])) {
             var howMuch = "";
             var daysToPay = "";
             var description = "";
+            var creditoID="";
 
             
             var today = new Date();
@@ -446,15 +447,26 @@ if (isset($_POST['logout'])) {
 
             if (document.getElementById('gridRadios1').checked) {
                 description = document.getElementById('gridRadios1').value;
+                creditoID= "tar_visa";
             }
 
             if (document.getElementById('gridRadios2').checked) {
                 description = document.getElementById('gridRadios2').value;
+                creditoID= "tar_visa";
             }
 
             if (document.getElementById('gridRadios3').checked) {
                 description = document.getElementById('gridRadios3').value;
+                creditoID= "tar_visa";
             }
+
+            if (document.getElementById('gridRadios4').checked) {
+                description = document.getElementById('gridRadios4').value;
+                creditoID= "tar_master";
+
+            }
+
+            
 
             alert("Your form was submitted successfully! :)");
             console.log("How much did the client asked? " + howMuch);
@@ -473,7 +485,7 @@ if (isset($_POST['logout'])) {
                         "descripcion": description,
                         "monto": howMuch,
                         "diapago": daysToPay,
-                        "cred_tipo": "tar_visa2" + resultTime
+                        "cred_tipo": creditoID + resultTime
                     })
                 })
                 .then(response => {

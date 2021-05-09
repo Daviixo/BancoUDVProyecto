@@ -172,6 +172,11 @@ if (isset($_POST['logout'])) {
 
         <!--INICIO DE FORMULARIO-->
         <form id="formulario" method="post">
+            <input type="text" name="dpi" id="dpi"><br>
+            <input type="submit" value="Search">    
+            <button type="button" class="btn btn-primary" onclick="deleteUser()">Delete</button>
+            
+            </form>
 
             <h2 class="text-center">--User Info--</h2><br>
             <div>
@@ -188,17 +193,6 @@ if (isset($_POST['logout'])) {
                 </table>
             </div>
 
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="inputEmail4">DPI</label>
-                    <input type="text" class="form-control" id="dpi" placeholder="dpi">
-                </div>
-
-                <input type="submit" value="Search">
-                <br><br>
-                <button type="button" class="btn btn-primary" onclick="deleteUser()">Delete</button>
-
-        </form>
         <!--FINAL DE FORMULARIO-->
 
         <footer class="site-footer">
@@ -403,7 +397,7 @@ if (isset($_POST['logout'])) {
     <!-- Boton para consulta de datos por DPI -->
 
     <script>
-    
+
         let template = ({
             ...json
         }) => `<tr>

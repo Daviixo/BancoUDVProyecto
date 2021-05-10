@@ -551,22 +551,6 @@ if (isset($_POST['logout'])) {
 
                 // Insert INTO Database HISTORIAL
 
-                var mysql = require('mysql');
-
-                var con = mysql.createConnection({
-                    host: "localhost",
-                    user: "usuario",
-                    password: "DavincianosA*2021a",
-                    database: "bancoaplicaciones"
-                });
-
-                con.connect(function(err) {
-                    if (err) throw err;
-                    con.query("SELECT * FROM Usuario", function(err, result, fields) {
-                        if (err) throw err;
-                        console.log(result);
-                    });
-                });
 
             }
         </script>
@@ -602,6 +586,16 @@ if (isset($_POST['logout'])) {
                         console.error(err);
                     });
             }
+        </script>
+
+        <script>
+
+            function executeQuery(){
+
+                
+
+            }
+
         </script>
 
 </body>

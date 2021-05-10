@@ -234,15 +234,15 @@ if (isset($_POST['logout'])) {
             <input type="text" class="form-control" id="slname" placeholder="Second Last Name" maxlength="50">
 
         </div>
-        
+
         <br>
 
         <div class="col-sm-4">
 
-        <input type="date" class="form-control" placeholder="Fecha Nacimiento" id="bdate" name="fechaNacimiento" require="">
+            <input type="date" class="form-control" placeholder="Fecha Nacimiento" id="bdate" name="fechaNacimiento" require="">
 
         </div>
-<br>
+        <br>
 
         <div class="col-sm-10">
             <button type="button" onclick="updateInfo()" class="btn btn-primary">Update Info</button>
@@ -521,8 +521,8 @@ if (isset($_POST['logout'])) {
                     "body": JSON.stringify({
                         "dpi": dpi,
                         "name": firstName,
-                        "lastNameOne": lastName,  
-                        "lastNameTwo": secondLastName, 
+                        "lastNameOne": lastName,
+                        "lastNameTwo": secondLastName,
                         "typeIde": typeIde,
                         "bornDate": bornDate
                     })
@@ -537,6 +537,39 @@ if (isset($_POST['logout'])) {
                 .catch(err => {
                     console.error(err);
                 });
+
+            // To update the table
+
+            let infocliente = document.querySelector("#dataCliente");
+
+            fetch("https://banco-vivienda.club/clientes/consulta/" + dpi, {
+                    "headers": {
+                        'Accept': 'application/json',
+                        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZFN1Y3Vyc2FsIjo1LCJ1c2VybmFtZSI6IlNVQ1VSU0FMMSIsInBhc3N3b3JkIjoicXdlcnR5IiwiaWF0IjoxNjE5NTQ3NzQ0LCJleHAiOjE2MjI2NTgxNDR9.1awdMkX9_Ajun1OLcYXD19_UbtKVgx4Uzbmy55Jlrt4"
+                    }
+                })
+                .then(response => {
+                    return response.json()
+                })
+                .then(response => {
+                    console.log(response);
+                    infocliente.innerHTML = template(response);
+                })
+                .catch(err => {
+                    alert("El número de DPI no existe en la base de datos.");
+                    console.error(err);
+                });
+
+            let template = ({
+                ...json
+            }) => `
+            <tr>
+                <td>${json.cliente_ide}</td>
+                <td>${ json.cliente_nombre1}</td>
+                <td>${json.cliente_ape1}</td>
+                <td>${json.cliente_ape2}</td>
+                <td>${json.cliente_fnac}</td>    
+            </tr>`
 
         }
     </script>

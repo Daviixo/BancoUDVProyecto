@@ -218,29 +218,25 @@ if (isset($_POST['logout'])) {
         <br>
 
         <div class="col-sm-4">
-
+            <label for="fname">First Name</label>
             <input type="text" class="form-control" id="fname" placeholder="First Name" maxlength="50">
-
         </div>
 
         <div class="col-sm-4">
-
+            <label for="lname">Last Name</label>
             <input type="text" class="form-control" id="lname" placeholder="Last Name" maxlength="50">
-
         </div>
 
         <div class="col-sm-4">
-
+            <label for="slname">Second Last Name</label>
             <input type="text" class="form-control" id="slname" placeholder="Second Last Name" maxlength="50">
-
         </div>
 
         <br>
 
         <div class="col-sm-4">
-
+            <label for="bdate">Born Date</label>
             <input type="date" class="form-control" placeholder="Fecha Nacimiento" id="bdate" name="fechaNacimiento" require="">
-
         </div>
         <br>
 

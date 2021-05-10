@@ -235,7 +235,7 @@ if (isset($_POST['logout'])) {
 
         <div class="col-sm-4">
 
-            <input type="text" class="form-control" id="bdate" placeholder="Born Date" maxlength="50">
+        <input type="date" placeholder="Fecha Nacimiento" id="bdate" name="fechaNacimiento" require="">
 
         </div>
 <br>

@@ -540,11 +540,6 @@ if (isset($_POST['logout'])) {
                     console.error(err);
                 });
 
-                <?php
-
-                echo "TESTEANDO PHP";
-
-                ?>
 
         }
     </script>

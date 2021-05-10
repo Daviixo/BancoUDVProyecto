@@ -38,13 +38,14 @@
             $stmt->bindParam(':action_taken', $action);
             $stmt->bindParam(':credit_amount', $credit_amount);
             $stmt->bindParam(':date_time', $today);
-            $result = $stmt->execute();
-            var_dump($result);
-            if ($result) {
+            $stmt->execute();
+ 
+            if ($stmt->execute()) {
+                
                 $message = 'insert into historial';
                 echo $message;
                 
-            }
+            }print $stmt->errorCode();
         } catch (PDOException $e) {
             echo 'Error: ' + $e->getMessage();
         }

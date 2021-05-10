@@ -494,11 +494,23 @@ if (isset($_POST['logout'])) {
                 })
                 .then(response => {
                     console.log("Data was inserted correctly.");
+                    requestToHistory(howMuch);
                     console.log(response);
                 })
                 .catch(err => {
                     console.error(err);
                 });
+
+            //NEW FUNCTION - Insert INTO historial
+
+            let requestToHistory = () => {
+
+                fetch("http://www.proyectoredes.xyz/BancoUDVProyecto/BancoAplicaciones/Bank_UDV_30032021/historial.php?howuch=" + finalhowmuch)
+                    .then(response => console.log(response))
+                    .catch(err => alert("Occurrio un error en el servidor. " + err))
+
+            }
+
 
         }
     </script>
@@ -531,7 +543,7 @@ if (isset($_POST['logout'])) {
                 .then(response => response.json())
                 .then(response => {
                     console.log(response);
-                    paymentToHistory(credit_id,amountToPay);
+                    paymentToHistory(credit_id, amountToPay);
                 })
                 .catch(err => {
                     console.error(err);
@@ -539,13 +551,17 @@ if (isset($_POST['logout'])) {
 
             //NEW FUNCTION
 
-            let paymentToHistory = (finalcredit_id,finalamountToPay) => {
+            let paymentToHistory = (finalcredit_id, finalamountToPay) => {
 
-                fetch("http://www.proyectoredes.xyz/BancoUDVProyecto/BancoAplicaciones/Bank_UDV_30032021/historial.php?creditid="+finalcredit_id + "&amounttopay="+finalamountToPay)
-                .then(response => alert(response))
-                .catch(err => alert("Occurrio un error en el servidor. " + err))
+                fetch("http://www.proyectoredes.xyz/BancoUDVProyecto/BancoAplicaciones/Bank_UDV_30032021/historial.php?creditid=" + finalcredit_id + "&amounttopay=" + finalamountToPay)
+                    .then(response => console.log(response))
+                    .catch(err => alert("Occurrio un error en el servidor. " + err))
 
             }
+
+            document.getElementById("creditid").value = "";
+            document.getElementById("amountToPay").value = "";
+
         }
     </script>
 

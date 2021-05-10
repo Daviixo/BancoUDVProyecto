@@ -239,7 +239,7 @@ if (isset($_POST['logout'])) {
                 <!-- Form para pagar credito -->
                 <br><br>
                 <h1>Pay for your Credit!</h1>
-                <form method="$_POST" style="margin: auto;">
+                <form method="post" style="margin: auto;">
                     <div class="form-group row">
                         <label for="CID" class="col-sm-2 col-form-label">What's the Credit ID?</label>
                         <div class="col-sm-2">
@@ -556,14 +556,6 @@ if (isset($_POST['logout'])) {
         $credit_amount = $_POST['amountToPay'];
         $action = "Credit payment";
         $email = $_SESSION['username'];
-
-        echo '<script>';
-        echo 'console.log('. json_encode( $credit_id) .')';
-        echo '</script>';
-
-        echo '<script>';
-        echo 'console.log('. json_encode( $credit_amount) .')';
-        echo '</script>';
 
         //$final_credit_id = strval($credit_id);
         //$final_credit_amount = strval($credit_amount);

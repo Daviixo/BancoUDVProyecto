@@ -552,7 +552,7 @@ if (isset($_POST['logout'])) {
         $username = "usuario";
         $password = "DavincianosA*2021a";
         $database = "bancoaplicaciones";
-        $today = date("F j, Y, g:i a", ("Mountain/Colorado"));
+        $today = date("F j, Y, g:i a");
 
         $conex = mysqli_connect($_SERVER, $username, $password, $database);
 

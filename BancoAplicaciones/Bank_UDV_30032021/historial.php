@@ -10,11 +10,14 @@
         $password = "DavincianosA*2021a";
         $database = "bancoaplicaciones";
         $today = date("F j, Y, g:i a");
-        $credit_id = $finalid;
-        $credit_amount = $finalamount;
+        $credit_id = $_GET['creditid'];
+        $credit_amount = $_GET['amounttopay'];
 
         $icreditid = (int)$finalid;
         $icreditamount = (int)$finalamount; 
+
+        echo $icreditid;
+        echo $icreditamount;
 
         $action = "Credit payment";
         $email = $_SESSION['username'];

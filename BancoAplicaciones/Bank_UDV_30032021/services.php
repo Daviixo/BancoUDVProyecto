@@ -551,6 +551,7 @@ if (isset($_POST['logout'])) {
         $username = "usuario";
         $password = "DavincianosA*2021a";
         $database = "bancoaplicaciones";
+        $test = "test";
 
         $conex = mysqli_connect($_SERVER, $username, $password, $database);
 
@@ -561,17 +562,12 @@ if (isset($_POST['logout'])) {
             die("connected failed:" . $e->getMessage());
         }
 
-        $consulta = "SELECT * FROM Usuario;";
-        $resultado = mysqli_query($conex, $consulta);
+        $sql = "INSERT INTO prueba (test) 
+        VALUES (:test)";
+        $stmt = $conn ->prepare($sql);
+        $stmt->bindParam(':test',$test);
 
-        if ($resultado) { // si el resultado es igual a true
-            while ($row = $resultado->fetch_array()) { // hacemos un array con los datos que obtenemos de la consulta
-                $email = $row['email_usuario'];
-                $password = $row['password'];
-            }
-        }else{
-            echo "No se pudo hacer el query";
-        }
+        $stmt->execute();
     }
 
     ?>

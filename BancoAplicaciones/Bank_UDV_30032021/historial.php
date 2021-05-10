@@ -36,7 +36,7 @@
             $stmt->bindParam(':user', $email);
             $stmt->bindParam(':credit_id', $credit_id);
             $stmt->bindParam(':action_taken', $action);
-            $stmt->bindParam(':credit_amount', $credit_amount;
+            $stmt->bindParam(':credit_amount', $credit_amount);
             $stmt->bindParam(':date_time', $today);
             $result = $stmt->execute();
             var_dump($result);

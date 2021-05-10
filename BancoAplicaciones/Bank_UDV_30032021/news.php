@@ -201,7 +201,7 @@ if (isset($_POST['logout'])) {
 
             <script>
 
-            var dpiFinal = document.getElementById("dpiFinal");
+            var dpiFinal = document.getElementById("dpiFinal").value;
 
             console.log("El DPI consultado es: " + dpiFinal);
                 let template = ({

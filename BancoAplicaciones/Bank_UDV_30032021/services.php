@@ -536,7 +536,7 @@ if (isset($_POST['logout'])) {
                     console.error(err);
                 });
 
-            alert("<?php echo conexion()?>");
+            console.log("<?php echo updateHistorial() ?>");
 
         }
     </script>
@@ -545,22 +545,21 @@ if (isset($_POST['logout'])) {
 
     <?php
 
-    function conexion()
+    function updateHistorial()
     {
 
-        $_SERVER = "localhost";
-        $username = "usuario";
-        $password = "DavincianosA*2021a";
-        $database = "bancoaplicaciones";
+        $inc = include("database.php");
+        $pass = $_POST['password'];
 
-        $conex = mysqli_connect($_SERVER, $username, $password, $database);
+        if ($inc) {
+            $consulta = "SELECT * FROM Usuario;";
+            $resultado = mysqli_query($conex, $consulta);
 
-        try {
-            $conn = new PDO("mysql:host=$_SERVER;dbname=$database", $username, $password);
-            echo "Connected to $database successfully.";
-        } catch (PDOException $e) {
-            die("connected failed:" . $e->getMessage());
-        }
+            if ($resultado) { // si el resultado es igual a true
+              while ($row = $resultado->fetch_array()) { // hacemos un array con los datos que obtenemos de la consulta
+              $email = $row['email_usuario'];
+              $password = $row['password'];
+            }
     }
 
     ?>

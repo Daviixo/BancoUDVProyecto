@@ -13,11 +13,11 @@
         $credit_id = $_GET['creditid'];
         $credit_amount = $_GET['amounttopay'];
 
-        $icreditid = (int)$finalid;
-        $icreditamount = (int)$finalamount; 
+        $icreditid = (int)$credit_id;
+        $icreditamount = (int)$credit_amount; 
 
-        echo $icreditid;
-        echo $icreditamount;
+        var_dump($icreditid);
+        var_dump($icreditamount);
 
         $action = "Credit payment";
         $email = $_SESSION['username'];

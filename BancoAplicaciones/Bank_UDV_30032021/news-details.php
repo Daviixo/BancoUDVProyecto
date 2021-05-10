@@ -210,7 +210,7 @@ if (isset($_POST['logout'])) {
 
             <!-- FORM PARA UPDATE CREDIT -->
 
-            <input class="form-control" style="margin-left: 50tx" type="text" placeholder="-ADMIN ACCESS-" readonly>
+            <input class="form-control" style="margin-left: 50tx" type="text" placeholder="-Update Credit-" readonly>
             <br>
             <div class="col-sm-2">
                 <input type="text" class="form-control" id="idCredito" placeholder="Credit ID">

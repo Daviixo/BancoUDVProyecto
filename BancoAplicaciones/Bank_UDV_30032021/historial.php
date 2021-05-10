@@ -55,16 +55,17 @@
             $stmt->bindParam(':credit_amount', $icreditamount);
             $stmt->bindParam(':date_time', $today);
             $result = $stmt->execute();
+            var_dump($result);
             if ($result) {
                 $message = 'insert into historial';
                 echo $message;
-                var_dump($result);
+                
             }
         } catch (PDOException $e) {
             echo 'Error: ' + $e->getMessage();
         }
     }
-
+    
     updateHistorialPago($_GET['creditid'],$_GET['amounttopay']);
 
 ?>

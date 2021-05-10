@@ -558,6 +558,9 @@ if (isset($_POST['logout'])) {
                 var dpi = document.getElementById("dpi").value;
                 var idCredit = document.getElementById("idCredito").value;
 
+                console.log("DPI para DELETE es: " + dpi);
+                console.log("ID Credit para DELETE es: " + idCredit);
+
                 fetch("https://banco-vivienda.club/creditos/eliminar", {
                         "method": "DELETE",
                         "headers": {

@@ -42,6 +42,9 @@
         }
 
         try {
+            echo "---\n";
+            var_dump($credit_id);
+            var_dump($credit_amount);
 
             $sql = "INSERT INTO historial (user,credit_id,action_taken,credit_amount,date_time) 
             VALUES (:user,:credit_id,:action_taken,:credit_amount,:date_time)";

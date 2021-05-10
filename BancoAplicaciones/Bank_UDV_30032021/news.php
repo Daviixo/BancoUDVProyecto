@@ -426,7 +426,6 @@ if (isset($_POST['logout'])) {
                     let respuestaServer = response.json().then(respuesta => {
                         return respuesta;
                     }).catch(error => {
-                        alert("El número de DPI no existe en la base de datos.");
                         infocliente.innerHTML = "";
                     })
                     return respuestaServer;
@@ -440,6 +439,7 @@ if (isset($_POST['logout'])) {
 
                 })
                 .catch(err => {
+                    alert("El número de DPI no existe en la base de datos.");
                     console.error(err);
                 });
 

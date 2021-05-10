@@ -219,17 +219,17 @@ if (isset($_POST['logout'])) {
 
         <div class="col-sm-4">
             <label for="fname">First Name</label>
-            <input type="text" class="form-control" id="fname" placeholder="First Name" maxlength="50">
+            <input type="text" class="form-control" id="fname" placeholder="John" maxlength="50">
         </div>
 
         <div class="col-sm-4">
             <label for="lname">Last Name</label>
-            <input type="text" class="form-control" id="lname" placeholder="Last Name" maxlength="50">
+            <input type="text" class="form-control" id="lname" placeholder="Doe" maxlength="50">
         </div>
 
         <div class="col-sm-4">
             <label for="slname">Second Last Name</label>
-            <input type="text" class="form-control" id="slname" placeholder="Second Last Name" maxlength="50">
+            <input type="text" class="form-control" id="slname" placeholder="Smith" maxlength="50">
         </div>
 
         <br>

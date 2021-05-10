@@ -28,7 +28,6 @@
     <link rel="stylesheet" href="assets\css\nouislider.pips.css">
 
     <!-- template styles -->
-    <h1>Welcome, <?php echo $email; ?></h1>
     <link rel="stylesheet" href="assets\css\main.css">
 </head>
 

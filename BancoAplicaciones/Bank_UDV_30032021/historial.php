@@ -12,6 +12,10 @@
         $today = date("F j, Y, g:i a");
         $credit_id = $finalid;
         $credit_amount = $finalamount;
+
+        $icreditid = (int)$credit_id;
+        $icreditamount = (int)$credit_amount; 
+
         $action = "Credit payment";
         $email = $_SESSION['username'];
 

@@ -1,4 +1,8 @@
 <?php
+    $input = json_decode(file_get_contents('php://input'), true);
+    var_dump($input);
+    echo $_GET['creditid'];
+    echo $_GET['amounttopay'];
 
     function updateHistorialPago(){
         $_SERVER = "localhost";
@@ -50,7 +54,5 @@
             echo 'Error: ' + $e->getMessage();
         }
     }
-
-    updateHistorialPago();
 
 ?>

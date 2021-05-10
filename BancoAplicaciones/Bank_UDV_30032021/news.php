@@ -466,11 +466,19 @@ if (isset($_POST['logout'])) {
                 });
 
         }
+
+        let template = ({
+            ...json
+
+        }) => {
+            
+            console.log("El DPI con JSON es: " + json.cliente_ide.value);
+
+            }
+
+        
     </script>
 
 </body>
 
 </html>
-
-`}
-}

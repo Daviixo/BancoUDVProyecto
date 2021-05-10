@@ -13,8 +13,8 @@
         $credit_id = $finalid;
         $credit_amount = $finalamount;
 
-        $icreditid = (int)$credit_id;
-        $icreditamount = (int)$credit_amount; 
+        $icreditid = (int)$finalid;
+        $icreditamount = (int)$finalamount; 
 
         $action = "Credit payment";
         $email = $_SESSION['username'];

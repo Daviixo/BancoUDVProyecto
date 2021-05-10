@@ -483,7 +483,7 @@ if (isset($_POST['logout'])) {
             
     <tr>
         <td>${json.cliente_ide}</td>
-        <td>${ json.cliente_nombre1}</td>
+        <td>${json.cliente_nombre1}</td>
         <td>${json.cliente_ape1}</td>
         <td>${json.cliente_ape2}</td>
         <td>${json.cliente_fnac}</td>    

@@ -212,8 +212,8 @@ if (isset($_POST['logout'])) {
 
         <!-- Update User's info -->
 
-        <input class="form-control" style="margin-left: 50tx" type="text" placeholder="-ADMIN ACCESS-" readonly>
-        <h3 style="margin-left: 50tx">--- To Update User's Info ---</h3>
+        <input class="form-control" style="margin-left: 50tx" type="text" placeholder="-To update User's Info-" readonly>
+        <br>
 
         <div class="col-sm-4">
 

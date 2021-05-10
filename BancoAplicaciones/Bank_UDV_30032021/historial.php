@@ -15,10 +15,10 @@
         $action = "Credit payment";
         $email = $_SESSION['username'];
 
-        if(isset($credit_id) && isset($credit_amount)){
-            echo "ID y amount van NULL";
-            exit();
-        }
+        // if(isset($credit_id) && isset($credit_amount)){
+        //     echo "ID y amount van NULL";
+        //     exit();
+        // }
 
         echo $credit_id + " > Credit ID";
         echo $credit_amount + " > Credit amount";

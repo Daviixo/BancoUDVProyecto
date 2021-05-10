@@ -384,27 +384,6 @@ if (isset($_POST['logout'])) {
 
                 var dpi = document.getElementById("dpi").value;
 
-                console.log("El valor ingresado del DPI es: " + dpi)
-                let infocliente = document.querySelector("#dataCliente");
-
-                fetch("https://banco-vivienda.club/clientes/consulta/" + dpi, {
-                        "headers": {
-                            'Accept': 'application/json',
-                            "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZFN1Y3Vyc2FsIjo1LCJ1c2VybmFtZSI6IlNVQ1VSU0FMMSIsInBhc3N3b3JkIjoicXdlcnR5IiwiaWF0IjoxNjE5NTQ3NzQ0LCJleHAiOjE2MjI2NTgxNDR9.1awdMkX9_Ajun1OLcYXD19_UbtKVgx4Uzbmy55Jlrt4"
-                        }
-                    })
-                    .then(response => {
-                        return response.json()
-                    })
-                    .then(response => {
-                        console.log(response);
-                        infocliente.innerHTML = template(response);
-                    })
-                    .catch(err => {
-                        alert("El número de DPI no existe en la base de datos.");
-                        console.error(err);
-                    });
-
                 let template = ({
                     ...json
 
@@ -420,8 +399,9 @@ if (isset($_POST['logout'])) {
                     <td>${data.clientecred_dsc}</td>
 
                     <td>${data.clientecred_monto}</td>
-                    </tr>`
+                </tr>`
                         }
+
 
                     })
                     if (temp == "") {
@@ -430,6 +410,60 @@ if (isset($_POST['logout'])) {
                         return temp;
                     }
                 }
+
+                //let dpi_usuario = document.getElementById("user_dpi").value;
+
+                console.log("El DPI FINAL FINAL ES: " + dpi);
+
+                fetch("https://banco-vivienda.club/clientes/consulta/" + dpi, {
+                        "headers": {
+                            'Accept': 'application/json',
+                            "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZFN1Y3Vyc2FsIjo1LCJ1c2VybmFtZSI6IlNVQ1VSU0FMMSIsInBhc3N3b3JkIjoicXdlcnR5IiwiaWF0IjoxNjE5NTQ3NzQ0LCJleHAiOjE2MjI2NTgxNDR9.1awdMkX9_Ajun1OLcYXD19_UbtKVgx4Uzbmy55Jlrt4"
+                        }
+                    })
+                    .then(response => {
+                        console.log("Entro al primer RESPONSE");
+                        return response.json()
+                    })
+                    .then(response => {
+                        console.log("Entro al segundo RESPONSE");
+                        console.log("Este es el ID: " + response.cliente_id);
+                        solicitudCredito(response.cliente_id);
+                        console.log(response);
+                    })
+                    .catch(err => {
+                        console.log("Entro al catch");
+                        console.error(err);
+                    });
+
+                let infocliente = document.querySelector("#dataCliente");
+
+                let solicitudCredito = (id) => fetch("https://banco-vivienda.club/clientes/" + id, {
+                        "headers": {
+                            'Accept': 'application/json',
+                            "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZFN1Y3Vyc2FsIjo1LCJ1c2VybmFtZSI6IlNVQ1VSU0FMMSIsInBhc3N3b3JkIjoicXdlcnR5IiwiaWF0IjoxNjE5NTQ3NzQ0LCJleHAiOjE2MjI2NTgxNDR9.1awdMkX9_Ajun1OLcYXD19_UbtKVgx4Uzbmy55Jlrt4"
+                        }
+                    })
+                    .then(response => {
+
+                        let respuestaServer = response.json().then(respuesta => {
+                            return respuesta;
+                        }).catch(error => {
+                            alert("El número de DPI no existe en la base de datos.");
+                            infocliente.innerHTML = "";
+                        })
+                        return respuestaServer;
+
+                    })
+                    .then(response => {
+                        console.log(response);
+
+                        infocliente.innerHTML = template(response);
+
+                    })
+                    .catch(err => {
+                        console.error(err);
+                    });
 
             }
         </script>

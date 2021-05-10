@@ -16,6 +16,9 @@
         $action = "Credit payment";
         $email = $_SESSION['username'];
 
+        var_dump($credit_id);
+        var_dump($credit_amount);
+
         // if(isset($credit_id) && isset($credit_amount)){
         //     echo "ID y amount van NULL";
         //     exit();

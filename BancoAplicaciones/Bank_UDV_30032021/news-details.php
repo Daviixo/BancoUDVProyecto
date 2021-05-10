@@ -84,6 +84,16 @@ if(isset($_POST['logout'])){
                     <ul class="main-menu__list">
                         <li class="dropdown">
                             <a href="index-1.php">Home</a>
+                            <ul>
+                                <li>
+                                    <a href="index-1.php">Home One</a>
+                                </li>
+                                <li><a href="index-1.php">Home Two</a></li>
+                                <li class="dropdown">
+                                    <a href="#">Header Styles</a>
+                                    <ul>
+                                        <li><a href="index-1.php">Header One</a></li>
+                                        <li><a href="index-1.php">Header Two</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -99,13 +109,6 @@ if(isset($_POST['logout'])){
                             <ul>
                                 <li><a href="services.php">Services</a></li>
                                 <li><a href="service-details.php">Service Details</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="dropdown"><a href="news.php">Admin</a>
-                            <ul>
-                                <li><a href="news.php">User's Info</a></li>
-                                <li><a href="news-details.php">User's Credits</a></li>
                             </ul>
                         </li>
                       

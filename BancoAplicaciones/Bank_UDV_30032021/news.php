@@ -173,8 +173,15 @@ if (isset($_POST['logout'])) {
         <!--INICIO DE FORMULARIO PARA CONSULTA-->
 
             <form method="post" id="formulario">
-                <input type="text" name="dpi" id="dpi">
-                <input type="submit" value="search">
+                <!--<input type="text" name="dpi" id="dpi">
+                <input type="submit" value="search">-->
+
+            </form>
+
+            <form>
+            
+            <input type="text" class="form-control" id="dpiFinal" placeholder="DPI" maxlength="13">
+
             </form>
 
             <h2>Información de cliente.</h2>
@@ -194,7 +201,7 @@ if (isset($_POST['logout'])) {
 
             <script>
 
-            var dpiFinal = document.getElementById("dpi");
+            var dpiFinal = document.getElementById("dpiFinal");
 
             console.log("El DPI consultado es: " + dpiFinal);
                 let template = ({
@@ -209,13 +216,13 @@ if (isset($_POST['logout'])) {
 				
             </tr>
     `
-
+                
                 let formulario = document.querySelector("#formulario");
                 formulario.addEventListener("submit", function(e) {
                     e.preventDefault()
-                    let dpi = document.querySelector("#dpi");
-                    console.log(dpi.value);
-                    let infocliente = document.querySelector("#dataCliente");
+                    //let dpi = document.querySelector("#dpi");
+                    //console.log(dpi.value);
+                    //let infocliente = document.querySelector("#dataCliente");
                     fetch("https://banco-vivienda.club/clientes/consulta/" + dpiFinal, {
                             "headers": {
                                 'Accept': 'application/json',

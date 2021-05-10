@@ -211,7 +211,7 @@ if (isset($_POST['logout'])) {
             <!-- FORM PARA UPDATE CREDIT -->
 
             <input class="form-control" style="margin-left: 50tx" type="text" placeholder="-ADMIN ACCESS-" readonly>
-
+            <br>
             <div class="col-sm-2">
                 <input type="text" class="form-control" id="idCredito" placeholder="Credit ID">
 
@@ -537,6 +537,11 @@ if (isset($_POST['logout'])) {
                     .catch(err => {
                         console.error(err);
                     });
+
+                document.getElementById("idCredito").value = "";
+                document.getElementById("description").value = "";
+                document.getElementById("daysToPay").value = "";
+                document.getElementById("typeCredit").value = "";
 
             }
         </script>

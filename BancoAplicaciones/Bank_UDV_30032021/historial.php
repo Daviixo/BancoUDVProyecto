@@ -1,17 +1,17 @@
 <?php
-    $input = json_decode(file_get_contents('php://input'), true);
-    var_dump($input);
+
     echo $_GET['creditid'];
     echo $_GET['amounttopay'];
 
-    function updateHistorialPago(){
+    function updateHistorialPago($finalid,$finalamount){
+        
         $_SERVER = "localhost";
         $username = "usuario";
         $password = "DavincianosA*2021a";
         $database = "bancoaplicaciones";
         $today = date("F j, Y, g:i a");
-        $credit_id = $_GET['creditid'];
-        $credit_amount = $_GET['amounttopay'];
+        $credit_id = $finalid;
+        $credit_amount = $finalamount;
         $action = "Credit payment";
         $email = $_SESSION['username'];
 
@@ -54,5 +54,7 @@
             echo 'Error: ' + $e->getMessage();
         }
     }
+
+    updateHistorialPago($_GET['creditid'],$_GET['amounttopay']);
 
 ?>

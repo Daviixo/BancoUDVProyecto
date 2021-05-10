@@ -407,13 +407,29 @@ if (isset($_POST['logout'])) {
 
                 let template = ({
                     ...json
-                }) => `<tr>
-                <td>${data.clientecred_id}</td>
-            
-                <td>${data.clientecred_dsc}</td>
 
-                <td>${data.clientecred_monto}</td>  
-                </tr>`
+                }) => {
+                    temp = "";
+                    json.tbcliente_creditos.map(data => {
+
+                        if (data.clientecred_id != null) {
+                            temp += `<tr>
+                    
+                    <td>${data.clientecred_id}</td>
+            
+                    <td>${data.clientecred_dsc}</td>
+
+                    <td>${data.clientecred_monto}</td>
+                    </tr>`
+                        }
+
+                    })
+                    if (temp == "") {
+                        return `<tr><td colspan = "2"> You have no credits. Ask for one NOW! :) </td></tr>`
+                    } else {
+                        return temp;
+                    }
+                }
 
             }
         </script>

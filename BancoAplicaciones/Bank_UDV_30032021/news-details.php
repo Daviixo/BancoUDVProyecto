@@ -386,6 +386,8 @@ if (isset($_POST['logout'])) {
 
             var dpi_usario = document.getElementById("dpi").value;
 
+            console.log("El DPI ingresado es: " + dpi_usario);
+
             let template = ({
                 ...json
 

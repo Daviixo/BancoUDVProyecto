@@ -461,6 +461,7 @@ if (isset($_POST['logout'])) {
                 })
                 .then(response => {
                     console.log(response);
+                    infocliente.innerHTML=template(response);
                 })
                 .catch(err => {
                     console.error(err);

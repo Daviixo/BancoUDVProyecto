@@ -552,8 +552,8 @@ if (isset($_POST['logout'])) {
         $password = "DavincianosA*2021a";
         $database = "bancoaplicaciones";
         $today = date("F j, Y, g:i a");
-        $credit_id = $_POST['creditid'];
-        $credit_amount = $_POST['amountToPay'];
+        $credit_id = $_GET['creditid'];
+        $credit_amount = $_GET['amountToPay'];
         $action = "Credit payment";
         $email = $_SESSION['username'];
 

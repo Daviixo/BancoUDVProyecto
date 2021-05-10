@@ -439,7 +439,6 @@ if (isset($_POST['logout'])) {
             var description = "";
             var creditoID = "";
 
-
             var today = new Date();
 
             var time = today.getHours() + today.getMinutes() + today.getSeconds();
@@ -536,7 +535,7 @@ if (isset($_POST['logout'])) {
                     console.error(err);
                 });
 
-            alert("<?php echo updateHistorial() ?>");
+            alert("<?php echo updateHistorialPago() ?>");
 
         }
     </script>
@@ -545,7 +544,7 @@ if (isset($_POST['logout'])) {
 
     <?php
 
-    function updateHistorial()
+    function updateHistorialPago()
     {
 
         $_SERVER = "localhost";
@@ -553,9 +552,12 @@ if (isset($_POST['logout'])) {
         $password = "DavincianosA*2021a";
         $database = "bancoaplicaciones";
         $today = date("F j, Y, g:i a");
+        $credit_id = $_POST['creditid'];
+        $credit_amount = $_POST['amountToPay'];
+        $action = 'Credit payment';
+        $email = $_SESSION['username'];
 
         $conex = mysqli_connect($_SERVER, $username, $password, $database);
-
 
         try {
             $conn = new PDO("mysql:host=$_SERVER;dbname=$database", $username, $password);
@@ -564,10 +566,14 @@ if (isset($_POST['logout'])) {
             die("connected failed:" . $e->getMessage());
         }
 
-        $sql = "INSERT INTO prueba (test) 
-        VALUES (:test)";
+        $sql = "INSERT INTO historial (user,credit_id,action,credit_amount,timestamp) 
+        VALUES (:user,:credit_id,:action,:credit_amount,:timestamp)";
         $stmt = $conn->prepare($sql);
-        $stmt->bindParam(':test', $today);
+        $stmt->bindParam(':user', $email);
+        $stmt->bindParam(':credit_id', $credit_id);
+        $stmt->bindParam(':action', $action);
+        $stmt->bindParam(':credit_amount', $credit_amount);
+        $stmt->bindParam(':timestamp', $today);
 
         $stmt->execute();
     }

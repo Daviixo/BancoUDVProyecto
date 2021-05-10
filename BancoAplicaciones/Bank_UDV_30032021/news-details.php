@@ -237,6 +237,12 @@ if (isset($_POST['logout'])) {
                 <br>
             </div><br>
 
+            <br>
+            <div class="col-sm-10">
+                <button type="button" onclick="deleteCredit()" class="btn btn-primary">Delete Credit</button>
+                <br>
+            </div><br>
+
             <!-- END OF FORM PARA UPDATE CREDIT -->
 
 
@@ -543,6 +549,36 @@ if (isset($_POST['logout'])) {
                 document.getElementById("daysToPay").value = "";
                 document.getElementById("typeCredit").value = "";
 
+            }
+        </script>
+
+        <script>
+            function deleteCredit() {
+
+                var dpi = document.getElementById("dpi").value;
+                var idCredit = document.getElementById("idCredito").value;
+
+                fetch("https://banco-vivienda.club/creditos/eliminar", {
+                        "method": "DELETE",
+                        "headers": {
+                            'Accept': 'application/json',
+                            "content-type": "application/json",
+                            "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZFN1Y3Vyc2FsIjo1LCJ1c2VybmFtZSI6IlNVQ1VSU0FMMSIsInBhc3N3b3JkIjoicXdlcnR5IiwiaWF0IjoxNjE5NTQ3NzQ0LCJleHAiOjE2MjI2NTgxNDR9.1awdMkX9_Ajun1OLcYXD19_UbtKVgx4Uzbmy55Jlrt4",
+                        },
+                        "body": JSON.stringify({
+                            "id": idCredit,
+                            "dpi": dpi
+                        })
+                    })
+                    .then(
+                        response => response.json()
+                    )
+                    .then(response => {
+                        console.log(response);
+                    })
+                    .catch(err => {
+                        console.error(err);
+                    });
             }
         </script>
 

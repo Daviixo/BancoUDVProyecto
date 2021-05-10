@@ -202,6 +202,8 @@ if (isset($_POST['logout'])) {
                     <th>DPI</th>
                     <th>First Name</th>
                     <th>Last Name</th>
+                    <th>Second Last Name</th>
+                    <th>Born Date</th>
                 </tr>
             </thead>
             <tbody id="dataCliente">
@@ -243,7 +245,7 @@ if (isset($_POST['logout'])) {
 <br>
 
         <div class="col-sm-10">
-            <button type="button" onclick="updateInfo()" class="btn btn-primary">Get Info</button>
+            <button type="button" onclick="updateInfo()" class="btn btn-primary">Update Info</button>
             <br>
         </div><br>
 
@@ -459,6 +461,8 @@ if (isset($_POST['logout'])) {
             <td>${json.cliente_ide}</td>
             <td>${ json.cliente_nombre1}</td>
             <td>${json.cliente_ape1}</td>
+            <td>${json.cliente_ape2}</td>
+            <td>${json.cliente_fnac}</td>
             </tr>`
 
         let formulario = document.querySelector("#formulario");

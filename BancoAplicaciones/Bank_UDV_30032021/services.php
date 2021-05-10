@@ -552,8 +552,7 @@ if (isset($_POST['logout'])) {
         $username = "usuario";
         $password = "DavincianosA*2021a";
         $database = "bancoaplicaciones";
-        $timezone =  date_default_timezone_set("Mountain/Colorado");
-        $today = date("F j, Y, g:i a", $timezone);
+        $today = date("F j, Y, g:i a", ("Mountain/Colorado"));
 
         $conex = mysqli_connect($_SERVER, $username, $password, $database);
 

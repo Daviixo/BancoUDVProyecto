@@ -232,10 +232,12 @@ if (isset($_POST['logout'])) {
             <input type="text" class="form-control" id="slname" placeholder="Second Last Name" maxlength="50">
 
         </div>
+        
+        <br>
 
         <div class="col-sm-4">
 
-        <input type="date" placeholder="Fecha Nacimiento" id="bdate" name="fechaNacimiento" require="">
+        <input type="date" class="form-control" placeholder="Fecha Nacimiento" id="bdate" name="fechaNacimiento" require="">
 
         </div>
 <br>

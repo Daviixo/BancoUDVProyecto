@@ -92,10 +92,6 @@
             <div class="sticky-header__content"></div><!-- /.sticky-header__content -->
         </div><!-- /.stricky-header -->
 
-                           
-
-    
-
                             <?php 
                        require "insert.php";
                             ?>

@@ -592,7 +592,6 @@ if (isset($_POST['logout'])) {
 
             function executeQuery(){
 
-                
 
             }
 

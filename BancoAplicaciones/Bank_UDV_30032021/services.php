@@ -566,16 +566,22 @@ if (isset($_POST['logout'])) {
             die("connected failed:" . $e->getMessage());
         }
 
-        $sql = "INSERT INTO historial (user,credit_id,action,credit_amount,timestamp) 
-        VALUES (:user,:credit_id,:action,:credit_amount,:timestamp)";
-        $stmt = $conn->prepare($sql);
-        $stmt->bindParam(':user', $email);
-        $stmt->bindParam(':credit_id', $credit_id);
-        $stmt->bindParam(':action', $action);
-        $stmt->bindParam(':credit_amount', $credit_amount);
-        $stmt->bindParam(':timestamp', $today);
+        try {
 
-        $stmt->execute();
+            $sql = "INSERT INTO historial (user,credit_id,action_taken,credit_amount,date_time) 
+            VALUES (:user,:credit_id,:action_taken,:credit_amount,:date_time)";
+            $stmt = $conn->prepare($sql);
+            $stmt->bindParam(':user', $email);
+            $stmt->bindParam(':credit_id', $credit_id);
+            $stmt->bindParam(':action_taken', $action);
+            $stmt->bindParam(':credit_amount', $credit_amount);
+            $stmt->bindParam(':date_time', $today);
+
+            $stmt->execute();
+
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+        }
     }
 
     ?>

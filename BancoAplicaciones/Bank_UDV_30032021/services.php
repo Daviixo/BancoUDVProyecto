@@ -557,8 +557,8 @@ if (isset($_POST['logout'])) {
         $action = "Credit payment";
         $email = $_SESSION['username'];
 
-        $final_credit_id = strval($credit_id);
-        $final_credit_amount = strval($credit_amount);
+        //$final_credit_id = strval($credit_id);
+        //$final_credit_amount = strval($credit_amount);
 
         $conex = mysqli_connect($_SERVER, $username, $password, $database);
 
@@ -575,9 +575,9 @@ if (isset($_POST['logout'])) {
             VALUES (:user,:credit_id,:action_taken,:credit_amount,:date_time)";
             $stmt = $conn->prepare($sql);
             $stmt->bindParam(':user', $email);
-            $stmt->bindParam(':credit_id', $final_credit_id);
+            $stmt->bindParam(':credit_id', $credit_id);
             $stmt->bindParam(':action_taken', $action);
-            $stmt->bindParam(':credit_amount', $final_credit_amount);
+            $stmt->bindParam(':credit_amount', $credit_amount);
             $stmt->bindParam(':date_time', $today);
 
             $stmt->execute();

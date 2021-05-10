@@ -246,7 +246,7 @@ if (isset($_POST['logout'])) {
         </div><br>
 
         <!-- END OF Update User's info -->
-
+         
         <!--FINAL DE FORMULARIO-->
 
         <footer class="site-footer">

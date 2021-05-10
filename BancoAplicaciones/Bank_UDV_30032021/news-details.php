@@ -116,7 +116,7 @@ if (isset($_POST['logout'])) {
                             <a href="about.php">Admin</a>
                             <ul>
                                 <li><a href="admin.html">User's Info</a></li>
-                                <li><a href="news-details.php">User's Credits</a></li>
+                                <li><a href="admin2.html">User's Credits</a></li>
                             </ul>
                         </li>
 

@@ -239,7 +239,7 @@ if (isset($_POST['logout'])) {
                 <!-- Form para pagar credito -->
                 <br><br>
                 <h1>Pay for your Credit!</h1>
-                <form method="post" style="margin: auto;">
+                <form method="get" style="margin: auto;">
                     <div class="form-group row">
                         <label for="CID" class="col-sm-2 col-form-label">What's the Credit ID?</label>
                         <div class="col-sm-2">
@@ -552,8 +552,8 @@ if (isset($_POST['logout'])) {
         $password = "DavincianosA*2021a";
         $database = "bancoaplicaciones";
         $today = date("F j, Y, g:i a");
-        $credit_id = $_POST['creditid'];
-        $credit_amount = $_POST['amountToPay'];
+        $credit_id = $_GET['creditid'];
+        $credit_amount = $_GET['amountToPay'];
         $action = "Credit payment";
         $email = $_SESSION['username'];
 

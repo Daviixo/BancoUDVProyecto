@@ -52,12 +52,13 @@ if(isset($_POST['logout'])){
     <link rel="stylesheet" href="assets\css\main.css">
 </head>
 
-<input type = "button" onclick = "firstExample()" value = "1st Function">
-<input type = "button" onclick = "searchByDPI()" value = "Get by DPI">    
+<button type="button" class="btn btn-warning float-right ml-2">Admin</button>
+
+<!-- This helped at the beginning... <input type = "button" onclick = "firstExample()" value = "1st Function">
+<input type = "button" onclick = "searchByDPI()" value = "Get by DPI"> -->
 
 <h1>Welcome, <?php echo $email; ?></h1>
 
-<button type="button" class="btn btn-warning float-right ml-2">Admin</button>
 <body>
     <div class="preloader">
         <img class="preloader__image" src="assets\images\loader.png" alt="">

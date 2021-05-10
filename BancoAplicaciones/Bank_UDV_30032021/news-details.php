@@ -201,6 +201,12 @@ if (isset($_POST['logout'])) {
                 </div>
         </div>
 
+        
+        <div class="form-group row">
+                <div class="col-sm-10">
+                    <button type="button" onclick="getCreditInfo()" class="btn btn-primary">Get Info</button>
+                </div>
+
         <!-- Aqui podemos poner el FORM para hacer el request para la info -->
 
         <!-- AQUI VA NUESTRO NUEVO CODIGO -->

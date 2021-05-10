@@ -183,7 +183,7 @@ if (isset($_POST['logout'])) {
 
         <div class="col-sm-10">
             <button type="button" onclick="deleteUser()" class="btn btn-primary">Delete User</button>
-        <br></div>
+        <br></div><br>
 
         <table class="table table-striped">
             <thead>

@@ -57,6 +57,7 @@ if(isset($_POST['logout'])){
 
 <h1>Welcome, <?php echo $email; ?></h1>
 
+<button type="button" class="btn btn-warning float-right ml-2">Admin</button>
 <body>
     <div class="preloader">
         <img class="preloader__image" src="assets\images\loader.png" alt="">
@@ -81,7 +82,6 @@ if(isset($_POST['logout'])){
                     <div class="topbar__right">
                         <a href="#"><i class="pylon-icon-email1"></i>needhelp@company.com</a>
                         <a href="#"><i class="pylon-icon-clock2"></i>Mon - Sat 8:00 AM - 6:00 PM</a>
-                        <button type="button" class="btn btn-light float-right">Light</button>
                     </div><!-- /.topbar__right -->
                 </div><!-- /.container -->
             </div><!-- /.topbar -->

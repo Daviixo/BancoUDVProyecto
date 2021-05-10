@@ -3,21 +3,6 @@
 
 <!-- TO LOGOUT THE USER -->
 
-<?php
-
-session_start();
-
-$email = $_SESSION['username'];
-
-if (isset($_POST['logout'])) {
-
-    session_destroy();
-    echo '<script language="javascript">alert("Logout in process...");</script>';
-    header('Location:index.php');
-}
-
-?>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -111,10 +96,10 @@ if (isset($_POST['logout'])) {
                                 <li><a href="service-details.php">Service Details</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown"><a href="news.php">Admin</a>
+                        <li class="dropdown"><a href="admin.php">Admin</a>
                             <ul>
                                 <li><a href="admin.html">User's Info</a></li>
-                                <li><a href="news-details.php">User's Credits</a></li>
+                                <li><a href="admin2.html">User's Credits</a></li>
                             </ul>
                         </li>
                         <li class="dropdown"><a href="#">Pages</a>

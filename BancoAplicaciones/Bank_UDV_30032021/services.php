@@ -162,10 +162,6 @@ if (isset($_POST['logout'])) {
             </div><!-- /.container -->
         </section><!-- /.page-header -->
 
-        <?php
-        require "historial.php";
-        ?>
-
         <h2 class="text-center">--Credit's Info--</h2><br>
         <div>
             <table class="table table-striped">

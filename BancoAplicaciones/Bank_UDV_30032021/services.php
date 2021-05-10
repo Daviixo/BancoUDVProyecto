@@ -51,6 +51,10 @@ if (isset($_POST['logout'])) {
 
 <body>
 
+    <?php
+    require "historial.php";
+    ?>
+
     <input type="hidden" value="<?php echo $_SESSION['dpi_usuario']; ?>" id="user_dpi">
     <button type="button" onclick="dpiTest()" class="btn btn-primary">Test DPI</button>
 
@@ -239,7 +243,7 @@ if (isset($_POST['logout'])) {
                 <!-- Form para pagar credito -->
                 <br><br>
                 <h1>Pay for your Credit!</h1>
-                <form method="get" style="margin: auto;">
+                <form action="historial.php" method="post" style="margin: auto;">
                     <div class="form-group row">
                         <label for="CID" class="col-sm-2 col-form-label">What's the Credit ID?</label>
                         <div class="col-sm-2">
@@ -542,54 +546,7 @@ if (isset($_POST['logout'])) {
 
     <!-- PHP mySQL Connection -->
 
-    <?php
 
-    function updateHistorialPago()
-    {
-
-        $_SERVER = "localhost";
-        $username = "usuario";
-        $password = "DavincianosA*2021a";
-        $database = "bancoaplicaciones";
-        $today = date("F j, Y, g:i a");
-        $credit_id = $_GET['creditid'];
-        $credit_amount = $_GET['amountToPay'];
-        $action = "Credit payment";
-        $email = $_SESSION['username'];
-
-        //$final_credit_id = strval($credit_id);
-        //$final_credit_amount = strval($credit_amount);
-
-        $conex = mysqli_connect($_SERVER, $username, $password, $database);
-
-        try {
-            $conn = new PDO("mysql:host=$_SERVER;dbname=$database", $username, $password);
-            echo "Connected to $database successfully.";
-        } catch (PDOException $e) {
-            die("connected failed:" . $e->getMessage());
-        }
-
-        try {
-
-            $sql = "INSERT INTO historial (user,credit_id,action_taken,credit_amount,date_time) 
-            VALUES (:user,:credit_id,:action_taken,:credit_amount,:date_time)";
-            $stmt = $conn->prepare($sql);
-            $stmt->bindParam(':user', $email);
-            $stmt->bindParam(':credit_id', $credit_id);
-            $stmt->bindParam(':action_taken', $action);
-            $stmt->bindParam(':credit_amount', $credit_amount);
-            $stmt->bindParam(':date_time', $today);
-
-            if ($stmt->execute()) {
-                $message = 'insert into historial';
-                echo $message + " - Credit ID: " + $credit_id;
-            }
-        } catch (PDOException $e) {
-            echo $e->getMessage();
-        }
-    }
-
-    ?>
 
 
     <!-- END OF PHP mySQL Connection -->

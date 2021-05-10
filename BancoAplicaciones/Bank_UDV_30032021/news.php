@@ -177,7 +177,7 @@ if (isset($_POST['logout'])) {
             <input type="text" name="dpi" id="dpi">
             <input type="submit" value="search">
         </form>
-        <input type="text" name="mostrarNombre" id="mostrarNombre">
+
         <h2>Información de cliente.</h2>
         <div>
             <table>
@@ -210,12 +210,11 @@ if (isset($_POST['logout'])) {
        
     
     `
-            console.log("El valor del DPI es: " + dpi.value);
             let formulario = document.querySelector("#formulario");
             formulario.addEventListener("submit", function(e) {
                 e.preventDefault()
                 let dpi = document.querySelector("#dpi");
-                console.log(dpi.value);
+                console.log("El valor del DPI es: " + dpi.value);
                 let infocliente = document.querySelector("#dataCliente");
                 fetch("https://banco-vivienda.club/clientes/consulta/" + dpi.value, {
                         "headers": {

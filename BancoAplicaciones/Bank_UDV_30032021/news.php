@@ -174,7 +174,7 @@ if (isset($_POST['logout'])) {
 
 
         <form method="post" id="formulario">
-            <input type="text" name="dpi" id="dpi">
+            <input type="text" name="dpi1" id="dpi">
             <input type="submit" value="search">
         </form>
 

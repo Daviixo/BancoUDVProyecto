@@ -173,14 +173,14 @@ if (isset($_POST['logout'])) {
         <!--INICIO DE FORMULARIO PARA CONSULTA-->
 
             <form method="post" id="formulario">
-                <!--<input type="text" name="dpi" id="dpi">
-                <input type="submit" value="search">-->
+                <!--<input type="text" name="dpi" id="dpi">-->
+                <input type="submit" value="search">
 
             </form>
 
             <form>
             
-            <input type="text" class="form-control" id="dpiFinal" placeholder="DPI" maxlength="13">
+            <input type="text" id="dpiFinal" placeholder="DPI" maxlength="13">
 
             </form>
 

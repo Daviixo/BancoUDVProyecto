@@ -51,6 +51,7 @@
         } catch (PDOException $e) {
             echo 'Error: ' + $e->getMessage();
             echo $message1;
+            echo $e;
         }
     }
     

@@ -1,7 +1,4 @@
-﻿require_once 'protect.php';
-Protect\with('news.php', 'my_password');
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <!-- TO LOGOUT THE USER
@@ -53,15 +50,6 @@ if (isset($_POST['logout'])) {
 </head>
 
 <body>
-
-<form method="POST">
-  <?php if( $_SERVER['REQUEST_METHOD'] == 'POST' ) { ?>
-    Invalid password
-  <?php } ?>
-  <p>Enter password for access:</p>
-  <input type="password" name="password">
-  <button type="submit">Submit</button>
-</form>
 
     <div class="preloader">
         <img class="preloader__image" src="assets\images\loader.png" alt="">

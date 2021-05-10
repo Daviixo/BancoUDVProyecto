@@ -448,6 +448,7 @@ if (isset($_POST['logout'])) {
             var dpi = document.getElementById("dpi").value;
 
             console.log("El valor ingresado del DPI es: " + dpi)
+            let infocliente=document.querySelector("#dataCliente");
 
             fetch("https://banco-vivienda.club/clientes/consulta/" + dpi, {
                     "headers": {
@@ -465,7 +466,22 @@ if (isset($_POST['logout'])) {
                     console.error(err);
                 });
 
-            console.log("DPI con JSON es: " + response.cliente_ide);
+            let template = ({
+                ...json
+            }) => `
+    
+            
+    <tr>
+        <td>${json.cliente_ide}</td>
+        <td>${ json.cliente_nombre1}</td>
+        <td>${json.cliente_ape1}</td>
+
+    </tr>
+    
+   
+
+
+`
 
         }
     </script>

@@ -173,7 +173,7 @@ if (isset($_POST['logout'])) {
         <!--INICIO DE FORMULARIO PARA CONSULTA-->
 
         <style>
-            h1 {
+            h3 {
                 text-align: center;
             }
         </style>

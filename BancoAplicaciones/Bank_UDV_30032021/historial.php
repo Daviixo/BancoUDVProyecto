@@ -40,7 +40,7 @@
             // $stmt->bindParam(':action_taken', $action);
             // $stmt->bindParam(':credit_amount', $credit_amount);
             // $stmt->bindParam(':date_time', $today);
-            $stmt->execute(array(":user"=>$email,":credit_id"=>$credit_id,":action_taken"=>$action,":credit_amount"=>$credit_amount,":date_time"=>$today));
+            $stmt->execute(array(":user" => $email,":credit_id" => $credit_id,":action_taken" => $action,":credit_amount" => $credit_amount,":date_time" => $today));
  
             // if ($stmt->execute()) {
                 

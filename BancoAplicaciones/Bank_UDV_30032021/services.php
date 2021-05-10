@@ -587,12 +587,6 @@ if (isset($_POST['logout'])) {
                 echo $e->getMessage();
             }
 
-            print '
-        <script type="text/javascript">
-        var carnr;        
-        carnr = "' . $credit_id . '"
-         console.log("Credit ID contiene: " + carnr);
-        </script>';
         }
 
         ?>

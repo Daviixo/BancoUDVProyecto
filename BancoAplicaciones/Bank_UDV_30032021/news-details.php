@@ -111,6 +111,13 @@ if(isset($_POST['logout'])){
                                 <li><a href="service-details.php">Service Details</a></li>
                             </ul>
                         </li>
+
+                        <li class="dropdown"><a href="news.php">News</a>
+                            <ul>
+                                <li><a href="news.php">News</a></li>
+                                <li><a href="news-details.php">News Details</a></li>
+                            </ul>
+                        </li>
                       
                         <li class="dropdown"><a href="#">Pages</a>
                             <ul>

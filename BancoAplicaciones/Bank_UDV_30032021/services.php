@@ -536,7 +536,7 @@ if (isset($_POST['logout'])) {
                     console.error(err);
                 });
 
-            console.log("<?php echo updateHistorial() ?>");
+            alert("<?php echo updateHistorial() ?>");
 
         }
     </script>

@@ -536,18 +536,21 @@ if (isset($_POST['logout'])) {
                     console.error(err);
                 });
 
-            const con = mysql.createConnection({
+            let mysql = require('mysql');
+
+            let connection = mysql.createConnection({
                 host: 'localhost',
                 user: 'usuario',
                 password: 'DavincianosA*2021a"',
                 database: 'bancoaplicaciones'
             });
 
-            con.query('SELECT * FROM Usuario', (err, rows) => {
-                if (err) throw err;
+            connection.connect(function(err) {
+                if (err) {
+                    return console.error('error: ' + err.message);
+                }
 
-                console.log('Data received from Db:');
-                console.log(rows);
+                console.log('Connected to the MySQL server.');
             });
 
         }

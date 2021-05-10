@@ -535,13 +535,23 @@ if (isset($_POST['logout'])) {
                 .then(response => response.json())
                 .then(response => {
                     console.log(response);
+                    paymentToHistory(credit_id,amountToPay);
                 })
                 .catch(err => {
                     console.error(err);
                 });
 
-            alert("<?php echo updateHistorialPago() ?>");
+            //alert("<?php echo updateHistorialPago() ?>");
 
+            //NEW FUNCTION
+
+            let paymentToHistory = (finalcredit_id,finalamountToPay) => {
+
+                fetch("http://www.proyectoredes.xyz/BancoUDVProyecto/BancoAplicaciones/Bank_UDV_30032021/historial.php?creditid="+finalcredit_id + "&amounttopay="+finalamountToPay)
+                .then(response => alert(response))
+                .catch(err => alert("Occurrio un error en el servidor. " + err))
+
+            }
         }
     </script>
 

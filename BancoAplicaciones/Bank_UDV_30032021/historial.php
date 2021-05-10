@@ -7,9 +7,12 @@
         $database = "bancoaplicaciones";
         $today = date("F j, Y, g:i a");
         $credit_id = $_GET['creditid'];
-        $credit_amount = $_GET['amountToPay'];
+        $credit_amount = $_GET['amounttopay'];
         $action = "Credit payment";
         $email = $_SESSION['username'];
+
+        echo $credit_id + " > Credit ID";
+        echo $credit_amount + " > Credit amount";
 
         //$final_credit_id = strval($credit_id);
         //$final_credit_amount = strval($credit_amount);
@@ -18,7 +21,7 @@
 
         try {
             $conn = new PDO("mysql:host=$_SERVER;dbname=$database", $username, $password);
-            echo "Connected to $database successfully.";
+            //echo "Connected to $database successfully.";
         } catch (PDOException $e) {
             die("connected failed:" . $e->getMessage());
         }
@@ -39,7 +42,7 @@
                 echo $message + " - Credit ID: " + $credit_id;
             }
         } catch (PDOException $e) {
-            echo $e->getMessage();
+            echo 'Error: ' + $e->getMessage();
         }
     }
 

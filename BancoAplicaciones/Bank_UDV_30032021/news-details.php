@@ -115,8 +115,8 @@ if(isset($_POST['logout'])){
                         <li class="dropdown">
                             <a href="about.php">Admin</a>
                             <ul>
-                                <li><a href="team.php">User's Info</a></li>
-                                <li><a href="team-details.php">User's Credits</a></li>
+                                <li><a href="admin.html">User's Info</a></li>
+                                <li><a href="news-details.php">User's Credits</a></li>
                             </ul>
                         </li>
                       
@@ -172,7 +172,11 @@ if(isset($_POST['logout'])){
             </div><!-- /.container -->
         </section><!-- /.page-header -->
 
-        
+        <!-- AQUI VA NUESTRO NUEVO CODIGO -->
+        <!-- AQUI VA NUESTRO NUEVO CODIGO -->
+        <!-- AQUI VA NUESTRO NUEVO CODIGO -->
+        <!-- AQUI VA NUESTRO NUEVO CODIGO -->
+        <!-- AQUI VA NUESTRO NUEVO CODIGO -->
 
         <footer class="site-footer">
             <div class="container">

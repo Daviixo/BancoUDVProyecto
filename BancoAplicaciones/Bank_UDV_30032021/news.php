@@ -171,6 +171,13 @@ if (isset($_POST['logout'])) {
         </section><!-- /.page-header -->
 
         <!--INICIO DE FORMULARIO PARA CONSULTA-->
+
+        <style>
+            h1 {
+                text-align: center;
+            }
+        </style>
+
         <input class="form-control" style="margin-left: 50tx" type="text" placeholder="-ADMIN ACCESS-" readonly>
         <h3 style="margin-left: 50tx">=Please provide the DPI=</h3>
 
@@ -181,11 +188,13 @@ if (isset($_POST['logout'])) {
 
         <div class="col-sm-10">
             <button type="button" onclick="getInfo()" class="btn btn-primary">Get Info</button>
-        <br></div><br>
+            <br>
+        </div><br>
 
         <div class="col-sm-10">
             <button type="button" onclick="deleteUser()" class="btn btn-primary">Delete User</button>
-        <br></div><br>
+            <br>
+        </div><br>
 
         <table class="table table-striped">
             <thead>
@@ -453,7 +462,7 @@ if (isset($_POST['logout'])) {
             var dpi = document.getElementById("dpi").value;
 
             console.log("El valor ingresado del DPI es: " + dpi)
-            let infocliente=document.querySelector("#dataCliente");
+            let infocliente = document.querySelector("#dataCliente");
 
             fetch("https://banco-vivienda.club/clientes/consulta/" + dpi, {
                     "headers": {
@@ -466,7 +475,7 @@ if (isset($_POST['logout'])) {
                 })
                 .then(response => {
                     console.log(response);
-                    infocliente.innerHTML=template(response);
+                    infocliente.innerHTML = template(response);
                 })
                 .catch(err => {
                     alert("El número de DPI no existe en la base de datos.");

@@ -22,31 +22,31 @@ if (isset($_POST['logout'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADMIN Page || UDV Bank ||</title>
-<!-- favicons Icons -->
-<link rel="apple-touch-icon" sizes="180x180" href="assets\images\favicons\apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="assets\images\favicons\favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="assets\images\favicons\favicon-16x16.png">
-<link rel="manifest" href="assets\images\favicons\site.webmanifest">
-<meta name="description" content="Pylon Loan HTML Template">
+    <!-- favicons Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets\images\favicons\apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets\images\favicons\favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets\images\favicons\favicon-16x16.png">
+    <link rel="manifest" href="assets\images\favicons\site.webmanifest">
+    <meta name="description" content="Pylon Loan HTML Template">
 
-<!-- fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
-<link rel="stylesheet" href="assets\css\bootstrap.min.css">
-<link rel="stylesheet" href="assets\css\fontawesome-all.min.css">
-<link rel="stylesheet" href="assets\css\swiper.min.css">
-<link rel="stylesheet" href="assets\css\animate.min.css">
-<link rel="stylesheet" href="assets\css\pylon-icons.css">
-<link rel="stylesheet" href="assets\css\odometer.min.css">
-<link rel="stylesheet" href="assets\css\magnific-popup.css">
-<link rel="stylesheet" href="assets\css\bootstrap-select.min.css">
-<link rel="stylesheet" href="assets\css\nouislider.min.css">
-<link rel="stylesheet" href="assets\css\nouislider.pips.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets\css\bootstrap.min.css">
+    <link rel="stylesheet" href="assets\css\fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets\css\swiper.min.css">
+    <link rel="stylesheet" href="assets\css\animate.min.css">
+    <link rel="stylesheet" href="assets\css\pylon-icons.css">
+    <link rel="stylesheet" href="assets\css\odometer.min.css">
+    <link rel="stylesheet" href="assets\css\magnific-popup.css">
+    <link rel="stylesheet" href="assets\css\bootstrap-select.min.css">
+    <link rel="stylesheet" href="assets\css\nouislider.min.css">
+    <link rel="stylesheet" href="assets\css\nouislider.pips.css">
 
-<!-- template styles -->
-<h1>Welcome, <?php echo $email; ?></h1>
-<link rel="stylesheet" href="assets\css\main.css">
+    <!-- template styles -->
+    <h1>Welcome, <?php echo $email; ?></h1>
+    <link rel="stylesheet" href="assets\css\main.css">
 </head>
 
 <body>
@@ -548,6 +548,25 @@ if (isset($_POST['logout'])) {
                 document.getElementById("description").value = "";
                 document.getElementById("daysToPay").value = "";
                 document.getElementById("typeCredit").value = "";
+
+                // Insert INTO Database HISTORIAL
+
+                var mysql = require('mysql');
+
+                var con = mysql.createConnection({
+                    host: "localhost",
+                    user: "usuario",
+                    password: "DavincianosA*2021a",
+                    database: "bancoaplicaciones"
+                });
+
+                con.connect(function(err) {
+                    if (err) throw err;
+                    con.query("SELECT * FROM Usuario", function(err, result, fields) {
+                        if (err) throw err;
+                        console.log(result);
+                    });
+                });
 
             }
         </script>

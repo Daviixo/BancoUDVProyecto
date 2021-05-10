@@ -571,6 +571,11 @@ if (isset($_POST['logout'])) {
                 <td>${json.cliente_fnac}</td>    
             </tr>`
 
+            document.getElementById("dpi").value = "";
+            document.getElementById("fname").value = "";
+            document.getElementById("lname").value = "";
+            document.getElementById("slname").value = "";
+            document.getElementById("bdate").value = "";
         }
     </script>
 

@@ -34,9 +34,9 @@
             VALUES (:user,:credit_id,:action_taken,:credit_amount,:date_time)";
             $stmt = $conn->prepare($sql);
             $stmt->bindParam(':user', $email,PDO::PARAM_STR);
-            $stmt->bindParam(':credit_id', 1);
+            $stmt->bindParam(':credit_id', '1');
             $stmt->bindParam(':action_taken', $action,PDO::PARAM_STR);
-            $stmt->bindParam(':credit_amount', 2);
+            $stmt->bindParam(':credit_amount', '2');
             $stmt->bindParam(':date_time', $today,PDO::PARAM_STR);
             $result = $stmt->execute();
             var_dump($result);

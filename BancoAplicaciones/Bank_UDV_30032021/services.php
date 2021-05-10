@@ -536,59 +536,37 @@ if (isset($_POST['logout'])) {
                     console.error(err);
                 });
 
-            let jConexion = {
-
-                host: "localhost",
-                user: "usuario",
-                password: "DavincianosA*2021a",
-                database: "bancoaplicaciones"
-
-            }
-
-            //pasamos el json de conexion
-            var con = mysql.createConnection(jConexion);
-
-            //Abrimos conexión a la base de datos, "connect" regresa un error si no podemos
-
-            // conectarnos a la base de datos
-            con.connect(function(error) {
-                try {
-                    //si error es true mandamos el mesaje de error
-                    if (error) {
-
-                        console.log("Error al establecer la conexión a la BD -- " + error);
-
-                        //conexión exitosa, en este punto ya hemos establecido la conexión a base de datos
-                    } else {
-                        console.log("Conexión exitosa");
-                        //Aquí debes escribir el código que necesites, un INSERT, SELECT etc.
-                    }
-                } catch (x) {
-                    console.log("Contacto.agregarUsuario.connect --Error-- " + x);
-                }
-            });
-
-
-
-            // let mysql = require('mysql');
-
-            // let connection = mysql.createConnection({
-            //     host: 'localhost',
-            //     user: 'usuario',
-            //     password: 'DavincianosA*2021a',
-            //     database: 'bancoaplicaciones'
-            // });
-
-            // connection.connect(function(err) {
-            //     if (err) {
-            //         return console.error('error: ' + err.message);
-            //     }
-
-            //     console.log('Connected to the MySQL server.');
-            // });
+            alert("<?php echo conexion()?>");
 
         }
     </script>
+
+    <!-- PHP mySQL Connection -->
+
+    <?php
+
+    function conexion()
+    {
+
+        $_SERVER = "localhost";
+        $username = "usuario";
+        $password = "DavincianosA*2021a";
+        $database = "bancoaplicaciones";
+
+        $conex = mysqli_connect($_SERVER, $username, $password, $database);
+
+        try {
+            $conn = new PDO("mysql:host=$_SERVER;dbname=$database", $username, $password);
+            echo "Connected to $database successfully.";
+        } catch (PDOException $e) {
+            die("connected failed:" . $e->getMessage());
+        }
+    }
+
+    ?>
+
+
+    <!-- END OF PHP mySQL Connection -->
 
     <!-- END OF > Paying credit form -->
 

@@ -215,12 +215,30 @@ if (isset($_POST['logout'])) {
         <input class="form-control" style="margin-left: 50tx" type="text" placeholder="-ADMIN ACCESS-" readonly>
         <h3 style="margin-left: 50tx">--- To Update User's Info ---</h3>
 
-        <div class="col-sm-2">
+        <div class="col-sm-4">
+
             <input type="text" class="form-control" id="fname" placeholder="First Name" maxlength="50">
+
+        </div>
+
+        <div class="col-sm-4">
+
             <input type="text" class="form-control" id="lname" placeholder="Last Name" maxlength="50">
+
+        </div>
+
+        <div class="col-sm-4">
+
             <input type="text" class="form-control" id="slname" placeholder="Second Last Name" maxlength="50">
+
+        </div>
+
+        <div class="col-sm-4">
+
             <input type="text" class="form-control" id="bdate" placeholder="Born Date" maxlength="50">
-        </div><br>
+
+        </div>
+<br>
 
         <div class="col-sm-10">
             <button type="button" onclick="updateInfo()" class="btn btn-primary">Get Info</button>

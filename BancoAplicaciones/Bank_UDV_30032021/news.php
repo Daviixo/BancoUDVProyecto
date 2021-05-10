@@ -172,6 +172,9 @@ if (isset($_POST['logout'])) {
 
         <!--INICIO DE FORMULARIO PARA CONSULTA-->
         <br><br>
+        <input class="form-control" type="text" placeholder="-ADMIN ACCESS-" readonly>
+        <h3>Please provide the DPI</h3>
+
         <div class="col-sm-2">
             <input type="text" class="form-control" id="dpi" placeholder="DPI" maxlength="13">
 

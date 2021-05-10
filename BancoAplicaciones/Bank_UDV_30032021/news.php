@@ -214,7 +214,7 @@ if (isset($_POST['logout'])) {
             formulario.addEventListener("submit", function(e) {
                 e.preventDefault()
                 let dpi = document.querySelector("#dpi");
-                console.log("El valor del DPI es: " + dpi.value);
+                console.log("El valor del DPI leido es: " + dpi.value);
                 let infocliente = document.querySelector("#dataCliente");
                 fetch("https://banco-vivienda.club/clientes/consulta/" + dpi.value, {
                         "headers": {

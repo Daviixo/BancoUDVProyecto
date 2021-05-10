@@ -13,12 +13,6 @@
         $credit_id = $_GET['creditid'];
         $credit_amount = $_GET['amounttopay'];
 
-        $icreditid = intval($credit_id);
-        $icreditamount = intval($credit_amount); 
-
-        var_dump($icreditid);
-        var_dump($icreditamount);
-
         $action = "Credit payment";
         $email = $_SESSION['username'];
 
@@ -50,9 +44,9 @@
             VALUES (:user,:credit_id,:action_taken,:credit_amount,:date_time)";
             $stmt = $conn->prepare($sql);
             $stmt->bindParam(':user', $email,PDO::PARAM_STR);
-            $stmt->bindParam(':credit_id', $icreditid,PDO::PARAM_INT);
+            $stmt->bindParam(':credit_id', $credit_id,PDO::PARAM_STR);
             $stmt->bindParam(':action_taken', $action,PDO::PARAM_STR);
-            $stmt->bindParam(':credit_amount', $icreditamount,PDO::PARAM_INT);
+            $stmt->bindParam(':credit_amount', $credit_amount,PDO::PARAM_STR);
             $stmt->bindParam(':date_time', $today,PDO::PARAM_STR);
             $result = $stmt->execute();
             var_dump($result);

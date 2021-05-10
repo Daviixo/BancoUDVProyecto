@@ -545,8 +545,7 @@ if (isset($_POST['logout'])) {
 
     <?php
 
-    function updateHistorial()
-    {
+    function updateHistorial(){
 
         $_SERVER = "localhost";
         $username = "usuario";
@@ -570,6 +569,8 @@ if (isset($_POST['logout'])) {
                 $email = $row['email_usuario'];
                 $password = $row['password'];
             }
+        }else{
+            echo "No se pudo hacer el query";
         }
     }
 

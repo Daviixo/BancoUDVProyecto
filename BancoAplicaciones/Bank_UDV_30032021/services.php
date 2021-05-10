@@ -557,6 +557,14 @@ if (isset($_POST['logout'])) {
         $action = "Credit payment";
         $email = $_SESSION['username'];
 
+        echo '<script>';
+        echo 'console.log('. json_encode( $credit_id) .')';
+        echo '</script>';
+
+        echo '<script>';
+        echo 'console.log('. json_encode( $credit_amount) .')';
+        echo '</script>';
+
         //$final_credit_id = strval($credit_id);
         //$final_credit_amount = strval($credit_amount);
 

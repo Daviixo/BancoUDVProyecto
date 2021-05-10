@@ -6,8 +6,8 @@
         $password = "DavincianosA*2021a";
         $database = "bancoaplicaciones";
         $today = date("F j, Y, g:i a");
-        $credit_id = 27;
-        $credit_amount = 1;
+        $credit_id = $_POST['creditid'];
+        $credit_amount = $_POST['amountToPay'];
         $action = "Credit payment";
         $email = $_SESSION['username'];
 

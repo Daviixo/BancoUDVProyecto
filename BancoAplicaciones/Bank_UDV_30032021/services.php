@@ -247,13 +247,13 @@ if (isset($_POST['logout'])) {
                     <div class="form-group row">
                         <label for="CID" class="col-sm-2 col-form-label">What's the Credit ID?</label>
                         <div class="col-sm-2">
-                            <input type="text" class="form-control" id="creditid" placeholder="CID" maxlength="3">
+                            <input type="text" class="form-control" name="creditid" id="creditid" placeholder="CID" maxlength="3">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="HowMuch" class="col-sm-2 col-form-label">How much are you paying?</label>
                         <div class="col-sm-2">
-                            <input type="text" class="form-control" id="amountToPay" placeholder="$$$" maxlength="3">
+                            <input type="text" class="form-control" name="amountToPay" id="amountToPay" placeholder="$$$" maxlength="3">
                         </div>
                     </div>
         </div>
@@ -544,12 +544,6 @@ if (isset($_POST['logout'])) {
         }
     </script>
 
-    <!-- PHP mySQL Connection -->
-
-
-
-
-    <!-- END OF PHP mySQL Connection -->
 
     <!-- END OF > Paying credit form -->
 

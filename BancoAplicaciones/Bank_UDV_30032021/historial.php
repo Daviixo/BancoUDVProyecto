@@ -13,8 +13,8 @@
         $credit_id = $_GET['creditid'];
         $credit_amount = $_GET['amounttopay'];
 
-        $icreditid = (int)$credit_id;
-        $icreditamount = (int)$credit_amount; 
+        $icreditid = intval($credit_id);
+        $icreditamount = intval($credit_amount); 
 
         var_dump($icreditid);
         var_dump($icreditamount);

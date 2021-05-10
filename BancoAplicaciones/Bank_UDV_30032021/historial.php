@@ -11,13 +11,13 @@
         $action = "Credit payment";
         $email = $_SESSION['username'];
 
-        echo $credit_id + " > Credit ID";
-        echo $credit_amount + " > Credit amount";
+        //echo $credit_id + " > Credit ID";
+        //echo $credit_amount + " > Credit amount";
 
         //$final_credit_id = strval($credit_id);
         //$final_credit_amount = strval($credit_amount);
 
-        $conex = mysqli_connect($_SERVER, $username, $password, $database);
+        //$conex = mysqli_connect($_SERVER, $username, $password, $database);
 
         try {
             $conn = new PDO("mysql:host=$_SERVER;dbname=$database", $username, $password);

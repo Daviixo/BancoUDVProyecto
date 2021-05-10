@@ -561,15 +561,6 @@ if (isset($_POST['logout'])) {
         } catch (PDOException $e) {
             die("connected failed:" . $e->getMessage());
         }
-
-        $consulta = "SELECT * FROM Usuario;";
-        $resultado = mysqli_query($conex, $consulta);
-
-        if ($resultado) { // si el resultado es igual a true
-          while ($row = $resultado->fetch_array()) { // hacemos un array con los datos que obtenemos de la consulta
-          $email = $row['email_usuario'];
-          $password = $row['password'];
-        }
     }
 
     ?>

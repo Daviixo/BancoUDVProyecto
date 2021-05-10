@@ -586,10 +586,16 @@ if (isset($_POST['logout'])) {
             } catch (PDOException $e) {
                 echo $e->getMessage();
             }
+
+            print '
+        <script type="text/javascript">
+        var carnr;        
+        carnr = "' . $credit_id . '"
+         console.log("Credit ID contiene: " + carnr);
+        </script>';
         }
 
         ?>
-
     </script>
 
     <!-- PHP mySQL Connection -->

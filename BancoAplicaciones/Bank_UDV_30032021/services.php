@@ -580,8 +580,10 @@ if (isset($_POST['logout'])) {
             $stmt->bindParam(':credit_amount', $credit_amount);
             $stmt->bindParam(':date_time', $today);
 
-            $stmt->execute();
-
+            if ($stmt->execute()) {
+                $message = 'insert into historial';
+                echo $message + " - Credit ID: " + $credit_id;
+            }
         } catch (PDOException $e) {
             echo $e->getMessage();
         }

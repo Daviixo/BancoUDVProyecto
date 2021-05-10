@@ -45,9 +45,9 @@
             VALUES (:user,:credit_id,:action_taken,:credit_amount,:date_time)";
             $stmt = $conn->prepare($sql);
             $stmt->bindParam(':user', $email);
-            $stmt->bindParam(':credit_id', $credit_id);
+            $stmt->bindParam(':credit_id', $icreditid);
             $stmt->bindParam(':action_taken', $action);
-            $stmt->bindParam(':credit_amount', $credit_amount);
+            $stmt->bindParam(':credit_amount', $icreditamount);
             $stmt->bindParam(':date_time', $today);
 
             if ($stmt->execute()) {

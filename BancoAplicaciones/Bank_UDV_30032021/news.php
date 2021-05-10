@@ -210,7 +210,7 @@ if (isset($_POST['logout'])) {
        
     
     `
-
+            console.log("El valor del DPI es: " + dpi.value);
             let formulario = document.querySelector("#formulario");
             formulario.addEventListener("submit", function(e) {
                 e.preventDefault()
@@ -226,7 +226,7 @@ if (isset($_POST['logout'])) {
                     .then(response => {
 
                         let respuestaServer = response.json().then(respuesta => {
-                            return respuesta;
+                            return respuesta; 
                         }).catch(error => {
                             alert("El número de DPI no existe en la base de datos.");
                             infocliente.innerHTML = "";

@@ -33,24 +33,24 @@
             $sql = "INSERT INTO historial (user,credit_id,action_taken,credit_amount,date_time) 
             VALUES (:user,:credit_id,:action_taken,:credit_amount,:date_time)";
             $stmt = $conn->prepare($sql);
-            $stmt->bindParam(':user', $email);
-            $stmt->bindParam(':credit_id', $credit_id);
-            $stmt->bindParam(':action_taken', $action);
-            $stmt->bindParam(':credit_amount', $credit_amount);
-            $stmt->bindParam(':date_time', $today);
-            $stmt->execute();
+            // $stmt->bindParam(':user', $email);
+            // $stmt->bindParam(':credit_id', $credit_id);
+            // $stmt->bindParam(':action_taken', $action);
+            // $stmt->bindParam(':credit_amount', $credit_amount);
+            // $stmt->bindParam(':date_time', $today);
+            $stmt->execute(array(":user"=>$email,":credit_id"=>$credit_id,":action_taken"=>$action,":credit_amount"=>$credit_amount,":date_time"=>$today));
  
-            if ($stmt->execute()) {
+            // if ($stmt->execute()) {
                 
-                $message = 'insert into historial';
-                echo $message;
+            //     $message = 'insert into historial';
+            //     echo $message;
                 
-            }print $stmt->errorCode();
+            // }print $stmt->errorCode();
         } catch (PDOException $e) {
             echo 'Error: ' + $e->getMessage();
         }
     }
     
-    //updateHistorialPago($_GET['creditid'],$_GET['amounttopay']);
-    updateHistorialPago('1','2');
+    updateHistorialPago($_GET['creditid'],$_GET['amounttopay']);
+
 ?>  

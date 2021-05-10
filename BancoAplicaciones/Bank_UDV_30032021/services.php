@@ -51,6 +51,10 @@ if (isset($_POST['logout'])) {
 
 <body>
 
+    <?php
+    require "historial.php";
+    ?>
+
     <input type="hidden" value="<?php echo $_SESSION['dpi_usuario']; ?>" id="user_dpi">
     <button type="button" onclick="dpiTest()" class="btn btn-primary">Test DPI</button>
 
@@ -161,10 +165,6 @@ if (isset($_POST['logout'])) {
                 <h2>Services</h2>
             </div><!-- /.container -->
         </section><!-- /.page-header -->
-
-        <?php
-        require "historial.php";
-        ?>
 
         <h2 class="text-center">--Credit's Info--</h2><br>
         <div>
@@ -544,6 +544,12 @@ if (isset($_POST['logout'])) {
         }
     </script>
 
+    <!-- PHP mySQL Connection -->
+
+
+
+
+    <!-- END OF PHP mySQL Connection -->
 
     <!-- END OF > Paying credit form -->
 

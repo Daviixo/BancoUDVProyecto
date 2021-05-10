@@ -551,7 +551,7 @@ if (isset($_POST['logout'])) {
         $username = "usuario";
         $password = "DavincianosA*2021a";
         $database = "bancoaplicaciones";
-        $test = "test";
+        $today = date("F j, Y, g:i a");
 
         $conex = mysqli_connect($_SERVER, $username, $password, $database);
 
@@ -565,7 +565,7 @@ if (isset($_POST['logout'])) {
         $sql = "INSERT INTO prueba (test) 
         VALUES (:test)";
         $stmt = $conn ->prepare($sql);
-        $stmt->bindParam(':test',$test);
+        $stmt->bindParam(':test',$today);
 
         $stmt->execute();
     }

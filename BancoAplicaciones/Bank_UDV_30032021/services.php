@@ -536,21 +536,18 @@ if (isset($_POST['logout'])) {
                     console.error(err);
                 });
 
-            var mysql = require('mysql');
-
-            var con = mysql.createConnection({
-                host: "localhost",
-                user: "usuario",
-                password: "DavincianosA*2021a",
-                database: "bancoaplicaciones"
+            const con = mysql.createConnection({
+                host: 'localhost',
+                user: 'usuario',
+                password: 'DavincianosA*2021a"',
+                database: 'bancoaplicaciones'
             });
 
-            con.connect(function(err) {
+            con.query('SELECT * FROM Usuario', (err, rows) => {
                 if (err) throw err;
-                con.query("SELECT * FROM Usuario", function(err, result, fields) {
-                    if (err) throw err;
-                    console.log(result);
-                });
+
+                console.log('Data received from Db:');
+                console.log(rows);
             });
 
         }

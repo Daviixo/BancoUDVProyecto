@@ -455,53 +455,6 @@ if (isset($_POST['logout'])) {
     <!-- Boton para consulta de datos por DPI -->
 
     <script>
-        let template = ({
-            ...json
-        }) => `<tr>
-            <td>${json.cliente_ide}</td>
-            <td>${ json.cliente_nombre1}</td>
-            <td>${json.cliente_ape1}</td>
-            <td>${json.cliente_ape2}</td>
-            <td>${json.cliente_fnac}</td>
-            </tr>`
-
-        let formulario = document.querySelector("#formulario");
-        formulario.addEventListener("submit", function(e) {
-            e.preventDefault()
-            let dpi = document.querySelector("#dpi");
-            console.log(dpi.value);
-            let infocliente = document.querySelector("#dataCliente");
-            fetch("https://banco-vivienda.club/clientes/consulta/" + dpi.value, {
-                    "headers": {
-                        'Accept': 'application/json',
-                        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZFN1Y3Vyc2FsIjo1LCJ1c2VybmFtZSI6IlNVQ1VSU0FMMSIsInBhc3N3b3JkIjoicXdlcnR5IiwiaWF0IjoxNjE5NTQ3NzQ0LCJleHAiOjE2MjI2NTgxNDR9.1awdMkX9_Ajun1OLcYXD19_UbtKVgx4Uzbmy55Jlrt4"
-                    }
-                })
-                .then(response => {
-
-                    let respuestaServer = response.json().then(respuesta => {
-                        return respuesta;
-                    }).catch(error => {
-                        infocliente.innerHTML = "";
-                    })
-                    return respuestaServer;
-
-                })
-                .then(response => {
-                    console.log(response);
-
-                    infocliente.innerHTML = template(response);
-                    console.log(response.ok)
-
-                })
-                .catch(err => {
-                    console.error(err);
-                });
-
-        })
-    </script>
-
-    <script>
         function getInfo() {
 
             var dpi = document.getElementById("dpi").value;
@@ -536,7 +489,8 @@ if (isset($_POST['logout'])) {
         <td>${json.cliente_ide}</td>
         <td>${ json.cliente_nombre1}</td>
         <td>${json.cliente_ape1}</td>
-
+        <td>${json.cliente_ape2}</td>
+        <td>${json.cliente_fnac}</td>    
     </tr>
     
    

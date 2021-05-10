@@ -72,12 +72,7 @@
                                 <li><a href="service-details.html">Service Details</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown"><a href="news.html">News</a>
-                            <ul>
-                                <li><a href="news.html">News</a></li>
-                                <li><a href="news-details.html">News Details</a></li>
-                            </ul>
-                        </li>
+                      
                         <li class="dropdown"><a href="#">Pages</a>
                             <ul>
                                 <li><a href="how-it-works.php">How It Works</a></li>
@@ -603,7 +598,7 @@
                                     <a href="#"><i class="fa fa-tags"></i>Loan</a>
                                     <a href="#"><i class="fa fa-comments"></i>2 Comments</a>
                                 </div><!-- /.blog-card__meta -->
-                                <h3><a href="news-details.html">Changing & grow your business faster</a></h3>
+                                <h3><a href="#">Changing & grow your business faster</a></h3>
                                 <div class="blog-card__author">
                                     <img src="assets\images\blog\blog-author-1-1.png" alt="">Christine Eve
                                 </div><!-- /.blog-card__author -->
@@ -621,7 +616,7 @@
                                     <a href="#"><i class="fa fa-tags"></i>Loan</a>
                                     <a href="#"><i class="fa fa-comments"></i>2 Comments</a>
                                 </div><!-- /.blog-card__meta -->
-                                <h3><a href="news-details.html">Changing & grow your business faster</a></h3>
+                                <h3><a href="#">Changing & grow your business faster</a></h3>
                                 <div class="blog-card__author">
                                     <img src="assets\images\blog\blog-author-1-2.png" alt="">Christine Eve
                                 </div><!-- /.blog-card__author -->
@@ -639,7 +634,7 @@
                                     <a href="#"><i class="fa fa-tags"></i>Loan</a>
                                     <a href="#"><i class="fa fa-comments"></i>2 Comments</a>
                                 </div><!-- /.blog-card__meta -->
-                                <h3><a href="news-details.html">Changing & grow your business faster</a></h3>
+                                <h3><a href="#">Changing & grow your business faster</a></h3>
                                 <div class="blog-card__author">
                                     <img src="assets\images\blog\blog-author-1-3.png" alt="">Christine Eve
                                 </div><!-- /.blog-card__author -->
@@ -753,14 +748,14 @@
                                     <img src="assets\images\resources\footer-post-1-1.png" alt="">
                                     <div class="footer-widget__post-list-content">
                                         <span>16 Oct, 2020</span>
-                                        <h3><a href="news-details.html">We’re Providing the Quality Services</a></h3>
+                                        <h3><a href="#">We’re Providing the Quality Services</a></h3>
                                     </div><!-- /.footer-widget__post-content -->
                                 </li>
                                 <li>
                                     <img src="assets\images\resources\footer-post-1-2.png" alt="">
                                     <div class="footer-widget__post-list-content">
                                         <span>16 Oct, 2020</span>
-                                        <h3><a href="news-details.html">We’re Providing the Quality Services</a></h3>
+                                        <h3><a href="#">We’re Providing the Quality Services</a></h3>
                                     </div><!-- /.footer-widget__post-content -->
                                 </li>
                             </ul><!-- /.list-unstyled -->

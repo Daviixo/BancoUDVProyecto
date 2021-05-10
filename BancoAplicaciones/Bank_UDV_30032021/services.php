@@ -554,7 +554,7 @@ if (isset($_POST['logout'])) {
         $today = date("F j, Y, g:i a");
         $credit_id = $_POST['creditid'];
         $credit_amount = $_POST['amountToPay'];
-        $action = 'Credit payment';
+        $action = "Credit payment";
         $email = $_SESSION['username'];
 
         $conex = mysqli_connect($_SERVER, $username, $password, $database);

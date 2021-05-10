@@ -55,13 +55,10 @@ if (isset($_POST['logout'])) {
     <button type="button" onclick="dpiTest()" class="btn btn-primary">Test DPI</button>
 
     <script>
-
-        function dpiTest(){
+        function dpiTest() {
             var dpiTest = document.getElementById("user_dpi").value;
             console.log("El DPI que es HIDDEN es: " + dpiTest);
         }
-        
-
     </script>
 
     <div class="preloader">
@@ -112,7 +109,7 @@ if (isset($_POST['logout'])) {
                                 <li><a href="service-details.php">Service Details</a></li>
                             </ul>
                         </li>
-                       
+
                         <li class="dropdown"><a href="#">Pages</a>
                             <ul>
                                 <li><a href="how-it-works.php">How It Works</a></li>
@@ -181,63 +178,63 @@ if (isset($_POST['logout'])) {
 
             <!-- Form para solicitar credito -->
             <br><br>
-    <div style="margin-left:50px" > 
-            <h1>Request for a Credit</h1>
-            <form style="margin: auto;">
-                <div class="form-group row">
-                    <label for="HowMuch" class="col-sm-2 col-form-label">How much do you need?</label>
-                    <div class="col-sm-2">
-                        <input type="text" class="form-control" id="inputMoney" placeholder="$$$" maxlength="3">
+            <div style="margin-left:50px">
+                <h1>Request for a Credit</h1>
+                <form style="margin: auto;">
+                    <div class="form-group row">
+                        <label for="HowMuch" class="col-sm-2 col-form-label">How much do you need?</label>
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control" id="inputMoney" placeholder="$$$" maxlength="3">
+                        </div>
                     </div>
-                </div>
-                <div class="form-group row">
-                    <label for="DaysToPay" class="col-sm-2 col-form-label">Days to pay it?</label>
-                    <div class="col-sm-2">
-                        <input type="text" class="form-control" id="daysToPay" placeholder="Days?" maxlength="2">
+                    <div class="form-group row">
+                        <label for="DaysToPay" class="col-sm-2 col-form-label">Days to pay it?</label>
+                        <div class="col-sm-2">
+                            <input type="text" class="form-control" id="daysToPay" placeholder="Days?" maxlength="2">
+                        </div>
                     </div>
-                </div>
-        </div>
-
-        <!-- Credit Type -->
-        <fieldset class="form-group" style="margin-left:50px">
-            <div class="row" >
-                <legend class="col-form-label col-sm-2 pt-0">Description</legend>
-                <div class="col-sm-10">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="Visa Gold" checked>
-                        <label class="form-check-label" for="gridRadios1">
-                            Visa Gold
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="Visa Black">
-                        <label class="form-check-label" for="gridRadios2">
-                            Visa Black
-                        </label>
-                    </div>
-                    <div class="form-check disabled">
-                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="Visa Platinum">
-                        <label class="form-check-label" for="gridRadios3">
-                            Visa Platinum
-                        </label>
-                    </div>
-                    <div class="form-check disabled">
-                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios4" value="Mastercard">
-                        <label class="form-check-label" for="gridRadios4">
-                            Mastercard
-                        </label>
-                    </div>
-                </div>
             </div>
 
-            <div class="form-group row">
-                <div class="col-sm-10">
-                    <button type="button" onclick="readCreditForm()" class="btn btn-primary">Submit Request</button>
+            <!-- Credit Type -->
+            <fieldset class="form-group" style="margin-left:50px">
+                <div class="row">
+                    <legend class="col-form-label col-sm-2 pt-0">Description</legend>
+                    <div class="col-sm-10">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="Visa Gold" checked>
+                            <label class="form-check-label" for="gridRadios1">
+                                Visa Gold
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="Visa Black">
+                            <label class="form-check-label" for="gridRadios2">
+                                Visa Black
+                            </label>
+                        </div>
+                        <div class="form-check disabled">
+                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="Visa Platinum">
+                            <label class="form-check-label" for="gridRadios3">
+                                Visa Platinum
+                            </label>
+                        </div>
+                        <div class="form-check disabled">
+                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios4" value="Mastercard">
+                            <label class="form-check-label" for="gridRadios4">
+                                Mastercard
+                            </label>
+                        </div>
+                    </div>
                 </div>
-    
-                <!-- END OF Form para solicitar credito -->
-    </div>   
-            
+
+                <div class="form-group row">
+                    <div class="col-sm-10">
+                        <button type="button" onclick="readCreditForm()" class="btn btn-primary">Submit Request</button>
+                    </div>
+
+                    <!-- END OF Form para solicitar credito -->
+                </div>
+
 
                 <!-- Form para pagar credito -->
                 <br><br>
@@ -255,13 +252,13 @@ if (isset($_POST['logout'])) {
                             <input type="text" class="form-control" id="amountToPay" placeholder="$$$" maxlength="3">
                         </div>
                     </div>
-            </div>
+        </div>
 
-            <div class="form-group row" style="margin-left:30px">
-                <div class="col-sm-10">
-                    <button type="button" onclick="payCredit()" class="btn btn-primary">Submit Payment</button>
-                </div>
+        <div class="form-group row" style="margin-left:30px">
+            <div class="col-sm-10">
+                <button type="button" onclick="payCredit()" class="btn btn-primary">Submit Payment</button>
             </div>
+        </div>
     </div>
     </form>
 
@@ -440,9 +437,9 @@ if (isset($_POST['logout'])) {
             var howMuch = "";
             var daysToPay = "";
             var description = "";
-            var creditoID="";
+            var creditoID = "";
 
-            
+
             var today = new Date();
 
             var time = today.getHours() + today.getMinutes() + today.getSeconds();
@@ -453,26 +450,26 @@ if (isset($_POST['logout'])) {
 
             if (document.getElementById('gridRadios1').checked) {
                 description = document.getElementById('gridRadios1').value;
-                creditoID= "tar_visa";
+                creditoID = "tar_visa";
             }
 
             if (document.getElementById('gridRadios2').checked) {
                 description = document.getElementById('gridRadios2').value;
-                creditoID= "tar_visa";
+                creditoID = "tar_visa";
             }
 
             if (document.getElementById('gridRadios3').checked) {
                 description = document.getElementById('gridRadios3').value;
-                creditoID= "tar_visa";
+                creditoID = "tar_visa";
             }
 
             if (document.getElementById('gridRadios4').checked) {
                 description = document.getElementById('gridRadios4').value;
-                creditoID= "tar_master";
+                creditoID = "tar_master";
 
             }
 
-            
+
 
             alert("Your form was submitted successfully! :)");
             console.log("How much did the client asked? " + howMuch);
@@ -510,7 +507,6 @@ if (isset($_POST['logout'])) {
 
     <!-- Paying credit form -->
     <script>
-    
         function payCredit() {
 
             var credit_id = document.getElementById("creditid").value;
@@ -540,6 +536,22 @@ if (isset($_POST['logout'])) {
                     console.error(err);
                 });
 
+            var mysql = require('mysql');
+
+            var con = mysql.createConnection({
+                host: "localhost",
+                user: "usuario",
+                password: "DavincianosA*2021a",
+                database: "bancoaplicaciones"
+            });
+
+            con.connect(function(err) {
+                if (err) throw err;
+                con.query("SELECT * FROM Usuario", function(err, result, fields) {
+                    if (err) throw err;
+                    console.log(result);
+                });
+            });
 
         }
     </script>
@@ -547,18 +559,17 @@ if (isset($_POST['logout'])) {
     <!-- END OF > Paying credit form -->
 
     <!-- template js -->
-    
+
     <script src="assets\js\theme.js"></script>
 
     <script>
-        
         let template = ({
             ...json
 
         }) => {
             temp = "";
             json.tbcliente_creditos.map(data => {
-                
+
                 if (data.clientecred_id != null) {
                     temp += `<tr>
                     
@@ -631,7 +642,6 @@ if (isset($_POST['logout'])) {
             .catch(err => {
                 console.error(err);
             });
-
     </script>
 
 

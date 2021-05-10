@@ -52,7 +52,7 @@ if(isset($_POST['logout'])){
     <link rel="stylesheet" href="assets\css\main.css">
 </head>
 
-<button type="button" class="btn btn-light float-right ml-2">Admin</button>
+<button href="admin.html" type="button" class="btn btn-light float-right ml-2">Admin</button>
 
 <!-- This helped at the beginning... <input type = "button" onclick = "firstExample()" value = "1st Function">
 <input type = "button" onclick = "searchByDPI()" value = "Get by DPI"> -->

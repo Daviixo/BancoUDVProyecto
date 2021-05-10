@@ -465,7 +465,7 @@ if (isset($_POST['logout'])) {
                     console.error(err);
                 });
 
-            let item = reponse;
+            let item = response;
 
             console.log("DPI con JSON es: " + item.cliente_ide);
 

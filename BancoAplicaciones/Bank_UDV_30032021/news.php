@@ -179,7 +179,7 @@ if (isset($_POST['logout'])) {
         </style>
 
         <input class="form-control" style="margin-left: 50tx" type="text" placeholder="-ADMIN ACCESS-" readonly>
-        <h3 style="margin-left: 50tx">=Please provide the DPI=</h3>
+        <h3 style="margin-left: 50tx">--- Please provide the DPI ---</h3>
 
         <div class="col-sm-2">
             <input type="text" class="form-control" id="dpi" placeholder="DPI" maxlength="13">
@@ -207,6 +207,27 @@ if (isset($_POST['logout'])) {
             <tbody id="dataCliente">
             </tbody>
         </table>
+
+        <br>
+
+        <!-- Update User's info -->
+
+        <input class="form-control" style="margin-left: 50tx" type="text" placeholder="-ADMIN ACCESS-" readonly>
+        <h3 style="margin-left: 50tx">--- To Update User's Info ---</h3>
+
+        <div class="col-sm-2">
+            <input type="text" class="form-control" id="fname" placeholder="First Name" maxlength="50">
+            <input type="text" class="form-control" id="lname" placeholder="Last Name" maxlength="50">
+            <input type="text" class="form-control" id="slname" placeholder="Second Last Name" maxlength="50">
+            <input type="text" class="form-control" id="bdate" placeholder="Born Date" maxlength="50">
+        </div><br>
+
+        <div class="col-sm-10">
+            <button type="button" onclick="updateInfo()" class="btn btn-primary">Get Info</button>
+            <br>
+        </div><br>
+
+        <!-- END OF Update User's info -->
 
         <!--FINAL DE FORMULARIO-->
 
@@ -498,6 +519,46 @@ if (isset($_POST['logout'])) {
 
 
 `
+
+        }
+    </script>
+
+    <script>
+        function updateInfo() {
+
+            var dpi = document.getElementById("dpi").value;
+            var firstName = document.getElementById("fname").value;
+            var lastName = document.getElementById("lname").value;
+            var secondLastName = document.getElementById("slname").value;
+            var typeIde = 1;
+            var bornDate = document.getElementById("bdate").value;
+
+            fetch("https://banco-vivienda.club/clientes/actualizacion", {
+                    "method": "PUT",
+                    "headers": {
+                        "content-type": "application/json",
+                        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZFN1Y3Vyc2FsIjo1LCJ1c2VybmFtZSI6IlNVQ1VSU0FMMSIsInBhc3N3b3JkIjoicXdlcnR5IiwiaWF0IjoxNjE5NTQ3NzQ0LCJleHAiOjE2MjI2NTgxNDR9.1awdMkX9_Ajun1OLcYXD19_UbtKVgx4Uzbmy55Jlrt4",
+                        'Accept': 'application/json'
+                    },
+                    "body": JSON.stringify({
+                        "dpi": dpi,
+                        "name": firstName,
+                        "lastNameOne": lastName,  
+                        "lastNameTwo": secondLastName, 
+                        "typeIde": typeIde,
+                        "bornDate": bornDate
+                    })
+                })
+                .then(
+                    response => response.json()
+                )
+                .then(response => {
+                    alert("User's info updated successfully!");
+                    console.log(response);
+                })
+                .catch(err => {
+                    console.error(err);
+                });
 
         }
     </script>

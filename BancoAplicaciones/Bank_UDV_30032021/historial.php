@@ -50,4 +50,6 @@
         }
     }
     
-    updateHistorialPago($_GET['creditid'],$_GET['amounttopay']);
+    //updateHistorialPago($_GET['creditid'],$_GET['amounttopay']);
+    updateHistorialPago('1','2');
+?>  

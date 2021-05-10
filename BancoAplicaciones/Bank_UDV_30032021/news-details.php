@@ -112,10 +112,11 @@ if(isset($_POST['logout'])){
                             </ul>
                         </li>
 
-                        <li class="dropdown"><a href="news.php">News</a>
+                        <li class="dropdown">
+                            <a href="about.php">Admin</a>
                             <ul>
-                                <li><a href="news.php">News</a></li>
-                                <li><a href="news-details.php">News Details</a></li>
+                                <li><a href="team.php">User's Info</a></li>
+                                <li><a href="team-details.php">User's Credits</a></li>
                             </ul>
                         </li>
                       

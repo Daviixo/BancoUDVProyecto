@@ -52,6 +52,17 @@ if (isset($_POST['logout'])) {
 <body>
 
     <input type="hidden" value="<?php echo $_SESSION['dpi_usuario']; ?>" id="user_dpi">
+    <button type="button" onclick="dpiTest()" class="btn btn-primary">Test DPI</button>
+
+    <script>
+
+        function dpiTest(){
+            var dpiTest = document.getElementById("user_dpi").value;
+            console.log("El DPI que es HIDDEN es: " + dpiTest);
+        }
+        
+
+    </script>
 
     <div class="preloader">
         <img class="preloader__image" src="assets\images\loader.png" alt="">

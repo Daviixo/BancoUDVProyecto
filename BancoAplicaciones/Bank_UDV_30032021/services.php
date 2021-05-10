@@ -541,8 +541,6 @@ if (isset($_POST['logout'])) {
                     console.error(err);
                 });
 
-            //alert("<?php echo updateHistorialPago() ?>");
-
             //NEW FUNCTION
 
             let paymentToHistory = (finalcredit_id,finalamountToPay) => {

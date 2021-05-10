@@ -545,16 +545,18 @@ if (isset($_POST['logout'])) {
 
     <?php
 
-    function updateHistorial(){
+    function updateHistorial()
+    {
 
         $_SERVER = "localhost";
         $username = "usuario";
         $password = "DavincianosA*2021a";
         $database = "bancoaplicaciones";
-        $dateTimeRaw = date("F j, Y, g:i a");
-        $dateTimeFixed = new DateTime($dateTimeRaw, new DateTimeZone('Mountain/Colorado'));
+        $timezone =  date_default_timezone_set("Mountain/Colorado");
+        $today = date("F j, Y, g:i a", $timezone);
 
         $conex = mysqli_connect($_SERVER, $username, $password, $database);
+
 
         try {
             $conn = new PDO("mysql:host=$_SERVER;dbname=$database", $username, $password);
@@ -565,8 +567,8 @@ if (isset($_POST['logout'])) {
 
         $sql = "INSERT INTO prueba (test) 
         VALUES (:test)";
-        $stmt = $conn ->prepare($sql);
-        $stmt->bindParam(':test',$dateTimeFixed);
+        $stmt = $conn->prepare($sql);
+        $stmt->bindParam(':test', $today);
 
         $stmt->execute();
     }

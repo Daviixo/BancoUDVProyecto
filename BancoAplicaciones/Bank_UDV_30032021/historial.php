@@ -55,6 +55,6 @@
         }
     }
 
-    updateHistorialPago($_GET['creditid'],$_GET['amounttopay']);
+    updateHistorialPago(27,5);
 
 ?>

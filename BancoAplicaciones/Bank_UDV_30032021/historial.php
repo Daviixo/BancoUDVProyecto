@@ -11,8 +11,13 @@
         $action = "Credit payment";
         $email = $_SESSION['username'];
 
-        //echo $credit_id + " > Credit ID";
-        //echo $credit_amount + " > Credit amount";
+        if(isset($credit_id) && isset($credit_amount)){
+            echo "ID y amount van NULL";
+            exit();
+        }
+
+        echo $credit_id + " > Credit ID";
+        echo $credit_amount + " > Credit amount";
 
         //$final_credit_id = strval($credit_id);
         //$final_credit_amount = strval($credit_amount);

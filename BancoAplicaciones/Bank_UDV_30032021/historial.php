@@ -49,11 +49,11 @@
             $sql = "INSERT INTO historial (user,credit_id,action_taken,credit_amount,date_time) 
             VALUES (:user,:credit_id,:action_taken,:credit_amount,:date_time)";
             $stmt = $conn->prepare($sql);
-            $stmt->bindParam(':user', $email);
-            $stmt->bindParam(':credit_id', $icreditid);
-            $stmt->bindParam(':action_taken', $action);
-            $stmt->bindParam(':credit_amount', $icreditamount);
-            $stmt->bindParam(':date_time', $today);
+            $stmt->bindParam(':user', $email,PDO::PARAM_STR);
+            $stmt->bindParam(':credit_id', $icreditid,PDO::PARAM_INT);
+            $stmt->bindParam(':action_taken', $action,PDO::PARAM_STR);
+            $stmt->bindParam(':credit_amount', $icreditamount,PDO::PARAM_INT);
+            $stmt->bindParam(':date_time', $today,PDO::PARAM_STR);
             $result = $stmt->execute();
             var_dump($result);
             if ($result) {

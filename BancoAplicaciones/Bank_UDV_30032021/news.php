@@ -172,80 +172,26 @@ if (isset($_POST['logout'])) {
 
         <!--INICIO DE FORMULARIO PARA CONSULTA-->
 
+        <div class="col-sm-2">
+            <input type="text" class="form-control" id="dpi" placeholder="DPI" maxlength="13">
 
-        <form method="post" id="formulario">
-            <input type="text" name="dpi1" id="dpi">
-            <input type="submit" value="search">
-        </form>
-
-        <h2>Información de cliente.</h2>
-        <div>
-            <table>
-                <thead>
-                    <tr>
-                        <th>DPI</th>
-                        <th>Nombre</th>
-                        <th>Apellido</th>
-                    </tr>
-                </thead>
-                <tbody id="dataCliente">
-                </tbody>
-            </table>
         </div>
 
-        <script>
-            let template = ({
-                ...json
-            }) => `
-    
-            
-            <tr>
-                <td>${json.cliente_ide}</td>
-                <td>${ json.cliente_nombre1}</td>
-				<td>${json.cliente_ape1}</td>
-				
-            </tr>
-            
-           
-       
-    
-    `
-            let formulario = document.querySelector("#formulario");
-            formulario.addEventListener("submit", function(e) {
-                e.preventDefault()
-                let dpi = document.querySelector("#dpi");
-                console.log("El valor del DPI leido es: " + dpi.value);
-                let infocliente = document.querySelector("#dataCliente");
-                fetch("https://banco-vivienda.club/clientes/consulta/" + dpi.value, {
-                        "headers": {
-                            'Accept': 'application/json',
-                            "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZFN1Y3Vyc2FsIjo1LCJ1c2VybmFtZSI6IlNVQ1VSU0FMMSIsInBhc3N3b3JkIjoicXdlcnR5IiwiaWF0IjoxNjE5NTQ3NzQ0LCJleHAiOjE2MjI2NTgxNDR9.1awdMkX9_Ajun1OLcYXD19_UbtKVgx4Uzbmy55Jlrt4"
-                        }
-                    })
-                    .then(response => {
+        <div class="col-sm-10">
+            <button type="button" onclick="getInfo()" class="btn btn-primary">Get Info</button>
+        </div>
 
-                        let respuestaServer = response.json().then(respuesta => {
-                            return respuesta; 
-                        }).catch(error => {
-                            alert("El número de DPI no existe en la base de datos.");
-                            infocliente.innerHTML = "";
-                        })
-                        return respuestaServer;
-
-                    })
-                    .then(response => {
-                        console.log(response);
-
-                        infocliente.innerHTML = template(response);
-                        console.log(response.ok)
-
-                    })
-                    .catch(err => {
-                        console.error(err);
-                    });
-
-            })
-        </script>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>DPI</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                </tr>
+            </thead>
+            <tbody id="dataCliente">
+            </tbody>
+        </table>
 
         <!--FINAL DE FORMULARIO-->
 
@@ -494,6 +440,32 @@ if (isset($_POST['logout'])) {
                 });
 
         })
+    </script>
+
+    <script>
+        function getInfo() {
+
+            var dpi = document.getElementById("dpi").value;
+
+            console.log("El valor ingresado del DPI es: " + dpi)
+
+            fetch("https://banco-vivienda.club/clientes/consulta/" + dpi, {
+                    "headers": {
+                        'Accept': 'application/json',
+                        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZFN1Y3Vyc2FsIjo1LCJ1c2VybmFtZSI6IlNVQ1VSU0FMMSIsInBhc3N3b3JkIjoicXdlcnR5IiwiaWF0IjoxNjE5NTQ3NzQ0LCJleHAiOjE2MjI2NTgxNDR9.1awdMkX9_Ajun1OLcYXD19_UbtKVgx4Uzbmy55Jlrt4"
+                    }
+                })
+                .then(response => {
+                    return response.json()
+                })
+                .then(response => {
+                    console.log(response);
+                })
+                .catch(err => {
+                    console.error(err);
+                });
+
+        }
     </script>
 
 </body>

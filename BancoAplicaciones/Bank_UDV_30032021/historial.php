@@ -14,6 +14,8 @@
     
             $action = "Credit payment";
             $email = $_SESSION['username'];
+
+            $message1 = "Entro al catch";
     
             var_dump($credit_id);
             var_dump($credit_amount);
@@ -48,6 +50,7 @@
             // }print $stmt->errorCode();
         } catch (PDOException $e) {
             echo 'Error: ' + $e->getMessage();
+            echo $message1;
         }
     }
     

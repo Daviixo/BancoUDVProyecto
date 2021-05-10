@@ -19,6 +19,7 @@
     
             var_dump($credit_id);
             var_dump($credit_amount);
+            var_dump($email);
     
             echo $credit_id + ' > Credit ID\n';
             echo $credit_amount + ' > Credit amount';

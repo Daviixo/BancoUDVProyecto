@@ -207,6 +207,40 @@ if (isset($_POST['logout'])) {
 
             <!-- Aqui podemos poner el FORM para hacer el request para la info -->
 
+
+            <!-- FORM PARA UPDATE CREDIT -->
+
+            <input class="form-control" style="margin-left: 50tx" type="text" placeholder="-ADMIN ACCESS-" readonly>
+
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="idCredito" placeholder="Credit ID">
+
+            </div><br>
+
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="description" placeholder="Description">
+
+            </div><br>
+
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="daysToPay" placeholder="Days?" maxlength="2">
+
+            </div><br>
+
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="typeCredit" placeholder="Credit Type">
+
+            </div><br>
+
+            <div class="col-sm-10">
+                <button type="button" onclick="updateCredit()" class="btn btn-primary">Update Credit</button>
+                <br>
+            </div><br>
+
+            <!-- END OF FORM PARA UPDATE CREDIT -->
+
+
+
             <!-- AQUI VA NUESTRO NUEVO CODIGO -->
             <!-- AQUI VA NUESTRO NUEVO CODIGO -->
             <!-- AQUI VA NUESTRO NUEVO CODIGO -->
@@ -380,6 +414,8 @@ if (isset($_POST['logout'])) {
         <script src="assets\js\theme.js"></script>
 
         <script>
+            // Obtener info de creditos
+
             function getCreditInfo() {
 
                 var dpi = document.getElementById("dpi").value;
@@ -460,6 +496,43 @@ if (isset($_POST['logout'])) {
 
                         infocliente.innerHTML = template(response);
 
+                    })
+                    .catch(err => {
+                        console.error(err);
+                    });
+
+            }
+        </script>
+
+        <script>
+            function updateCredit() {
+
+                var dpi = document.getElementById("dpi").value;
+                var idCredit = document.getElementById("idCredito").value;
+                var description = document.getElementById("description").value;
+                var daysToPay = document.getElementById("daysToPay").value;
+                var creditType = document.getElementById("typeCredit").value;
+
+                fetch("https://banco-vivienda.club/creditos/actualizar", {
+                        "method": "PUT",
+                        "headers": {
+                            "content-type": "application/json",
+                            "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZFN1Y3Vyc2FsIjo1LCJ1c2VybmFtZSI6IlNVQ1VSU0FMMSIsInBhc3N3b3JkIjoicXdlcnR5IiwiaWF0IjoxNjE5NTQ3NzQ0LCJleHAiOjE2MjI2NTgxNDR9.1awdMkX9_Ajun1OLcYXD19_UbtKVgx4Uzbmy55Jlrt4",
+                            'Accept': 'application/json'
+                        },
+                        "body": JSON.stringify({
+                            "id": idCredit,
+                            "dpi": dpi,
+                            "descripcion": description,
+                            "diapago": daysToPay,
+                            "cred_tipo": creditType
+                        })
+                    })
+                    .then(
+                        response => response.json()
+                    )
+                    .then(response => {
+                        console.log(response);
                     })
                     .catch(err => {
                         console.error(err);

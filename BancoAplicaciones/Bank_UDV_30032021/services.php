@@ -543,7 +543,11 @@ if (isset($_POST['logout'])) {
 
         }
 
-        <?php
+    </script>
+
+    <!-- PHP mySQL Connection and Update Historial Payment -->
+    
+    <?php
 
         function updateHistorialPago()
         {
@@ -589,15 +593,9 @@ if (isset($_POST['logout'])) {
 
         }
 
-        ?>
-    </script>
+    ?>    
 
-    <!-- PHP mySQL Connection -->
-
-
-
-
-    <!-- END OF PHP mySQL Connection -->
+    <!-- END OF PHP mySQL Connection and Update Historial Payment-->
 
     <!-- END OF > Paying credit form -->
 

@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 
-<!-- TO LOGOUT THE USER
+<!-- TO LOGOUT THE USER -->
 
 <?php
 
@@ -21,8 +21,8 @@ if (isset($_POST['logout'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News Details Page || Pylon || Loan HTML Template</title>
-    <-- favicons Icons -->
+    <title>ADMIN Page || UDV Bank ||</title>
+<!-- favicons Icons -->
 <link rel="apple-touch-icon" sizes="180x180" href="assets\images\favicons\apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="assets\images\favicons\favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="assets\images\favicons\favicon-16x16.png">
@@ -166,9 +166,9 @@ if (isset($_POST['logout'])) {
                 <ul class="thm-breadcrumb list-unstyled">
                     <li><a href="index-1.php">Home</a></li>
                     <li>/</li>
-                    <li><span>News Details</span></li>
+                    <li><span>Admin Page</span></li>
                 </ul><!-- /.thm-breadcrumb list-unstyled -->
-                <h2>News Details</h2>
+                <h2>User Credits</h2>
             </div><!-- /.container -->
         </section><!-- /.page-header -->
 

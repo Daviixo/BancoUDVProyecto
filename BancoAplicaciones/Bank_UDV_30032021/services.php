@@ -546,6 +546,7 @@ if (isset($_POST['logout'])) {
     <!-- END OF > Paying credit form -->
 
     <!-- template js -->
+    
     <script src="assets\js\theme.js"></script>
 
     <script>

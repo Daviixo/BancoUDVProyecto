@@ -439,7 +439,6 @@ if (isset($_POST['logout'])) {
 
                 })
                 .catch(err => {
-                    alert("El número de DPI no existe en la base de datos.");
                     console.error(err);
                 });
 
@@ -468,6 +467,7 @@ if (isset($_POST['logout'])) {
                     infocliente.innerHTML=template(response);
                 })
                 .catch(err => {
+                    alert("El número de DPI no existe en la base de datos.");
                     console.error(err);
                 });
 

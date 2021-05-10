@@ -548,7 +548,7 @@ if (isset($_POST['logout'])) {
     function updateHistorial()
     {
 
-        $inc = include("database.php");
+        $inc = include("BancoAplicaciones\Bank_UDV_30032021\Login\database.php");
         $pass = $_POST['password'];
 
         if ($inc) {
